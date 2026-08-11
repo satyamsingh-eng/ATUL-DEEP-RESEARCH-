@@ -1,0 +1,30 @@
+# Default-deny publication policy: version only the reviewed release set.
+/*
+!/.gitignore
+!/README.md
+!/LICENSE
+!/requirements.txt
+!/Atul_Bansal_C3A_Network_Intelligence_Report.md
+!/Atul_Bansal_C3A_Network_Intelligence_Report.html
+!/render_report.py
+!/release/
+!/release/**
+!/evidence/
+/evidence/*
+!/evidence/apollo_validation/
+/evidence/apollo_validation/*
+!/evidence/apollo_validation/run_focused_report_qa.py
+
+# Never publish local/system/transient artifacts even if a future allow rule is added.
+.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+*.png
+*.jpg
+*.jpeg
+*.webp
+.env
+.env.*
+*.pem
+*.key
