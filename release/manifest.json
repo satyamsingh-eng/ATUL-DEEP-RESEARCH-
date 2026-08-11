@@ -1,12 +1,12 @@
 {
-  "release": "board-ui-v1",
+  "release": "board-ui-v2-monochrome",
   "visibility": "private_required",
-  "generated_at_utc": "2026-08-11T19:29:12Z",
+  "generated_at_utc": "2026-08-11T20:45:07Z",
   "artifacts": [
     {
       "path": "Atul_Bansal_C3A_Network_Intelligence_Report.html",
-      "bytes": 156468,
-      "sha256": "11ab06fd759050bbb9ec466437fc2f7061c42acae08c4dcd791e94e00e4967d6"
+      "bytes": 146963,
+      "sha256": "f1a71b109183017652be1141e9f12be60d82204dfe61174b74481bd777743c8a"
     },
     {
       "path": "Atul_Bansal_C3A_Network_Intelligence_Report.md",
@@ -15,8 +15,13 @@
     },
     {
       "path": "render_report.py",
-      "bytes": 47270,
-      "sha256": "4fdd4c533075c7062bfadb2ac7549975cfc50bbebaacb64d61b2cde2e4ee8286"
+      "bytes": 41320,
+      "sha256": "84c3c8f5a03cfed857438cb7b7408a0ce0504226be35890b4deb9e1238dee3da"
+    },
+    {
+      "path": "evidence/apollo_validation/run_focused_report_qa.py",
+      "bytes": 19522,
+      "sha256": "a51cea93e1b4f34a9c712c12cac836d06cd636ca1d48dc3d702405b91e053fff"
     }
   ],
   "verification": {
@@ -36,17 +41,19 @@
       "browser_engines": ["chromium", "webkit"],
       "viewports": ["1440x900", "1024x768", "390x844"],
       "coverage": [
+        "left-side brief-sequence rail removal",
+        "true-black principal surfaces and white-highlight polarity",
         "responsive geometry and page-overflow gate",
         "evidence-card table treatment",
         "citation dialog, keyboard close, manual focus trap, and focus restoration",
-        "source ledger, navigation, reading-mode, touch-target, and progress semantics",
+        "source ledger, touch-target, and progress semantics",
         "print mode",
         "offline direct-file operation"
       ]
     }
   },
   "release_boundary": {
-    "included": "Final report, source Markdown, self-contained renderer, UI QA harness, and this release metadata.",
+    "included": "Final report, source Markdown, self-contained renderer, UI QA harness, and release metadata.",
     "excluded": [
       "raw connector or enrichment payloads",
       "credentials, tokens, contact data, profile URLs, and detailed locations",

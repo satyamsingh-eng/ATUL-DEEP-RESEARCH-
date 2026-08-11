@@ -19,7 +19,6 @@ Open `Atul_Bansal_C3A_Network_Intelligence_Report.html` directly in a modern bro
 
 Board-facing controls:
 
-- **Focus reading** — expands the evidence canvas on desktop.
 - **Evidence ledger** — jumps to the source register.
 - **Inline citations** — open a source-specific evidence dialog.
 - **Source register** — inspect one source at a time or open all 19.

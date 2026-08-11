@@ -1,19 +1,27 @@
 {
   "result": "PASS",
   "artifact": "Atul_Bansal_C3A_Network_Intelligence_Report.html",
-  "artifact_sha256": "11ab06fd759050bbb9ec466437fc2f7061c42acae08c4dcd791e94e00e4967d6",
+  "artifact_sha256": "f1a71b109183017652be1141e9f12be60d82204dfe61174b74481bd777743c8a",
   "engines_exercised": ["chromium", "webkit"],
   "viewports_exercised": ["1440x900", "1024x768", "390x844"],
   "checks": [
+    "left-side Brief sequence / Decision record rail absent from the final DOM",
+    "true #000000 principal briefing surfaces with intentionally polarised #ffffff highlights",
+    "no retained blue accent tokens",
     "no page-level horizontal overflow",
     "19 structured source cards and complete citation targets",
     "mobile cards for all tables with three or more columns",
-    "focus-reading, rail navigation, evidence ledger, source-toggle controls, and 44px touch targets",
+    "evidence ledger, source-toggle controls, and 44px touch targets",
     "evidence dialog open, Escape close, manual focus trap, ledger action, and focus restoration",
     "semantic reading-progress bar",
     "print presentation",
     "self-contained offline direct-file operation"
   ],
+  "visual_review": {
+    "desktop_hero": "PASS — pure black canvas, legible white decision panel, no blue accent, no left rail",
+    "desktop_content": "PASS — no rail, full-width section shell, readable evidence-bound content",
+    "mobile_390x844": "PASS — unclipped header controls and responsive black/white hero"
+  },
   "not_exercised": {
     "firefox": "Not installed in the local Playwright runtime. It is not counted as a pass."
   }

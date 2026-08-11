@@ -98,6 +98,24 @@ def audit_state(page: Page) -> dict[str, Any]:
               current: document.getElementById('scroll-progress')?.getAttribute('aria-valuenow'),
             },
             hasSkipLink: !!document.querySelector('.skip-link[href="#brief-content"]'),
+            hasRail: !!document.querySelector('.side-rail'),
+            monochrome: {
+              tokens: {
+                black: getComputedStyle(document.documentElement).getPropertyValue('--black').trim(),
+                canvas: getComputedStyle(document.documentElement).getPropertyValue('--canvas').trim(),
+                surface: getComputedStyle(document.documentElement).getPropertyValue('--surface').trim(),
+                accent: getComputedStyle(document.documentElement).getPropertyValue('--accent').trim(),
+                accentSoft: getComputedStyle(document.documentElement).getPropertyValue('--accent-soft').trim(),
+              },
+              bodyBackground: getComputedStyle(document.body).backgroundColor,
+              heroBackground: getComputedStyle(document.querySelector('.hero')).backgroundColor,
+              sectionBackground: getComputedStyle(document.querySelector('.report-section')).backgroundColor,
+              decisionBackground: getComputedStyle(document.querySelector('.decision-panel')).backgroundColor,
+              decisionText: getComputedStyle(document.querySelector('.decision-panel h2')).color,
+              boardHighlightBackground: getComputedStyle(document.querySelector('.snapshot-heading')).backgroundColor,
+              boardHighlightText: getComputedStyle(document.querySelector('.snapshot-heading h2')).color,
+              staleBlueAccent: /#(?:0a84ff|0066cc|005bb5|2997ff|d9ecff|101a25|3b5e80|36536e|4f6376)/i.test(document.documentElement.outerHTML),
+            },
             noGradient: !document.documentElement.outerHTML.includes('linear-gradient') && !document.documentElement.outerHTML.includes('radial-gradient'),
             noBoxShadow: !document.documentElement.outerHTML.includes('box-shadow')
           };
@@ -106,19 +124,14 @@ def audit_state(page: Page) -> dict[str, Any]:
 
 
 def exercise_interactions(page: Page) -> dict[str, Any]:
-    # Focus mode is intentionally unavailable on phone widths to conserve header space.
-    focus = page.locator("#focus-toggle")
-    focus_result: dict[str, Any] = {"available": focus.count() == 1 and focus.is_visible()}
-    if focus_result["available"]:
-        focus.focus()
-        focus_result["focus_outline"] = page.evaluate("getComputedStyle(document.getElementById('focus-toggle')).outlineStyle")
-        focus.click()
-        focus_result["enabled"] = page.evaluate("document.body.classList.contains('focus-mode')")
-        focus_result["aria_when_enabled"] = focus.get_attribute("aria-pressed")
-        focus.click()
-        focus_result["restored"] = not page.evaluate("document.body.classList.contains('focus-mode')")
+    evidence_button = page.locator("#open-evidence")
+    evidence_button.focus()
+    controls = {
+        "evidence_focus_outline": page.evaluate("getComputedStyle(document.getElementById('open-evidence')).outlineStyle"),
+        "rail_absent": page.locator(".side-rail").count() == 0,
+    }
 
-    page.locator("#open-evidence").click()
+    evidence_button.click()
     page.wait_for_timeout(550)
     evidence_scroll = page.evaluate("window.scrollY")
 
@@ -150,15 +163,8 @@ def exercise_interactions(page: Page) -> dict[str, Any]:
     source_two_open = page.locator("#source-2").evaluate("node => node.open")
     dialog_ledger_closed = not dialog.evaluate("node => node.open")
 
-    nav = page.locator(".side-rail nav a[data-nav-target]").nth(1)
-    nav_target = nav.get_attribute("data-nav-target")
-    nav.click()
-    page.wait_for_timeout(1150)
-    nav_hash = page.evaluate("location.hash")
-    nav_current = nav.get_attribute("aria-current")
-
     return {
-        "focus": focus_result,
+        "controls": controls,
         "evidence_scroll_y": evidence_scroll,
         "source_toggle": {"open_count": open_count, "aria_expanded": source_toggle_state, "closed_count": closed_count},
         "dialog": {
@@ -171,7 +177,6 @@ def exercise_interactions(page: Page) -> dict[str, Any]:
             "ledger_action_closed": dialog_ledger_closed,
             "source_two_open": source_two_open,
         },
-        "nav": {"target": nav_target, "hash": nav_hash, "aria_current": nav_current},
     }
 
 
@@ -184,7 +189,7 @@ def audit_print(browser: Browser) -> dict[str, Any]:
             """() => ({
               bodyBackground: getComputedStyle(document.body).backgroundColor,
               navDisplay: getComputedStyle(document.querySelector('.topbar')).display,
-              railDisplay: getComputedStyle(document.querySelector('.side-rail')).display,
+              railAbsent: !document.querySelector('.side-rail'),
               tableHeaderColor: getComputedStyle(document.querySelector('thead th')).color,
               sourceBodyDisplay: getComputedStyle(document.querySelector('.source-card .source-body')).display,
             })"""
@@ -232,6 +237,23 @@ def check_result(label: str, state: dict[str, Any], interactions: dict[str, Any]
         failures.append(f"{label}: external runtime resource detected")
     if not state["noGradient"] or not state["noBoxShadow"]:
         failures.append(f"{label}: non-flat styling detected")
+    if state["hasRail"]:
+        failures.append(f"{label}: removed left navigation rail is still present")
+    monochrome = state["monochrome"]
+    if monochrome["tokens"] != {
+        "black": "#000000",
+        "canvas": "#000000",
+        "surface": "#000000",
+        "accent": "#ffffff",
+        "accentSoft": "#ffffff",
+    }:
+        failures.append(f"{label}: monochrome token set is not true black / white")
+    if any(monochrome[key] != "rgb(0, 0, 0)" for key in ("bodyBackground", "heroBackground", "sectionBackground")):
+        failures.append(f"{label}: a principal briefing surface is not true black")
+    if any(monochrome[key] != "rgb(255, 255, 255)" for key in ("decisionBackground", "boardHighlightBackground")) or any(monochrome[key] != "rgb(0, 0, 0)" for key in ("decisionText", "boardHighlightText")):
+        failures.append(f"{label}: white highlight treatment is not correctly polarised")
+    if monochrome["staleBlueAccent"]:
+        failures.append(f"{label}: stale blue accent token detected")
     for table in state["tables"]:
         if not table["contained"]:
             failures.append(f"{label}: table {table['index']} breaks containment")
@@ -243,19 +265,18 @@ def check_result(label: str, state: dict[str, Any], interactions: dict[str, Any]
     for summary in state["summaries"]:
         if summary["height"] < 44:
             failures.append(f"{label}: source disclosure below 44px ({summary['text'][:48]})")
-    focus = interactions["focus"]
-    if focus["available"] and not (focus["enabled"] and focus["restored"] and focus["aria_when_enabled"] == "true" and focus["focus_outline"] not in ("none", "", None)):
-        failures.append(f"{label}: focus-reading toggle or visible focus state failed")
+    controls = interactions["controls"]
+    if not controls["rail_absent"] or controls["evidence_focus_outline"] in ("none", "", None):
+        failures.append(f"{label}: rail-removal or visible evidence-control focus state failed")
+    if interactions["evidence_scroll_y"] <= 0:
+        failures.append(f"{label}: evidence-ledger control did not move the reader to the ledger")
     toggle = interactions["source_toggle"]
     if toggle["open_count"] != EXPECTED_SOURCE_COUNT or toggle["closed_count"] != 0 or toggle["aria_expanded"] != "true":
         failures.append(f"{label}: source ledger toggle failed")
     dialog = interactions["dialog"]
     if not all((dialog["opened"], dialog["tab_trapped"], dialog["shift_tab_trapped"], dialog["closed_by_escape"], dialog["focus_restored"], dialog["ledger_action_closed"], dialog["source_two_open"])):
         failures.append(f"{label}: evidence dialog lifecycle or focus trap failed")
-    nav = interactions["nav"]
-    if nav["hash"] != f"#{nav['target']}" or nav["aria_current"] != "true":
-        failures.append(f"{label}: rail navigation failed")
-    if print_state["navDisplay"] != "none" or print_state["railDisplay"] != "none" or print_state["sourceBodyDisplay"] == "none":
+    if print_state["navDisplay"] != "none" or not print_state["railAbsent"] or print_state["sourceBodyDisplay"] == "none":
         failures.append(f"{label}: print presentation failed")
     return failures
 

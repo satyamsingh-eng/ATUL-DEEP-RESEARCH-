@@ -24,6 +24,7 @@ __pycache__/
 *.jpg
 *.jpeg
 *.webp
+.env*
 .env
 .env.*
 *.pem

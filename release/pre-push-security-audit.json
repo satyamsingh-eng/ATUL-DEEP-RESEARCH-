@@ -1,22 +1,23 @@
 {
   "result": "PASS_WITH_PRIVATE_REPOSITORY_REQUIREMENT",
-  "scope": "reviewed release set only",
+  "reviewed_at_utc": "2026-08-11T20:47:41Z",
+  "scope": "all 11 tracked release files",
   "release_policy": "The target GitHub repository must remain private. The report includes restricted internal relationship context and is not approved for public distribution.",
-  "files_reviewed": 10,
+  "files_reviewed": 11,
   "checks": {
-    "secrets_tokens_api_keys": "PASS — no staged match",
-    "local_absolute_paths": "PASS — no staged match",
-    "file_uris": "PASS — no staged match",
-    "direct_email_addresses": "PASS — no staged match",
-    "direct_phone_numbers": "PASS — no staged match after manual review",
-    "private_network_addresses": "PASS — no staged match",
+    "secrets_tokens_api_keys": "PASS — zero matches for OpenAI, Anthropic, GitHub, AWS, Google, and Hugging Face credential patterns",
+    "local_absolute_paths": "PASS — zero matches",
+    "file_uris": "PASS — zero matches",
+    "direct_email_addresses": "PASS — zero matches",
+    "direct_phone_numbers": "PASS — no contact number retained after candidate review",
+    "private_network_addresses": "PASS — zero matches",
     "files_over_10_mb": "PASS — none",
     "license": "PASS — proprietary confidential license included",
-    "gitignore": "PASS — default-deny release allowlist; connector outputs, evidence model, screenshots, and transient artifacts ignored",
-    "git_history": "PASS — repository has no prior commits at the time of the review"
+    "gitignore": "PASS — default-deny allowlist plus .DS_Store, .env*, cache, log, and image exclusions",
+    "git_history": "PASS — all commits scanned for credential patterns; zero matches"
   },
   "manual_false_positive_disposition": {
-    "numeric_source_strings": "14 broad phone-pattern hits were reviewed. They were public-source URL numeric paths or an SEC accession number, not telephone values. No phone value is released."
+    "broad_phone_pattern_candidates": "16 candidates were reviewed without retaining their values: 14 are numeric public-source URL or SEC-accession context, and 2 are artifact-checksum substrings. None is a telephone value."
   },
   "release_boundary": [
     "No credentials, tokens, raw connector payloads, contact data, profile URLs, detailed locations, local paths, screenshots, or transient logs are staged.",
