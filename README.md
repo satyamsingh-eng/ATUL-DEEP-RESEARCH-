@@ -1,28 +1,52 @@
-# C3A Labs — Confidential Founder / Board Brief
+# C3A Labs — Atul Bansal Final Intelligence Brief
 
-> **Private repository only.** This is internal relationship intelligence for authorised C3A Labs review. Do not fork, share, publish, or use for outreach without explicit C3A approval.
+> **Private repository only.** This is an internal, evidence-bounded C3A Labs decision brief. Do not publish, fork, distribute, or use for outbound contact without explicit C3A approval.
 
 ## Purpose
 
-This repository delivers an evidence-bounded intelligence brief on Atul Bansal for founder and board review. It is designed to support an operator-first conversation, not a lead-generation, fundraising, or relationship-access assumption.
+This repository contains the **final consolidated synthesis** of the completed Round 1 and Round 2 research into Atul Bansal.
 
-The report explicitly separates:
+It answers one practical question:
 
-- verified historical evidence;
-- bounded third-party vendor reconciliation;
-- inferences that require validation; and
-- claims that must **not** be assumed.
+> What is the evidence-backed role Atul could realistically play for C3A Labs, and what should C3A ask for first?
 
-## Open the brief
+### Final decision
 
-Open `Atul_Bansal_C3A_Network_Intelligence_Report.html` directly in a modern browser. It is self-contained and makes no runtime network calls.
+Start with a **25-minute enterprise-operator pressure test** of SARVAX’s problem, control boundary, business model, and proof threshold.
 
-Board-facing controls:
+The evidence supports an experienced enterprise-software operator with transaction experience and documented angel-ecosystem participation. It does **not** establish a current VC / GP role, a current employer title, personal investment authority, wealth-management buyer access, or a commitment to advise or introduce C3A.
 
-- **Evidence ledger** — jumps to the source register.
-- **Inline citations** — open a source-specific evidence dialog.
-- **Source register** — inspect one source at a time or open all 19.
-- **Print / PDF** — produces a flattened, readable print view.
+## Open the final brief
+
+Open `Atul_Bansal_C3A_Network_Intelligence_Report.html` directly in a modern browser. It is self-contained and works offline from a local file.
+
+The report includes:
+
+- decision readout and first / no-go asks;
+- identity controls and same-name collision handling;
+- verified Laurel → ECI and Timesys → Lynx transaction context;
+- bounded angel / investor assessment;
+- evidence-backed network pathways and strict relationship boundaries;
+- SARVAX positioning and relationship progression; and
+- an inspectable source ledger with retained excerpts.
+
+## Release boundary
+
+The committed package deliberately contains only:
+
+- final canonical Markdown;
+- self-contained HTML report;
+- deterministic renderer;
+- focused browser QA harness;
+- release metadata; and
+- repository documentation and policy files.
+
+It deliberately excludes:
+
+- contact data, email addresses, phone numbers, raw professional-profile URLs;
+- raw Apollo payloads, identifiers, or enrichment records;
+- internal contact registers or restricted relationship material;
+- credentials, local paths, screenshots, logs, and transient research exports.
 
 ## Rebuild and validate
 
@@ -32,22 +56,23 @@ python render_report.py
 python evidence/apollo_validation/run_focused_report_qa.py
 ```
 
-The QA gate runs against the direct local HTML file in the available Playwright engines and checks:
+The QA harness tests the direct local HTML file in Chromium, Firefox, and WebKit when installed. It verifies:
 
-- desktop, tablet, and 390px mobile geometry;
-- no page-level horizontal overflow;
-- responsive evidence-card treatment for every 3+ column table;
-- citation-to-source mapping and the evidence dialog lifecycle;
-- keyboard Escape, focus restoration, source-ledger and reading-mode controls;
-- print styles; and
-- no external runtime resources.
+- desktop, tablet, and 390px mobile containment;
+- citation-to-source mapping and source ledger controls;
+- evidence dialog keyboard lifecycle and focus restoration;
+- responsive tables, visible focus, print mode, and offline operation;
+- no external runtime resources, gradients, or glows; and
+- absence of contact data, professional-profile links, and restricted-contact markers.
 
-## Release boundary
+## Evidence standard
 
-The tracked release intentionally contains only the final source Markdown, self-contained HTML, renderer, release manifest, and UI QA harness.
+- **VERIFIED FACT** — supported by direct, dated public or regulatory evidence.
+- **STRONG INFERENCE** — bounded conclusion derived from verified facts.
+- **HYPOTHESIS** — explicitly not established; used only to frame a conversation question.
 
-It deliberately excludes raw connector output, contact data, profile URLs, detailed locations, credentials, local filesystem paths, screenshots, transient logs, and intermediate research exports. The canonical report preserves citations and evidence limitations; restricted internal material remains restricted.
+A public page, transaction, organisation co-listing, or vendor record is never treated as proof of a current role, personal relationship strength, investment authority, or willingness to introduce.
 
-## Ownership
+## Repository policy
 
 Copyright © 2026 C3A Labs. All rights reserved. See `LICENSE`.

@@ -1,7 +1,54 @@
 {
   "release": "final-r1-r2-synthesis",
-  "visibility": "private_required",
-  "generated_at_utc": "2026-08-12T23:01:44.447968+00:00",
+  "result": "PASS",
+  "validated_at_utc": "2026-08-12T23:01:44.447968+00:00",
+  "private_repository_required": true,
+  "report": {
+    "section_count": 14,
+    "source_count": 17,
+    "cited_source_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ]
+  },
+  "html": {
+    "source_cards": 17,
+    "source_ids": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "self_contained": true
+  },
   "artifacts": [
     {
       "path": ".gitignore",
@@ -49,19 +96,5 @@
       "sha256": "aa5fee777028a02bc11b0ec72124f441c4a7a446e864f949dc08e89c9171f4c0"
     }
   ],
-  "verification": {
-    "final_release_gate": "PASS",
-    "section_count": 14,
-    "source_count": 17,
-    "self_contained_html": true
-  },
-  "release_boundary": {
-    "included": "Final combined report, self-contained HTML, deterministic renderer, focused browser QA, and release validation code.",
-    "excluded": [
-      "contact data and profile URLs",
-      "raw Apollo or enrichment payloads and identifiers",
-      "restricted relationship material",
-      "credentials, local paths, screenshots, logs, and transient research outputs"
-    ]
-  }
+  "errors": []
 }

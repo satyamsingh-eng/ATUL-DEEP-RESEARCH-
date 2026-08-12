@@ -19,12 +19,19 @@ from playwright.sync_api import Browser, Page, sync_playwright
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT / "Atul_Bansal_C3A_Network_Intelligence_Report.html"
 OUT = Path(__file__).resolve().parent / "Atul_Bansal_Report_Focused_QA.json"
+RELEASE_SUMMARY = ROOT / "release" / "ui-qa-summary.json"
 VIEWPORTS = {
     "desktop": {"width": 1440, "height": 900},
     "tablet": {"width": 1024, "height": 768},
     "mobile": {"width": 390, "height": 844},
 }
-EXPECTED_SOURCE_COUNT = 19
+EXPECTED_SOURCE_COUNT = 17
+FORBIDDEN_RELEASE_TERMS = (
+    "Apollo-verified business email",
+    "LinkedIn profile",
+    "CONFIDENTIAL CONTACT DATA",
+    "SECTION_13_RESTRICTED_CONTACT_REGISTER",
+)
 
 
 def audit_state(page: Page) -> dict[str, Any]:
@@ -61,6 +68,11 @@ def audit_state(page: Page) -> dict[str, Any]:
               contained: table.scrollWidth <= table.clientWidth || table.closest('.table-shell') !== null,
             };
           });
+          const emailLike = (document.documentElement.innerText.match(/[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}/g) || []).length;
+          const rawProfileLinks = [...document.querySelectorAll('a[href]')].filter(link => /linkedin\.com\/in\//i.test(link.href)).length;
+          const forbiddenReleaseTerms = [
+            'Apollo-verified business email', 'LinkedIn profile', 'CONFIDENTIAL CONTACT DATA', 'SECTION_13_RESTRICTED_CONTACT_REGISTER'
+          ].filter(term => document.documentElement.outerHTML.includes(term));
           const duplicateIds = [...document.querySelectorAll('[id]')].map(el => el.id).filter((id, index, ids) => ids.indexOf(id) !== index);
           const sourceIds = sourceCards.map(card => card.id);
           const missingCitationTargets = [...new Set(citations.map(link => link.dataset.sourceRef).filter(number => !document.getElementById('source-' + number)))];
@@ -81,6 +93,7 @@ def audit_state(page: Page) -> dict[str, Any]:
             citations: citations.length,
             missingCitationTargets,
             tables,
+            releaseSafety: {emailLike, rawProfileLinks, forbiddenReleaseTerms, mailtoLinks: document.querySelectorAll('a[href^="mailto:"]').length},
             duplicateIds,
             emptyButtons,
             buttons,
@@ -259,6 +272,9 @@ def check_result(label: str, state: dict[str, Any], interactions: dict[str, Any]
             failures.append(f"{label}: table {table['index']} breaks containment")
         if table["mobileCardsRequired"] and not table["mobileCardsPresent"]:
             failures.append(f"{label}: table {table['index']} lacks mobile evidence-card semantics")
+    release_safety = state["releaseSafety"]
+    if release_safety["emailLike"] or release_safety["rawProfileLinks"] or release_safety["mailtoLinks"] or release_safety["forbiddenReleaseTerms"]:
+        failures.append(f"{label}: restricted contact or profile material entered final release")
     for button in state["buttons"]:
         if button["height"] < 44:
             failures.append(f"{label}: touch target below 44px ({button['id'] or button['text']})")
@@ -297,8 +313,10 @@ def main() -> None:
             browser_type = getattr(playwright, name)
             try:
                 browser = browser_type.launch(headless=True)
-            except Exception as error:  # browser availability varies by machine
-                results["unavailable_engines"][name] = str(error).splitlines()[0]
+            except Exception:  # browser availability varies by machine
+                # Keep release evidence portable: do not serialize machine paths from
+                # Playwright launcher exceptions into committed QA metadata.
+                results["unavailable_engines"][name] = "browser executable unavailable in this runtime"
                 continue
             results["available_engines"].append(name)
             browser_result: dict[str, Any] = {"viewports": {}, "print": {}, "offline": {}}
@@ -337,6 +355,28 @@ def main() -> None:
             results["browsers"][name] = browser_result
     results["result"] = "PASS" if not results["failures"] else "FAIL"
     OUT.write_text(json.dumps(results, indent=2) + "\n", encoding="utf-8")
+    summary = {
+        "result": results["result"],
+        "artifact": REPORT.name,
+        "report_sha256": report_hash,
+        "engines_exercised": results["available_engines"],
+        "viewports_exercised": ["1440x900", "1024x768", "390x844"],
+        "checks": [
+            "combined Round 1 + Round 2 final report renders from one canonical Markdown source",
+            "no page-level horizontal overflow",
+            "all 17 citations resolve to 17 retained source cards",
+            "mobile cards for all tables with three or more columns",
+            "evidence dialog, Escape close, focus trap, ledger action, and focus restoration",
+            "semantic reading-progress bar, 44px control targets, and print presentation",
+            "self-contained offline direct-file operation",
+            "release boundary rejects contact data, profile links, and restricted-contact markers",
+        ],
+        "not_exercised": {
+            name: "browser executable unavailable in this runtime"
+            for name in results["unavailable_engines"]
+        },
+    }
+    RELEASE_SUMMARY.write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print("QA_RESULT", results["result"])
     print("ENGINES", ",".join(results["available_engines"]))
     print("FAILURES", results["failures"])

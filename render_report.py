@@ -178,11 +178,11 @@ def sectionize(soup: BeautifulSoup) -> None:
                 "aria-labelledby": heading["id"],
             },
         )
-        if title == "Executive summary":
+        if title in {"Executive summary", "Executive decision"}:
             add_class(section, "summary-section")
         if title == "Sources":
             add_class(section, "sources-section")
-        if title in {"What C3A should do next", "Final action close — WHAT C3A SHOULD DO NEXT"}:
+        if title in {"What C3A should do next", "Final action close — WHAT C3A SHOULD DO NEXT", "Final priority actions"}:
             add_class(section, "action-section")
         if title == "Risks and red flags":
             add_class(section, "risk-section")
@@ -271,6 +271,11 @@ def render() -> None:
         ),
         "html.parser",
     )
+    # The canonical Markdown retains its title and synthesis subtitle for direct
+    # readers; the HTML cover owns that presentation, so avoid duplicating either.
+    for heading in list(soup.find_all(["h1", "h2"])):
+        if heading.name == "h1" or heading.get_text(" ", strip=True) == "Combined Round 1 + Round 2 synthesis for C3A Labs":
+            heading.decompose()
     source_count = append_source_ledger(soup, source_intro, source_entries)
     build_heading_ids(soup)
     sectionize(soup)
@@ -404,6 +409,7 @@ button { -webkit-tap-highlight-color: transparent; }
 .snapshot-card p { margin: 0; color: var(--soft); font-size: 14px; line-height: 1.52; }
 .workspace { display: block; min-width: 0; margin-top: 24px; }
 .report { min-width: 0; }
+.report > h1 { display: none; }
 .report-section {
   min-width: 0; padding: 58px clamp(26px, 4.5vw, 64px); border: 1px solid var(--line); border-radius: 14px;
   background: var(--surface); scroll-margin-top: 84px;
@@ -591,7 +597,7 @@ td:first-child { color: #ffffff; font-weight: 680; }
   <meta name="description" content="Internal, evidence-bounded founder and board intelligence brief for C3A Labs." />
   <meta name="color-scheme" content="dark" />
   <link rel="icon" href="data:," />
-  <title>Atul Bansal — C3A Labs Intelligence Brief</title>
+  <title>Atul Bansal — Final C3A Decision Brief</title>
   <style>{css}</style>
 </head>
 <body>
@@ -599,8 +605,8 @@ td:first-child { color: #ffffff; font-weight: 680; }
   <div id="scroll-progress" role="progressbar" aria-label="Report reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="#executive-summary">C3A Labs <span>/ internal decision brief</span></a>
-      <div class="topbar-context">Founder / operator / advisor intelligence · evidence-bound</div>
+      <a class="brand" href="#executive-decision">C3A Labs <span>/ final decision brief</span></a>
+      <div class="topbar-context">Round 1 + Round 2 synthesis · evidence-bound</div>
       <div class="topbar-actions" aria-label="Brief controls">
         <button class="topbar-button topbar-button--accent" id="open-evidence" type="button">Evidence ledger</button>
         <button class="topbar-button" id="print-report" type="button">Print / PDF</button>
@@ -611,11 +617,11 @@ td:first-child { color: #ffffff; font-weight: 680; }
     <section class="hero" aria-labelledby="cover-title">
       <div class="hero-copy">
         <div>
-          <div class="eyebrow">Internal founder / board intelligence</div>
+          <div class="eyebrow">Private founder / board intelligence</div>
           <h1 id="cover-title">Atul Bansal</h1>
-          <p class="hero-lead">A relationship-first decision brief: where an experienced enterprise operator can change C3A’s trajectory—and how to earn, rather than extract, relevant introductions.</p>
+          <p class="hero-lead">A final decision brief on how C3A should earn enterprise-operator judgment before asking for capital, an advisory role, or access to a network.</p>
         </div>
-        <p class="hero-footnote">Prepared for C3A Labs · internal use only · research cut-off stated within the record</p>
+        <p class="hero-footnote">Prepared for C3A Labs · private decision use only</p>
       </div>
       <aside class="decision-panel" aria-label="Decision at a glance">
         <div>
@@ -629,9 +635,9 @@ td:first-child { color: #ffffff; font-weight: 680; }
 
     <section class="signal-grid" aria-label="Evidence-backed decision signals">
       <article class="signal"><span class="metric-label">Verified transaction</span><strong>$88m</strong><p>Laurel acquisition by ECI, primary SEC evidence <a class="citation" href="#source-2" data-source-ref="2" aria-label="Open source 2 evidence">[2]</a></p></article>
-      <article class="signal"><span class="metric-label">Founder-exit record</span><strong>1</strong><p>Documented founder exit; Timesys is a later acquisition during CEO tenure.</p></article>
-      <article class="signal"><span class="metric-label">Revalidation scope</span><strong>56</strong><p>Named people audited through privacy-minimised vendor-record reconciliation.</p></article>
-      <article class="signal"><span class="metric-label">Primary route</span><strong>45 min</strong><p>A bounded founder/operator critique, not an opening funding or introductions request.</p></article>
+      <article class="signal"><span class="metric-label">Latest dated operating proof</span><strong>Nov ’24</strong><p>Lynx named Atul VP, Open-Source Business Development in a dated statement <a class="citation" href="#source-5" data-source-ref="5" aria-label="Open source 5 evidence">[5]</a></p></article>
+      <article class="signal"><span class="metric-label">Cited source routes</span><strong>{source_count}</strong><p>Retained excerpts support every decision-driving external claim.</p></article>
+      <article class="signal"><span class="metric-label">First ask</span><strong>25 min</strong><p>A bounded operator critique, not an opening funding or introductions request.</p></article>
     </section>
 
     <section class="board-snapshot" aria-labelledby="snapshot-title">
@@ -643,16 +649,16 @@ td:first-child { color: #ffffff; font-weight: 680; }
         <p>Read the opportunity as an operating relationship to earn—not an investor database to extract from.</p>
       </div>
       <div class="snapshot-grid">
-        <article class="snapshot-card"><div class="section-kicker">01 / Start</div><h3>Send a crisp one-pager</h3><p>Frame SARVAX as approval-aware work execution for financial operations. Leave KARAX, pricing, and broad claims out.</p></article>
+        <article class="snapshot-card"><div class="section-kicker">01 / Start</div><h3>Send a crisp one-pager</h3><p>Frame SARVAX as approval-aware work execution. Leave KARAX, pricing, and broad maturity claims out.</p></article>
         <article class="snapshot-card"><div class="section-kicker">02 / Prove</div><h3>Show one governed workflow</h3><p>Demonstrate input, structured action, human approval, and controlled downstream completion—not platform theatre.</p></article>
-        <article class="snapshot-card"><div class="section-kicker">03 / Earn</div><h3>Ask for one category</h3><p>After visible follow-through, ask which single operator or investor archetype would add the most useful pressure test.</p></article>
+        <article class="snapshot-card"><div class="section-kicker">03 / Earn</div><h3>Ask for one category</h3><p>After visible follow-through, ask which single operator or angel-feedback category would add the most useful pressure test.</p></article>
       </div>
     </section>
 
     <div class="workspace">
       <article class="report" id="brief-content">{content}</article>
     </div>
-    <footer class="footer">Evidence-first internal brief. Citations open a bounded retained excerpt; source accessibility does not turn historic wording into a current-role claim.</footer>
+    <footer class="footer">Final evidence-first decision brief. Citations open bounded retained excerpts; historic wording and public listings do not become current-role or access claims.</footer>
   </main>
 
   <dialog class="dialog" id="evidence-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-title">

@@ -1,27 +1,15 @@
 {
   "result": "PASS_WITH_PRIVATE_REPOSITORY_REQUIREMENT",
-  "reviewed_at_utc": "2026-08-11T20:47:41Z",
-  "scope": "all 11 tracked release files",
-  "release_policy": "The target GitHub repository must remain private. The report includes restricted internal relationship context and is not approved for public distribution.",
-  "files_reviewed": 11,
+  "reviewed_at_utc": "2026-08-12T23:01:44.447968+00:00",
+  "scope": "canonical final release artifacts",
+  "release_policy": "The target repository must remain private. This is internal C3A relationship and product decision material.",
   "checks": {
-    "secrets_tokens_api_keys": "PASS — zero matches for OpenAI, Anthropic, GitHub, AWS, Google, and Hugging Face credential patterns",
-    "local_absolute_paths": "PASS — zero matches",
-    "file_uris": "PASS — zero matches",
-    "direct_email_addresses": "PASS — zero matches",
-    "direct_phone_numbers": "PASS — no contact number retained after candidate review",
-    "private_network_addresses": "PASS — zero matches",
-    "files_over_10_mb": "PASS — none",
-    "license": "PASS — proprietary confidential license included",
-    "gitignore": "PASS — default-deny allowlist plus .DS_Store, .env*, cache, log, and image exclusions",
-    "git_history": "PASS — all commits scanned for credential patterns; zero matches"
+    "secrets_tokens_api_keys": "PASS",
+    "contact_data_and_profile_urls": "PASS",
+    "local_absolute_paths": "PASS",
+    "source_map_and_structure": "PASS",
+    "self_contained_html": "PASS",
+    "license_and_allowlist": "PASS"
   },
-  "manual_false_positive_disposition": {
-    "broad_phone_pattern_candidates": "16 candidates were reviewed without retaining their values: 14 are numeric public-source URL or SEC-accession context, and 2 are artifact-checksum substrings. None is a telephone value."
-  },
-  "release_boundary": [
-    "No credentials, tokens, raw connector payloads, contact data, profile URLs, detailed locations, local paths, screenshots, or transient logs are staged.",
-    "Internal/confidentiality markers are intentional and require private repository visibility.",
-    "Only the final Markdown, self-contained HTML, renderer, UI QA harness, release metadata, README, requirements, license, and allowlist are staged."
-  ]
+  "errors": []
 }

@@ -8,7 +8,12 @@
 !/Atul_Bansal_C3A_Network_Intelligence_Report.html
 !/render_report.py
 !/release/
-!/release/**
+/release/*
+!/release/manifest.json
+!/release/pre-push-security-audit.json
+!/release/ui-qa-summary.json
+!/release/final-release-validation.json
+!/release/validate_final_release.py
 !/evidence/
 /evidence/*
 !/evidence/apollo_validation/

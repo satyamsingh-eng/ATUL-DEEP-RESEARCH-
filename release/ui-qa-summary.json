@@ -1,28 +1,27 @@
 {
   "result": "PASS",
   "artifact": "Atul_Bansal_C3A_Network_Intelligence_Report.html",
-  "artifact_sha256": "f1a71b109183017652be1141e9f12be60d82204dfe61174b74481bd777743c8a",
-  "engines_exercised": ["chromium", "webkit"],
-  "viewports_exercised": ["1440x900", "1024x768", "390x844"],
-  "checks": [
-    "left-side Brief sequence / Decision record rail absent from the final DOM",
-    "true #000000 principal briefing surfaces with intentionally polarised #ffffff highlights",
-    "no retained blue accent tokens",
-    "no page-level horizontal overflow",
-    "19 structured source cards and complete citation targets",
-    "mobile cards for all tables with three or more columns",
-    "evidence ledger, source-toggle controls, and 44px touch targets",
-    "evidence dialog open, Escape close, manual focus trap, ledger action, and focus restoration",
-    "semantic reading-progress bar",
-    "print presentation",
-    "self-contained offline direct-file operation"
+  "report_sha256": "8a869c627f5b7b97b55e5a19295bdf065b2e604ce283ce3a83b27145d9ba8e8b",
+  "engines_exercised": [
+    "chromium",
+    "webkit"
   ],
-  "visual_review": {
-    "desktop_hero": "PASS — pure black canvas, legible white decision panel, no blue accent, no left rail",
-    "desktop_content": "PASS — no rail, full-width section shell, readable evidence-bound content",
-    "mobile_390x844": "PASS — unclipped header controls and responsive black/white hero"
-  },
+  "viewports_exercised": [
+    "1440x900",
+    "1024x768",
+    "390x844"
+  ],
+  "checks": [
+    "combined Round 1 + Round 2 final report renders from one canonical Markdown source",
+    "no page-level horizontal overflow",
+    "all 17 citations resolve to 17 retained source cards",
+    "mobile cards for all tables with three or more columns",
+    "evidence dialog, Escape close, focus trap, ledger action, and focus restoration",
+    "semantic reading-progress bar, 44px control targets, and print presentation",
+    "self-contained offline direct-file operation",
+    "release boundary rejects contact data, profile links, and restricted-contact markers"
+  ],
   "not_exercised": {
-    "firefox": "Not installed in the local Playwright runtime. It is not counted as a pass."
+    "firefox": "browser executable unavailable in this runtime"
   }
 }
