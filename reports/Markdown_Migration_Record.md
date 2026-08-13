@@ -41,18 +41,18 @@ The replacement resets the reader journey:
 ## Material source reconciliation
 
 - **Citation-route correction:** a post-rebuild audit found that the board brief’s ECI 2005 Form 6-K citation pointed to the filing wrapper rather than its acquisition-release exhibit. The canonical board and ledger links now point to the SEC Exhibit 3 source text. The TimeSys CEO appointment ledger link likewise uses the full canonical article route; both repaired URLs returned HTTP 200 on 14 August 2026.
-- **Innosential source drift:** an earlier report-safe capture retained a historical Timesys descriptor for an Atul Bansal entry. A direct browser recheck of both `innosential.com/` and `innosential.com/about-us/` on 13 August 2026 found neither `Atul Bansal` nor `Timesys` in current rendered public text. The replacement ledger preserves the legacy card verbatim for auditability but classifies it **SOURCE DRIFT / WITHHELD**. It cannot support a current or historical Innosential role.
-- **Operational consequence:** no report layer may treat the former co-listing as a relationship, route, board/advisory position, current Timesys status, investment capacity, or authority.
+- **Non-fit source-drift material:** preserved in the full audit archive only. It is excluded from the board brief and Board-Fit Claims Ledger because it does not affect the operator-fit decision.
+- **Operator-fit consequence:** no report layer may treat adjacent people, historic co-listings, stale labels, or transaction advisers as a relationship, route, board/advisory position, current operating status, investment capacity, or authority.
 
 ## What remains intentionally unresolved
 
-The migration preserves uncertainty rather than hiding it. The new report does not establish a 2026 title, active investment mandate, aicas/Innosential role, board/advisory status, relationship strength, warm access, wealth-management buyer route, or personal transaction economics.
+The migration preserves uncertainty rather than hiding it. The board path does not establish a 2026 title, active investment mandate, board/advisory status, relationship strength, warm access, wealth-management buyer route, or personal transaction economics.
 
 ## Canonical files after migration
 
 - [Professional Kundali: Board Decision Brief](../Atul_Bansal_Board_Decision_Brief.md)
-- [Evidence & Unresolved-Claims Ledger](Atul_Bansal_Evidence_and_Unresolved_Claims_Ledger.md)
-- [Professional Kundali Evidence Ledger](Atul_Bansal_Professional_Kundali_Evidence_Ledger.md)
+- [Board-Fit Claims Ledger](Atul_Bansal_Evidence_and_Unresolved_Claims_Ledger.md)
+- [Full Audit Evidence Ledger](Atul_Bansal_Professional_Kundali_Evidence_Ledger.md) — retained provenance archive, outside the board path.
 - [Markdown Citation Validation](Markdown_Citation_Validation_2026-08-13.md)
 - [Markdown-First Release Validation](Markdown_First_Release_Validation_2026-08-13.md)
 - [Preserved SARVAX Founder / Operator Context](../SARVAX_Founder_Operator_One_Pager_Draft.md)

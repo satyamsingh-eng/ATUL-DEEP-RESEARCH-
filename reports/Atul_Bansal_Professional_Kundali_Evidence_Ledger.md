@@ -1,8 +1,8 @@
 # Atul Bansal — Professional Kundali Evidence Ledger
 
 > **PRIVATE · C3A Labs · SARVAX**
-> **Role:** report-safe evidence archive for the board decision brief.
-> **Scope:** 25 evidence cards reconciled from the prior professional kundali, combined decision brief, final evidence ledger, and late-research adjudication.
+> **Role:** private provenance archive for the board decision brief; not a board reading path, people map, investor screen, or relationship dossier.
+> **Scope:** 25 evidence cards reconciled from prior material. Some cards retain non-fit historical context solely to preserve the evidence trail; they must not drive the SARVAX operator-fit decision.
 > **Current-status rule:** nothing below converts a historical title, company acquisition, chapter listing, co-listing, or vendor record into a 2026 role, relationship, investment authority, or access claim.
 
 ## Reader controls

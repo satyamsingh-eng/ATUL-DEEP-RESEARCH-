@@ -6,20 +6,22 @@
 
 1. **[Atul Bansal — Professional Kundali: Board Decision Brief](Atul_Bansal_Board_Decision_Brief.md)**
    Founder/board-ready decision memo: what is proven, what is inferred, what is withheld, and the recommended C3A relationship motion.
-2. **[Professional Kundali Evidence Ledger](reports/Atul_Bansal_Professional_Kundali_Evidence_Ledger.md)**
-   All 25 preserved evidence cards: source, date, confidence, decision relevance, and exact boundary.
-3. **[Evidence & Unresolved-Claims Ledger](reports/Atul_Bansal_Evidence_and_Unresolved_Claims_Ledger.md)**
-   Compact proof map, unresolved-claims register, exact-target guardrail, and relationship interpretation rule.
-4. **[Primary Research Synthesis](Atul_Bansal_C3A_Network_Intelligence_Report.md)**
-   Earlier combined research retained as supporting analysis, not the current board memo.
-5. **[`evidence/`](evidence/)**
-   Privacy-minimised retained public/regulatory source extracts and machine-readable audit material; not a board deliverable.
+2. **[Board-Fit Claims Ledger](reports/Atul_Bansal_Evidence_and_Unresolved_Claims_Ledger.md)**
+   Concise, target-only proof map and unresolved questions for the board decision.
+3. **[Markdown Migration Record](reports/Markdown_Migration_Record.md)**
+   Why the legacy HTML surface was removed and how evidence was preserved in Markdown.
+
+## Preserved audit material — not for board reading
+
+- **[Full Audit Evidence Ledger](reports/Atul_Bansal_Professional_Kundali_Evidence_Ledger.md)** — retained 25-card provenance archive, including non-fit context removed from the board path.
+- **[Primary Research Synthesis](Atul_Bansal_C3A_Network_Intelligence_Report.md)** — earlier combined research retained as supporting analysis, not the current board memo.
+- **[`evidence/`](evidence/)** — retained public/regulatory source extracts and machine-readable audit material; not a board deliverable.
 
 ## Board decision
 
 Approach Atul as an **enterprise-infrastructure operator** for a bounded SARVAX operating critique.
 
-Do **not** assume or claim that he is a current investor, active VC/GP, current Lynx executive, current TiE decision-maker, aicas investor, Innosential leader, wealth-management connector, or a source of warm introductions. The 2026 current-status gap is explicit in the canonical brief.
+Current investment, advisory, board, customer-access, and introduction assumptions are excluded from the decision until Atul confirms his present focus directly.
 
 ## Markdown-first release policy
 
@@ -45,7 +47,7 @@ The target is the enterprise-infrastructure executive associated with:
 
 `Digital Equipment Corporation → FORE Systems → Laurel Networks → ECI → Timesys → Lynx`
 
-Do not merge same-name narratives involving LivLyt, ZenAdmin, Careem, McKinsey, KPMG, unrelated academic entries, or name-only board records.
+Do not merge unrelated same-name employment, academic, or board narratives.
 
 ## Security & privacy boundary
 

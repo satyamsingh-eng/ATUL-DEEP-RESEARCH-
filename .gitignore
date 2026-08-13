@@ -6,6 +6,7 @@
 !/LICENSE
 !/Atul_Bansal_C3A_Network_Intelligence_Report.md
 !/Atul_Bansal_Board_Decision_Brief.md
+!/Atul_Bansal_Board_Decision_Brief.html
 !/SARVAX_Founder_Operator_One_Pager_Draft.md
 !/reports/
 !/reports/*.md
@@ -13,6 +14,7 @@
 # Legacy browser reports, renderers, and UI QA are intentionally not releasable.
 *.html
 *.htm
+!/Atul_Bansal_Board_Decision_Brief.html
 
 # Never publish local/system/transient artifacts even if a future allow rule is added.
 .DS_Store
