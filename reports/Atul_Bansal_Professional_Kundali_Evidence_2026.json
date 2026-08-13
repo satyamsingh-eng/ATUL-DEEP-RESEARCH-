@@ -1,6 +1,6 @@
 {
   "report": "Atul_Bansal_Professional_Kundali_Final_2026.html",
-  "generated_at_utc": "2026-08-13T14:33:56.322467+00:00",
+  "generated_at_utc": "2026-08-13T14:53:30.683416+00:00",
   "evidence": [
     {
       "id": "F01",
@@ -104,8 +104,8 @@
     {
       "id": "F10",
       "type": "FACT",
-      "claim": "A source-dated Timesys management biography reports: B.S. Chemical Engineering, IIT Kanpur (1984); M.S. Chemical Engineering, University of Rhode Island (1987); M.S. Computer Science, University of Rhode Island (1989). It also states he became COO of ECI\u2019s Data Networking Division after the Laurel acquisition and joined Timesys as CEO in 2007.",
-      "why": "Fills professionally relevant education and post-exit operating links, but the undated/stale biography cannot establish any current board, India-LLP, advisory, or 2026 employment claim.",
+      "claim": "A source-dated Timesys management biography reports: B.S. Chemical Engineering, IIT Kanpur (1984); M.S. Chemical Engineering, University of Rhode Island (1987); M.S. Computer Science, University of Rhode Island (1989). It says he held engineering and technical-management positions for router products at Digital Equipment Corporation from 1988\u20131995; joined FORE Systems in 1995; and held senior FORE roles including president of the Network Control Technology division and product-group director of the multilayer Ethernet switching division. It also states he became COO of ECI\u2019s Data Networking Division after the Laurel acquisition and joined Timesys as CEO in 2007.",
+      "why": "Fills professionally relevant education, early technical leadership, and post-exit operating links, but the undated/stale biography cannot establish any current board, India-LLP, advisory, or 2026 employment claim.",
       "url": "https://www.timesys.com/management-team/",
       "source": "Timesys management page",
       "date": "live page checked 13 Aug 2026; biographical content undated",
@@ -149,7 +149,7 @@
       "id": "F14",
       "type": "FACT",
       "claim": "The 2021 SEC Form D identifies Atul Bansal as TiE Pittsburgh Angels Co-Managing Director and signer; Ganesh Mani and Raymond Milhem are named executive officers/directors.",
-      "why": "Strongest direct investor-platform governance proof. It does not establish a current fund, check size, personal portfolio, or present authority.",
+      "why": "Strongest direct investor-platform governance proof. It does not establish a current fund, check size, personal portfolio, or present authority. Raymond Milhem is retained only as a Form D signatory/governance context node and is omitted from the People table because no separate C3A-relevant relationship or route is established.",
       "url": "https://www.sec.gov/Archives/edgar/data/1843925/000184392521000001/xslFormDX01/primary_doc.xml",
       "source": "SEC Form D, TiE Pittsburgh Angels LLC",
       "date": "8 February 2021 filing",
@@ -203,8 +203,8 @@
     {
       "id": "F19",
       "type": "FACT",
-      "claim": "Innosential\u2019s official page publicly co-lists \u201cMr. Atul Bansal \u2014 Founder, CEO Timesys\u201d alongside founders and leaders including Ganesh Mani, but does not state an Atul board, founder, adviser, investor, or operational title at Innosential.",
-      "why": "Confirms an official co-listing and strongly narrows what can be said: organizational association only; Apollo-style Innosential role labels remain uncorroborated.",
+      "claim": "Innosential\u2019s official page publicly co-lists \u201cMr. Atul Bansal \u2014 Founder, CEO Timesys\u201d alongside founders and leaders including Ganesh Mani. \u201cFounder, CEO Timesys\u201d is a Timesys biographical descriptor, not an Innosential operating title; the page does not state an Atul board, founder, adviser, investor, or operational title at Innosential.",
+      "why": "Confirms an official co-listing only. It establishes neither an Innosential role nor current Timesys status; Apollo-style Innosential role labels remain uncorroborated.",
       "url": "https://innosential.com/about-us/",
       "source": "Innosential official about page",
       "date": "live page checked 13 Aug 2026",
