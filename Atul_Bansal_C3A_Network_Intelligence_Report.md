@@ -1,9 +1,13 @@
-# Atul Bansal — Final Intelligence Decision Brief
-## Combined Round 1 + Round 2 synthesis for C3A Labs
+# Atul Bansal — Combined Research Archive
 
-**Classification:** Private C3A founder / board decision brief
+> **ARCHIVED SUPPORTING RESEARCH · NOT THE CURRENT BOARD MEMO**
+> This combined Round 1 + Round 2 synthesis is retained as a Markdown research record. The canonical founder/board decision product is **[Atul Bansal — Board Decision Brief](Atul_Bansal_Board_Decision_Brief.md)**, with the **[Professional Kundali Evidence Ledger](reports/Atul_Bansal_Professional_Kundali_Evidence_Ledger.md)** controlling source boundaries. If this archive conflicts with those files, use the canonical brief/ledger. Do not use archived references to a "warm path," titles, relationships, potential routes, or superseded recommendations as current fact or outreach authority.
+
+## Combined Round 1 + Round 2 research synthesis
+
+**Classification:** Private C3A research archive · superseded for founder/board use
 **Research cut-off:** 12 August 2026
-**Decision:** Approach Atul first as an enterprise-software operator and transaction mentor. Treat capital, formal advisory, and network access as outcomes to validate—not assumptions to open with.
+**Historical decision snapshot:** Retained research context only. The current decision and every present-tense boundary are controlled by the canonical board brief and professional-kundali evidence ledger.
 
 ---
 
@@ -15,13 +19,9 @@
 
 **STRONG INFERENCE:** His highest value to C3A is operator judgment on strategic legibility, technical trust, commercial proof, and product-to-market discipline. His value is materially less proven as a current VC, wealth-management connector, or source of immediate introductions.
 
-### What C3A should do now
+### Historical recommendation snapshot — superseded
 
-1. Send the SARVAX one-page value proposition through the existing warm path.
-2. Request a **25-minute operator pressure test** of the problem, control boundary, business model, and “why now.”
-3. Show one governed workflow: input → structured action packet → human approval → controlled downstream completion.
-4. Return a concise “what we changed / what remains open” note within seven days.
-5. Only then ask whether one narrowly defined operator, founder, or angel-feedback conversation would be useful.
+The original research sequence referenced a “warm path.” That premise was not independently substantiated and is **not** a current instruction. The canonical brief supersedes it: first earn a 25-minute operator pressure test through an appropriate, explicitly authorized route; then show one governed workflow; then return a concise “what changed / what remains open” note; only after that ask whether one narrow feedback category would be useful.
 
 ### What C3A should not do now
 
@@ -106,7 +106,7 @@ This final brief combines the two completed research cycles into one decision re
 
 ## 4. Investor and angel assessment
 
-### Verdict: credible ecosystem participation; current VC status not verified
+### Verdict: credible historical ecosystem participation; current VC status withheld
 
 **VERIFIED FACT:** A 2021 TiE Pittsburgh Angels Form D names Atul Bansal as Co-Managing Director.[6]
 
@@ -118,11 +118,11 @@ This final brief combines the two completed research cycles into one decision re
 |---|---|
 | Formal, dated angel-ecosystem governance / participation | Current fund management or a GP title |
 | A community-level early-stage vehicle | Personal portfolio, individual deal attribution, or cheque-size authority |
-| A potential mentor / feedback path after trust is earned | A lead-investor premise, a wealthtech thesis, or immediate introductions |
+| Historical organization context | A mentor promise, a funding premise, a wealthtech thesis, or an introduction route |
 
-**STRONG INFERENCE:** The investment signal is more consistent with an operator-plus-angel ecosystem role than with a conventional institutional VC role.
+**ARCHIVED INFERENCE — superseded for current use:** The historical record was consistent with an operator-plus-angel ecosystem context rather than a conventional institutional VC profile. The canonical brief now treats present investment activity and authority as **WITHHELD**.
 
-**C3A action:** Do not frame the first discussion as a fundraise. Ask: **“What founder, proof, and business-model signals would make a company worth backing or introducing within your operator / angel network?”**
+**Current C3A action:** Do not frame any first discussion as a fundraise, investor-network request, or introduction request. Ask only for an operator critique, then reset current status directly if the conversation creates value.
 
 ---
 
@@ -153,23 +153,17 @@ Avoid generic agent claims, model comparisons, unapproved pricing, blanket compl
 
 ---
 
-## 6. Network map — pathways, not promises
+## 6. Historical ecosystem context — not relationship routes
 
-| Route | Evidence | What it can support | What it cannot support |
-|---|---|---|---|
-| Atul → Ganesh Mani | Formal TiE co-management plus public co-listing on Innosential’s team page.[7][8] | A possible AI / operator feedback path if Atul confirms it is active and appropriate. | Personal relationship depth, current availability, or permission to introduce. |
-| Atul → TiE Pittsburgh Angels | 2021 Form D and archived TiE material.[6][7][9] | One founder / angel / operator feedback conversation after trust is earned. | Fundraising shortcut, allocation authority, or broad investor access. |
-| Atul → CEO ally | CEO ally advised Timesys on the 2023 transaction.[3] | Long-term learning about M&A readiness and process discipline. | A live relationship with any specific adviser or an investment route. |
-| Atul → Lynx / OceanSound context | Timesys sale into Lynx; OceanSound identifies Lynx as a portfolio company.[3][4] | Strategic-buyer and enterprise-integration pattern recognition. | Current sponsor access, board seat, or commercial introduction. |
-| Atul → Innosential | Public page co-lists Atul with AI / MLOps / strategy-labelled people while still calling him Timesys CEO.[8] | Narrow ecosystem topology and a stale-data warning. | Innosential founder, investor, adviser, or operating role. |
+| Context | What the historical record can support | What it cannot support |
+|---|---|---|
+| TiE Pittsburgh Angels | 2021 governance context and later public organizational listing.[6][7][9] | Current authority, personal capital, a fundraising shortcut, or access. |
+| CEO ally | Formal Timesys sell-side advisory in the 2023 transaction.[3] | A live relationship with any adviser, investor, or acquirer. |
+| Lynx / OceanSound | Strategic-buyer and enterprise-integration context.[3][4] | Current sponsor access, a board seat, or a commercial introduction. |
+| Ganesh Mani | Formal TiE co-governance context plus independently verified financial-services AI work.[6][7][17] | Friendship, recency, a warm route, availability, or permission to introduce. |
+| Innosential | A prior page capture retained a historical Timesys descriptor; current public root/About pages no longer name Atul.[8] | Any Innosential founder, investor, adviser, operator, or board role. |
 
-### Highest-confidence recurring node: Ganesh Mani
-
-**VERIFIED FACT:** Atul and Ganesh appear together in TiE Angels governance material and on Innosential’s public team page.[7][8]
-
-**STRONG INFERENCE:** Ganesh is the most defensible second-degree research lead around Atul’s public ecosystem.
-
-**Action:** Ask Atul whether a targeted AI / enterprise-operator conversation with one person would be useful before naming Ganesh or asking for an introduction.
+**Archive rule:** these are research-topology observations, not executable relationship paths. The canonical brief prohibits naming a person or requesting an introduction unless Atul first identifies that category as relevant and grants permission.
 
 ---
 
@@ -179,7 +173,7 @@ These are independently relevant C3A research leads. They are **not** people Atu
 
 | Research lead | Evidence-bounded value | Required validation before action |
 |---|---|---|
-| Ganesh Mani | CMU describes his work as scaling human expertise through AI, including financial-services applications; he also has the repeated Atul organisational overlap.[17][7][8] | Current remit, problem fit, and whether an appropriate route exists. |
+| Ganesh Mani | CMU describes his work as scaling human expertise through AI, including financial-services applications; there is also historic TiE governance overlap with Atul.[17][7] | Current remit, problem fit, and an independent, appropriate route. Do not assume an Atul route. |
 | Alok Goyal | Stellaris identifies an enterprise-software investor with SAP India operating history.[13] | Current thesis, stage, and interest in regulated enterprise-workflow software. |
 | Manav Garg | Together describes enterprise SaaS, procurement / treasury / payments operating experience, an exit, and subsequent founder backing.[14] | Current advisory availability and fit with SARVAX’s India-first execution wedge. |
 | Venktesh Shukla | Monta Vista identifies a founder / GP and long-standing TiE involvement.[15] | Current investment scope and legitimate, independent relationship route. |
@@ -222,7 +216,7 @@ KARAX is frozen. Do not blend the products in the Atul conversation.
 
 | Stage | C3A move | Evidence logic | Do not do |
 |---|---|---|---|
-| 1. Warm conversation | Send the one-page and request a 25-minute operator critique. | Matches the strongest operator / mentor evidence. | Do not attach a broad investor deck. |
+| 1. Authorized conversation | Request a 25-minute operator critique through an appropriate, explicitly authorized route. | Matches the strongest operator / mentor evidence. | Do not assume a warm path or attach a broad investor deck. |
 | 2. Demonstrate listening | Return a concise “what changed / what remains open” note within seven days. | Tests whether engagement is real and earns trust. | Do not ask for titles, capital, or referrals. |
 | 3. Narrow second ask | Ask whether one founder / operator / angel-feedback category would add value. | TiE participation supports an ecosystem conversation, not access assumptions. | Do not name a person or claim closeness. |
 | 4. Defined advisory discussion | After two useful exchanges, ask whether a bounded quarterly operator review could be valuable. | Separates genuine pull from polite interest. | Do not offer an advisor package first. |
@@ -237,7 +231,7 @@ KARAX is frozen. Do not blend the products in the Atul conversation.
 | Atul is a current VC / GP / fund manager | **Not established** | No verified current fund platform, portfolio, investment authority, or fund economics. |
 | Atul is currently an aicas investor | **Withheld** | Third-party signal lacked exact-name official corroboration. |
 | Atul is currently a Lynx executive | **Not established** | Latest dated primary role evidence is from November 2024, not 2026. |
-| Atul has a verified Innosential founder / adviser / investor role | **Withheld** | The public page proves a name listing only and retains a stale Timesys descriptor.[8] |
+| Atul has a verified Innosential founder / adviser / investor role | **Withheld** | An earlier report-safe page capture retained a historical Timesys descriptor; current public root/About pages do not name Atul. Neither establishes a role.[8] |
 | Atul can introduce C3A to wealth-management buyers | **Not established** | No reviewed public evidence supports a current wealth-management buyer network. |
 | Atul controls TiE Pittsburgh Angels capital | **Not established** | Formal governance evidence does not prove individual investment authority or allocations. |
 | LivLyt / ZenAdmin / Careem / McKinsey history belongs to this Atul | **Excluded** | Same-name public biography is not identity-linked to the Laurel / Timesys record.[11] |
@@ -247,7 +241,7 @@ KARAX is frozen. Do not blend the products in the Atul conversation.
 
 ## 11. Final priority actions
 
-1. **Send the one-pager as an operator test.** State the failure, controlled execution layer, proof plan, commercial logic, and why now.
+1. **Use the one-pager only as an operator test after an appropriate, explicitly authorized route exists.** State the failure, controlled execution layer, proof plan, commercial logic, and why now.
 2. **Use one live or static workflow.** Show only a credible input → action packet → approval → controlled completion sequence.
 3. **Run a current-status reset in the meeting.** Let Atul define his actual operating / advising / investing focus.
 4. **Demonstrate follow-through before access asks.** Convert feedback into a visible product or narrative decision.
@@ -259,9 +253,9 @@ KARAX is frozen. Do not blend the products in the Atul conversation.
 
 - Direct professional-profile access was login-gated; no direct profile content was retained or relied on as current-role proof.
 - SEC automated link checks returned 403 responses and the cited video returned a 429 rate limit during final QA. Retained verbatim evidence was captured earlier; these routes are marked automation-limited, not silently treated as broken.
-- The warm path and one-page request remain C3A context. A read-only internal workspace scan found no independent message evidence, which does not disprove the relationship.
+- The prior archive’s “warm path” language was not independently substantiated. No current relationship or access path is asserted; any outreach requires a separately approved draft and explicit confirmation.
 - Current employment, formal advisory availability, fund platform, personal portfolio, cheque size, and customer-introduction capacity remain direct-conversation questions.
-- No contact data, raw Apollo payload, personal location, credential, or raw professional-profile URL is included in this final package.
+- No contact data, non-public vendor-record content, personal location, credential, or professional-profile address is included in this final package.
 
 ---
 
@@ -294,8 +288,8 @@ Every source card below contains a bounded retained excerpt. A source route, pag
 [7] https://web.archive.org/web/20250521172614id_/https://pittsburgh.tie.org/team — Archived TiE Pittsburgh team page
 > “Atul Bansal TiE Pgh Angels Co-Managing Director Ganesh Mani TiE Pgh Angels Co-Managing Director.”
 
-[8] https://innosential.com/about-us — Innosential team page
-> “Mr. Atul Bansal Founder, CEO Timesys ... Dr. Ganesh Mani Chief Strategy, Founder.”
+[8] https://innosential.com/ and https://innosential.com/about-us — Innosential source-drift record
+> An earlier report-safe capture retained the wording “Mr. Atul Bansal Founder, CEO Timesys ... Dr. Ganesh Mani Chief Strategy, Founder.” The current root/About pages rechecked on 13 August 2026 do not name Atul or Timesys. This historical capture is retained only as source-drift context; it does not establish a role or relationship.
 
 [9] https://web.archive.org/web/20260521052700id_/https://angels.tie.org — Archived TiE Angels Pittsburgh table
 > “Pittsburgh Year Deal Investment 2021 1 $60,000 2021-25 2 $4,50,000.”
