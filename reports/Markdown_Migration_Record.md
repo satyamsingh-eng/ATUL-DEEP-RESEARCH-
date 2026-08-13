@@ -40,6 +40,7 @@ The replacement resets the reader journey:
 
 ## Material source reconciliation
 
+- **Citation-route correction:** a post-rebuild audit found that the board brief’s ECI 2005 Form 6-K citation pointed to the filing wrapper rather than its acquisition-release exhibit. The canonical board and ledger links now point to the SEC Exhibit 3 source text. The TimeSys CEO appointment ledger link likewise uses the full canonical article route; both repaired URLs returned HTTP 200 on 14 August 2026.
 - **Innosential source drift:** an earlier report-safe capture retained a historical Timesys descriptor for an Atul Bansal entry. A direct browser recheck of both `innosential.com/` and `innosential.com/about-us/` on 13 August 2026 found neither `Atul Bansal` nor `Timesys` in current rendered public text. The replacement ledger preserves the legacy card verbatim for auditability but classifies it **SOURCE DRIFT / WITHHELD**. It cannot support a current or historical Innosential role.
 - **Operational consequence:** no report layer may treat the former co-listing as a relationship, route, board/advisory position, current Timesys status, investment capacity, or authority.
 

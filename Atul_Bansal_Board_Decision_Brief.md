@@ -223,7 +223,7 @@ Never say or imply that:
 - [5] [Laurel Networks technical-leadership page, archived](https://web.archive.org/web/20030925063329id_/http://www.laurelnetworks.com/company/techleadership.html)
 - [6] [Laurel Networks April 2005 newsletter, archived](https://web.archive.org/web/20050509004329id_/http://www.laurelnetworks.com/company/newsletter/newsletterapr05/index.html)
 - [7] [Converge Digest: Laurel CEO succession](https://convergedigest.com/laurel-appoints-former-ciscojuniper)
-- [8] [ECI Telecom 2005 Form 6-K / acquisition release](https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674.txt)
+- [8] [ECI Telecom 2005 Form 6-K, Exhibit 3 acquisition release](https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674_ex3.txt)
 - [9] [ECI Telecom 2005 Form 20-F](https://www.sec.gov/Archives/edgar/data/701544/000114420406012298/v038283_20f.htm)
 - [10] [ECI Telecom 2006 Form 20-F](https://www.sec.gov/Archives/edgar/data/701544/000114420407018057/v069024_20-f.htm)
 - [11] [TimeSys CEO appointment](https://vita.militaryembedded.com/842-timesys-appoints-atul-bansal-ceo)

@@ -142,7 +142,7 @@ Primary transaction ground truth; supports one documented founder exit, not pers
 [ECI Telecom acquisition release filed with SEC](https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674_ex3.txt)
 16 May 2005 release / June 2005 completion
 
-Direct filing route used in the board brief: [ECI Telecom 2005 Form 6-K / acquisition release](https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674.txt)
+Direct evidence route used in the board brief: [ECI Telecom 2005 Form 6-K, Exhibit 3 acquisition release](https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674_ex3.txt)
 
 **Boundary**
 Company transaction mechanics do not establish Atul’s proceeds, control of the sale, motive, or current ECI access.
@@ -192,10 +192,12 @@ An official TimeSys appointment release says Atul Bansal became CEO on 10 April 
 Explains the Laurel-to-Timesys transition as a board-led CEO recruitment, with direct historical investor-governance context.
 
 **Source / date**
-[TimeSys CEO appointment announcement](https://vita.militaryembedded.com/842-timesys-appoints)
+[TimeSys CEO appointment announcement](https://vita.militaryembedded.com/842-timesys-appoints-atul-bansal-ceo)
 10 April 2007
 
-Direct article route used in the board brief: [TimeSys CEO appointment](https://vita.militaryembedded.com/842-timesys-appoints-atul-bansal-ceo)
+**Canonical URL note:** Both historical URL forms resolve today to the same `.../842-timesys-appoints-atul-bansal-ceo/` article. This ledger uses the canonical full article route.
+
+**Legacy source-route preservation:** the removed JSON ledger’s source field was [`https://vita.militaryembedded.com/842-timesys-appoints`](https://vita.militaryembedded.com/842-timesys-appoints). It redirects to the canonical article above; it is retained here only to preserve the exact historical evidence-card field.
 
 **Boundary**
 A 2007 appointment establishes historical CEO recruitment only; it does not establish a present Timesys or investor role.

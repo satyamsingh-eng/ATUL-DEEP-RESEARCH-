@@ -11,11 +11,12 @@
 | Legacy HTML artifacts remaining outside `.git` / restricted local storage | 0 · PASS |
 | Legacy release JSON evidence cards reconciled into Markdown | 25 / 25 IDs and all preserved card fields · PASS |
 | Board citation IDs used / defined | 22 / 22 · PASS |
+| Citation-route repair (14 Aug) | ECI acquisition source uses SEC Exhibit 3 text; TimeSys evidence ledger uses canonical full article URL · PASS |
 | Local Markdown links | 3 / 3 · PASS |
 | Privacy / restricted-reference scan of canonical Markdown | 0 findings · PASS |
 | Restricted local artifact modes | directory `0700`; files `0600` · PASS |
 | Source-drift handling | Innosential legacy capture preserved and downgraded to `SOURCE DRIFT / WITHHELD`; current root/About pages do not name Atul · PASS |
-| Temporary Apple-style Markdown render QA | 42 / 42 Chromium + WebKit desktop/tablet/mobile cases · PASS |
+| Temporary Apple-style Markdown render QA | 60 / 60 Chromium + WebKit desktop/tablet/mobile cases · PASS |
 | Rendered mobile horizontal overflow | 0 · PASS |
 | Rendered console/page errors | 0 · PASS |
 
