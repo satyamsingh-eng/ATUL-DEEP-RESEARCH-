@@ -30,6 +30,19 @@ The report includes:
 - SARVAX positioning and relationship progression; and
 - an inspectable source ledger with retained excerpts.
 
+## Final-round Professional Kundali
+
+The final deep-research round is published under [`reports/`](reports/README.md). It extends—not overwrites—the combined decision brief with:
+
+- the reconstructed career and transition timeline, including the dated 2004 Laurel CEO handoff;
+- company, capital, transaction, people, and second-degree relationship maps;
+- 15 net-new or materially strengthened findings;
+- a current-signal / Apollo contradiction audit;
+- a founder-level SARVAX relationship strategy; and
+- a self-contained HTML dossier with a report-safe evidence ledger.
+
+Open [`reports/Atul_Bansal_Professional_Kundali_Final_2026.html`](reports/Atul_Bansal_Professional_Kundali_Final_2026.html) locally. This addition remains private and excludes contact data, raw vendor payloads, credentials, profiles, local paths, and restricted enrichment artifacts.
+
 ## Release boundary
 
 The committed package deliberately contains only:

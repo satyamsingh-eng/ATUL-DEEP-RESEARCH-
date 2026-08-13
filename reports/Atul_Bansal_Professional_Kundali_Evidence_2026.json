@@ -1,0 +1,281 @@
+{
+  "report": "Atul_Bansal_Professional_Kundali_Final_2026.html",
+  "generated_at_utc": "2026-08-13T14:33:56.322467+00:00",
+  "evidence": [
+    {
+      "id": "F01",
+      "type": "FACT",
+      "claim": "Laurel was founded in October 1999; its 2002 company fact sheet names Atul Bansal as President and CEO, describes early commercial deployment in 2002, and names a multi-region service-provider market.",
+      "why": "Clarifies that the Laurel identity/title timeline changes across dated official pages; validates commercial operating context rather than generic founder status.",
+      "url": "https://web.archive.org/web/20021216203646id_/http://www.laurelnetworks.com/company/factsheet.html",
+      "source": "Laurel Networks fact sheet, archived official page",
+      "date": "2002 snapshot",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F02",
+      "type": "FACT",
+      "claim": "Laurel\u2019s 2002 archived board page lists Atul Bansal as co-founder, CEO and President; it names Peter Barris (NEA), John Boyle (Worldview observer), Rob Coneybeer (NEA), Stephen Vogelsang, and Paul Vabakos (Trinity) in formal board/company context.",
+      "why": "Upgrades the capital map from company-level funding to named, dated governance relationships. It does not prove current access or personal closeness.",
+      "url": "https://web.archive.org/web/20030207014944id_/http://www.laurelnetworks.com/company/board.html",
+      "source": "Laurel Networks board page, archived official page",
+      "date": "2002 snapshot",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F03",
+      "type": "FACT",
+      "claim": "Laurel\u2019s official investor page says the company had nearly $90m from NEA, Trinity, Worldview, WorldCom Ventures, Rein Capital, and CommVest at that point; a later ECI release reports $118m from NEA, Trinity, and Ciena.",
+      "why": "Explains the apparent funding discrepancy as a date/scope change, not a contradiction; Ciena appears in later acquirer disclosures, while the earlier official list shows a broader venture stack.",
+      "url": "https://web.archive.org/web/20021216203807id_/http://www.laurelnetworks.com/company/investors.html",
+      "source": "Laurel Networks investor page, archived official page",
+      "date": "2002 snapshot",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F04",
+      "type": "FACT",
+      "claim": "Laurel\u2019s technical-leadership page identifies Robert Rennison, Dimitris Varotsis, Jeffrey Prem, and Pat Duegaw as technical/operational leaders, all with FORE Systems or adjacent carrier-networking lineage.",
+      "why": "Shows that Laurel was built from a repeatable FORE Systems talent cluster\u2014not solely a lone-founder story. It identifies former colleague nodes, not guaranteed current relationships.",
+      "url": "https://web.archive.org/web/20030925063329id_/http://www.laurelnetworks.com/company/techleadership.html",
+      "source": "Laurel Networks technical leadership page, archived official page",
+      "date": "2003 snapshot",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F05",
+      "type": "FACT",
+      "claim": "Laurel\u2019s April 2005 newsletter documents the final pre-sale commercial posture: carrier automation/security features, a Grande Communications FTTH deployment, and a Telindus UK reseller agreement supporting European distribution.",
+      "why": "Materially deepens the operating story immediately before acquisition: repeatable service-provider workflow, security/provisioning, a named customer deployment, and channel expansion.",
+      "url": "https://web.archive.org/web/20050509004329id_/http://www.laurelnetworks.com/company/newsletter/newsletterapr05/index.html",
+      "source": "Laurel Networks newsletter, archived official page",
+      "date": "April 2005 snapshot",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F06",
+      "type": "FACT",
+      "claim": "ECI completed the purchase of 100% of Laurel in June 2005 for $88m cash and made it the Data Networking Division; ECI described the strategic rationale as adding edge routing/IP service capabilities to its broadband, optical, and core portfolio.",
+      "why": "Primary transaction ground truth; supports one documented founder exit, not personal proceeds.",
+      "url": "https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674_ex3.txt",
+      "source": "ECI Telecom acquisition release filed with SEC",
+      "date": "16 May 2005 release / June 2005 completion",
+      "confidence": "VERY HIGH",
+      "new": false
+    },
+    {
+      "id": "F07",
+      "type": "FACT",
+      "claim": "ECI\u2019s 2006 annual filing reports that the acquired Data Networking Division registered a $19.6m operating loss from acquisition through 31 Dec 2005, with $37.1m allocated to Laurel goodwill.",
+      "why": "Adds necessary exit forensic context: the sale created a strategic platform but ECI disclosed early integration/economic risk. It cannot be attributed to Atul personally or used as a verdict on the business.",
+      "url": "https://www.sec.gov/Archives/edgar/data/701544/000114420406012298/v038283_20f.htm",
+      "source": "ECI Telecom Form 20-F",
+      "date": "30 March 2006",
+      "confidence": "VERY HIGH",
+      "new": true
+    },
+    {
+      "id": "F08",
+      "type": "FACT",
+      "claim": "ECI\u2019s 2007 annual filing says the former Data Networking Division recorded a $40.7m operating loss in 2006 versus $19.6m in the partial 2005 period. In January 2007 ECI merged it with Optical Networks into Transport Networking, retaining the IP routing technology; the filing reports $11.1m 2006 Data Networking sales.",
+      "why": "Completes the exit forensic arc: technology was retained and incorporated into a broader platform despite commercial pressure. The filing does not allocate responsibility to Atul or establish his post-2005 employment duration.",
+      "url": "https://www.sec.gov/Archives/edgar/data/701544/000114420407018057/v069024_20-f.htm",
+      "source": "ECI Telecom Form 20-F",
+      "date": "10 April 2007",
+      "confidence": "VERY HIGH",
+      "new": true
+    },
+    {
+      "id": "F09",
+      "type": "FACT",
+      "claim": "An official TimeSys appointment release says Atul Bansal became CEO on 10 April 2007, succeeding interim CEO Joseph Raffa, who became board chairman; it quotes Joel Adams, then Adams Capital general partner, on the board\u2019s selection.",
+      "why": "Explains the Laurel-to-Timesys transition as a board-led CEO recruitment, with direct historical investor-governance context.",
+      "url": "https://vita.militaryembedded.com/842-timesys-appoints",
+      "source": "TimeSys CEO appointment announcement",
+      "date": "10 April 2007",
+      "confidence": "HIGH",
+      "new": false
+    },
+    {
+      "id": "F10",
+      "type": "FACT",
+      "claim": "A source-dated Timesys management biography reports: B.S. Chemical Engineering, IIT Kanpur (1984); M.S. Chemical Engineering, University of Rhode Island (1987); M.S. Computer Science, University of Rhode Island (1989). It also states he became COO of ECI\u2019s Data Networking Division after the Laurel acquisition and joined Timesys as CEO in 2007.",
+      "why": "Fills professionally relevant education and post-exit operating links, but the undated/stale biography cannot establish any current board, India-LLP, advisory, or 2026 employment claim.",
+      "url": "https://www.timesys.com/management-team/",
+      "source": "Timesys management page",
+      "date": "live page checked 13 Aug 2026; biographical content undated",
+      "confidence": "MEDIUM-HIGH for historical biography; LOW for current status",
+      "new": false
+    },
+    {
+      "id": "F11",
+      "type": "FACT",
+      "claim": "Lynx announced its acquisition of Timesys on 12 Dec 2023. It said the combined platform would pair Lynx\u2019s mission-critical edge software with Timesys\u2019s Linux development tools, cybersecurity solutions, and engineering services; CEO ally was exclusive M&A adviser.",
+      "why": "Defines the second transaction as a business sale during Atul\u2019s CEO tenure\u2014not a second founder exit\u2014and identifies the formal M&A path.",
+      "url": "https://www.lynx.com/press-releases/timesys-acquisition",
+      "source": "Lynx acquisition announcement",
+      "date": "12 December 2023",
+      "confidence": "HIGH",
+      "new": false
+    },
+    {
+      "id": "F12",
+      "type": "FACT",
+      "claim": "A Lynx release with body dateline 13 Nov 2024 quotes Atul Bansal as \u201cLynx vice president of open-source business development\u201d on embedded vulnerability management and SBOM lifecycle work.",
+      "why": "Best official post-sale role signal; it is source-dated evidence, not proof of present 2026 employment.",
+      "url": "https://www.lynx.com/press-releases/lynx-sees-growing-demand-for-timesys-vigiles",
+      "source": "Lynx press release",
+      "date": "13 November 2024 body dateline; page date 11 February 2025",
+      "confidence": "HIGH for source wording; LOW for current job status",
+      "new": false
+    },
+    {
+      "id": "F13",
+      "type": "FACT",
+      "claim": "OceanSound\u2019s corresponding acquisition announcement says over 200 customers across aerospace, defense, industrial, medical, and enterprise end markets relied on Timesys; it describes SBOM/SCA and managed lifecycle offerings.",
+      "why": "Shows the industry environment Atul sold into and strengthens SARVAX fit only around governance, lifecycle discipline, and trusted execution\u2014not financial-services buyer access.",
+      "url": "https://oceansoundpartners.com/press-releases/lynx-software-technologies-announces-acquisition-of-timesys-corporation/",
+      "source": "OceanSound Partners acquisition announcement",
+      "date": "12 December 2023",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F14",
+      "type": "FACT",
+      "claim": "The 2021 SEC Form D identifies Atul Bansal as TiE Pittsburgh Angels Co-Managing Director and signer; Ganesh Mani and Raymond Milhem are named executive officers/directors.",
+      "why": "Strongest direct investor-platform governance proof. It does not establish a current fund, check size, personal portfolio, or present authority.",
+      "url": "https://www.sec.gov/Archives/edgar/data/1843925/000184392521000001/xslFormDX01/primary_doc.xml",
+      "source": "SEC Form D, TiE Pittsburgh Angels LLC",
+      "date": "8 February 2021 filing",
+      "confidence": "VERY HIGH for dated governance",
+      "new": false
+    },
+    {
+      "id": "F15",
+      "type": "FACT",
+      "claim": "The live TiE Pittsburgh chapter page still co-lists Atul Bansal and Ganesh Mani as TiE Pittsburgh Angels Co-Managing Directors, and includes both on its board/charter roster; the same roster includes Girish Godbole/CEO ally and regional operators/investors.",
+      "why": "Indicates a currently published organizational topology, but page lacks dated role validation. Use as an organizational overlap map, not proof of active personal access.",
+      "url": "https://pittsburgh.tie.org/team/",
+      "source": "TiE Pittsburgh official team page",
+      "date": "live page checked 13 Aug 2026; content undated",
+      "confidence": "HIGH for co-listing; MEDIUM-LOW for current operational role",
+      "new": false
+    },
+    {
+      "id": "F16",
+      "type": "FACT",
+      "claim": "TiE Angels\u2019 live platform identifies Atul Bansal as TiE Pittsburgh on its steering committee and reports aggregate Pittsburgh deal activity.",
+      "why": "Strengthens the chapter/platform association but does not attribute any deals, amounts, portfolios, or individual investments to Atul.",
+      "url": "https://angels.tie.org/",
+      "source": "TiE Angels official platform",
+      "date": "live page checked 13 Aug 2026; table includes 2025 aggregate activity",
+      "confidence": "HIGH for published platform listing; LOW for individual activity",
+      "new": true
+    },
+    {
+      "id": "F17",
+      "type": "FACT",
+      "claim": "Carnegie Mellon\u2019s official faculty page says Ganesh Mani applies AI to financial-services use cases, worked with large investment managers/hedge funds, and sold an early AI/ML asset-management boutique into SSgA.",
+      "why": "This is the closest proven second-degree thematic bridge to financial-services AI. It proves Mani\u2019s domain, not that Atul can or will provide access.",
+      "url": "https://s3d.cmu.edu/people/core-faculty/mani-ganesh.html",
+      "source": "Carnegie Mellon University faculty profile",
+      "date": "live page checked 13 Aug 2026",
+      "confidence": "HIGH",
+      "new": false
+    },
+    {
+      "id": "F18",
+      "type": "FACT",
+      "claim": "CEO ally\u2019s live site describes the firm as a boutique M&A advisory/consultancy and lists its December 2023 Timesys sell-side advisory to Lynx.",
+      "why": "Revalidates the adviser-to-transaction relationship and shows CEO ally remains an operating M&A firm; no personal closeness is inferred.",
+      "url": "https://www.ceoally.com/",
+      "source": "CEO ally official site",
+      "date": "live page checked 13 Aug 2026",
+      "confidence": "HIGH",
+      "new": true
+    },
+    {
+      "id": "F19",
+      "type": "FACT",
+      "claim": "Innosential\u2019s official page publicly co-lists \u201cMr. Atul Bansal \u2014 Founder, CEO Timesys\u201d alongside founders and leaders including Ganesh Mani, but does not state an Atul board, founder, adviser, investor, or operational title at Innosential.",
+      "why": "Confirms an official co-listing and strongly narrows what can be said: organizational association only; Apollo-style Innosential role labels remain uncorroborated.",
+      "url": "https://innosential.com/about-us/",
+      "source": "Innosential official about page",
+      "date": "live page checked 13 Aug 2026",
+      "confidence": "HIGH for co-listing; NOT ESTABLISHED for role",
+      "new": true
+    },
+    {
+      "id": "F20",
+      "type": "UNRESOLVED",
+      "claim": "A privacy-minimised Apollo final pass repeatedly returns an exact-name professional record with a vendor title of Investor at aicas. Direct official-site retrieval did not yield independent corroboration in this research environment.",
+      "why": "This is a vendor-only identity signal. It cannot establish investor activity, title, remit, board status, investment authority, or a current 2026 role.",
+      "url": "",
+      "source": "Apollo vendor reconciliation and unavailable official-site check",
+      "date": "13 August 2026",
+      "confidence": "MEDIUM vendor signal; NOT ESTABLISHED as a role fact",
+      "new": true
+    },
+    {
+      "id": "F21",
+      "type": "FACT",
+      "claim": "Apollo organization reconciliation returns \u201cTimesys is Now Lynx\u201d as owned by Lynx, matching the public acquisition. The limited pass generated company candidates for aicas, Innosential, CEO ally, and TiE Pittsburgh but supplied no new decision-grade relationship fact.",
+      "why": "Apollo added company-hierarchy corroboration and demonstrated the limits of vendor data; no raw payload or contact record is retained in the report package.",
+      "url": "",
+      "source": "Privacy-minimised Apollo company reconciliation",
+      "date": "13 August 2026",
+      "confidence": "MEDIUM vendor corroboration",
+      "new": true
+    },
+    {
+      "id": "I01",
+      "type": "INFERENCE",
+      "claim": "Atul\u2019s enduring professional pattern is systems-layer enterprise operating: router and network architecture \u2192 carrier edge systems \u2192 embedded/open-source lifecycle and security \u2192 transaction and post-acquisition integration.",
+      "why": "This is the core strategic identity, supported by multiple independently dated company and transaction sources. It is not a claim of current employment or an AI/wealth-management investing thesis.",
+      "url": "",
+      "source": "Synthesis of F01\u2013F13",
+      "date": "1999\u20132024 documented arc",
+      "confidence": "STRONG",
+      "new": true
+    },
+    {
+      "id": "I02",
+      "type": "INFERENCE",
+      "claim": "The highest-value C3A route is an operator review on control boundaries, repeatability, security/governance, and commercial proof\u2014not an immediate capital or customer-introduction ask.",
+      "why": "Atul\u2019s actual proof is strongest in B2B infrastructure operating and exits. The documented TiE route adds possible later advisor/capital pathways, but no access guarantee.",
+      "url": "",
+      "source": "Synthesis of F01\u2013F18 and SARVAX operating context",
+      "date": "Decision recommendation",
+      "confidence": "STRONG",
+      "new": false
+    },
+    {
+      "id": "I03",
+      "type": "INFERENCE",
+      "claim": "Ganesh Mani is the single most strategically relevant adjacent node if\u2014and only if\u2014Atul independently validates relevance: a formally documented TiE co-governor with official financial-services AI evidence.",
+      "why": "This is a two-hop ecosystem hypothesis with unusually strong facts on both edges. It is not a personal-relationship, warm-introduction, or availability claim.",
+      "url": "",
+      "source": "Synthesis of F14, F15, F17, F19",
+      "date": "Decision recommendation",
+      "confidence": "STRONG for thematic adjacency; LOW for access",
+      "new": true
+    },
+    {
+      "id": "F22",
+      "type": "FACT",
+      "claim": "A contemporaneous industry report dated 1 February 2004 says Laurel named Don Pyle CEO, succeeding co-founder/CEO Atul Bansal, who was named President and Chief Operating Officer.",
+      "why": "Resolves a pivotal title/timeline inconsistency between 2002\u201303 archived Laurel pages and the 2005 sale: Atul had moved from CEO into President/COO before the ECI transaction.",
+      "url": "https://convergedigest.com/laurel-appoints-former-ciscojuniper/",
+      "source": "Converge Digest contemporaneous Laurel CEO succession report",
+      "date": "1 February 2004",
+      "confidence": "HIGH",
+      "new": true
+    }
+  ]
+}

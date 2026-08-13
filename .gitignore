@@ -20,6 +20,13 @@
 /evidence/apollo_validation/*
 !/evidence/apollo_validation/run_focused_report_qa.py
 
+!/reports/
+!/reports/README.md
+!/reports/Atul_Bansal_Professional_Kundali_Final_2026.html
+!/reports/Atul_Bansal_Professional_Kundali_Evidence_2026.json
+!/reports/final_kundali_validation.json
+!/reports/final_kundali_browser_qa.json
+
 # Never publish local/system/transient artifacts even if a future allow rule is added.
 .DS_Store
 __pycache__/
