@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atul Bansal — Sai POV Strategic Decision Brief &amp; Leverage Matrix | C3A Labs</title>
+  <style>
+    :root {
+      --bg-dark: #000000;
+      --bg-dark-elevated: #111114;
+      --bg-dark-card: #1c1c1e;
+      --bg-light: #f5f5f7;
+      --bg-light-card: #ffffff;
+      
+      --text-dark-primary: #f5f5f7;
+      --text-dark-secondary: #a1a1a6;
+      --text-dark-muted: #6e6e73;
+      
+      --text-light-primary: #1d1d1f;
+      --text-light-secondary: #6e6e73;
+      --text-light-muted: #86868b;
+      
+      --accent: #0071e3;
+      --accent-hover: #0077ed;
+      --accent-dark: #2997ff;
+      --accent-light-bg: rgba(0, 113, 227, 0.08);
+      
+      --green: #30d158;
+      --green-dark: #0d6f30;
+      --green-bg: rgba(48, 209, 88, 0.12);
+      
+      --purple: #bf5af2;
+      --purple-bg: rgba(191, 90, 242, 0.12);
+      
+      --red: #ff453a;
+      --red-bg: rgba(255, 69, 58, 0.12);
+      
+      --amber: #ff9f0a;
+      --amber-bg: rgba(255, 159, 10, 0.12);
+      
+      --border-dark: rgba(255, 255, 255, 0.08);
+      --border-dark-strong: rgba(255, 255, 255, 0.16);
+      --border-light: rgba(0, 0, 0, 0.08);
+      --border-light-strong: rgba(0, 0, 0, 0.14);
+      
+      --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      --font-body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-pill: 980px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-dark);
+      color: var(--text-dark-primary);
+      line-height: 1.55;
+      letter-spacing: -0.015em;
+      overflow-x: hidden;
+    }
+
+    /* Top Sticky Navigation */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 52px;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 0.5px solid var(--border-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--text-dark-primary);
+      text-decoration: none;
+    }
+
+    .nav-brand span.divider {
+      color: var(--text-dark-muted);
+      font-weight: 300;
+    }
+
+    .nav-brand span.product {
+      color: var(--accent-dark);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 12px;
+      color: var(--text-dark-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text-dark-primary);
+    }
+
+    .nav-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 14px;
+      border-radius: var(--radius-pill);
+      background: var(--green-bg);
+      border: 1px solid rgba(48, 209, 88, 0.3);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+
+    /* Layout Containers */
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    section {
+      padding: 96px 0;
+    }
+
+    /* Theme Sections */
+    .section-dark {
+      background: var(--bg-dark);
+      color: var(--text-dark-primary);
+    }
+
+    .section-dark-elevated {
+      background: var(--bg-dark-elevated);
+      color: var(--text-dark-primary);
+      border-top: 1px solid var(--border-dark);
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .section-light {
+      background: var(--bg-light);
+      color: var(--text-light-primary);
+    }
+
+    .section-white {
+      background: var(--bg-light-card);
+      color: var(--text-light-primary);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    /* Typography */
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+    }
+
+    .eyebrow.accent-blue { color: var(--accent-dark); }
+    .eyebrow.accent-blue-light { color: var(--accent); }
+    .eyebrow.accent-green { color: var(--green); }
+
+    h1.hero-title {
+      font-family: var(--font-display);
+      font-size: 56px;
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    h2.hero-subtitle {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 1.35;
+      letter-spacing: -0.02em;
+      color: var(--text-dark-secondary);
+      margin-bottom: 32px;
+      max-width: 920px;
+    }
+
+    h2.section-title {
+      font-family: var(--font-display);
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 12px;
+    }
+
+    .section-dark h2.section-title,
+    .section-dark-elevated h2.section-title { color: #ffffff; }
+    .section-light h2.section-title,
+    .section-white h2.section-title { color: var(--text-light-primary); }
+
+    p.section-lead {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 40px;
+      max-width: 880px;
+    }
+
+    .section-dark p.section-lead,
+    .section-dark-elevated p.section-lead { color: var(--text-dark-secondary); }
+    .section-light p.section-lead,
+    .section-white p.section-lead { color: var(--text-light-secondary); }
+
+    /* Executive Hero Grid */
+    .executive-card-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 24px;
+      margin-bottom: 32px;
+    }
+
+    .exec-hero-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .exec-hero-card.highlight {
+      border-left: 4px solid var(--accent-dark);
+    }
+
+    .exec-hero-card h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
+
+    .exec-hero-card p {
+      font-size: 14.5px;
+      line-height: 1.55;
+      color: var(--text-dark-secondary);
+      margin-bottom: 14px;
+    }
+
+    .exec-hero-card ul {
+      list-style: none;
+    }
+
+    .exec-hero-card ul li {
+      position: relative;
+      padding-left: 18px;
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-dark-primary);
+      margin-bottom: 8px;
+    }
+
+    .exec-hero-card ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--accent-dark);
+      font-weight: 700;
+    }
+
+    /* KPI Grid */
+    .kpi-grid-4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .kpi-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 22px;
+    }
+
+    .kpi-num {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      color: #ffffff;
+    }
+
+    .kpi-num.accent { color: var(--accent-dark); }
+    .kpi-num.green { color: var(--green); }
+    .kpi-num.amber { color: var(--amber); }
+
+    .kpi-label {
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--text-dark-secondary);
+      line-height: 1.35;
+    }
+
+    /* Capability Cards */
+    .card-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 28px 0;
+    }
+
+    .card-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 28px 0;
+    }
+
+    .feature-card {
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .section-dark .feature-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+    }
+
+    .section-light .feature-card {
+      background: var(--bg-light-card);
+      border: 1px solid var(--border-light);
+    }
+
+    .feature-card h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .section-dark .feature-card h3 { color: #ffffff; }
+    .section-light .feature-card h3 { color: var(--text-light-primary); }
+
+    .feature-card p {
+      font-size: 13.5px;
+      line-height: 1.55;
+      margin-bottom: 12px;
+    }
+
+    .section-dark .feature-card p { color: var(--text-dark-secondary); }
+    .section-light .feature-card p { color: var(--text-light-secondary); }
+
+    .feature-card-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .section-light .feature-card-num { color: var(--accent); }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 14px;
+    }
+
+    .tag {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      background: rgba(0, 113, 227, 0.08);
+      color: var(--accent);
+      border: 1px solid rgba(0, 113, 227, 0.15);
+    }
+
+    .section-dark .tag {
+      background: rgba(41, 151, 255, 0.1);
+      color: var(--accent-dark);
+      border-color: rgba(41, 151, 255, 0.2);
+    }
+
+    .tag.green {
+      background: var(--green-bg);
+      color: var(--green);
+      border-color: rgba(48, 209, 88, 0.3);
+    }
+
+    .tag.red {
+      background: var(--red-bg);
+      color: var(--red);
+      border-color: rgba(255, 69, 58, 0.3);
+    }
+
+    /* Ranked Network Node Cards */
+    .ranked-node-card {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      margin-bottom: 16px;
+      display: grid;
+      grid-template-columns: 48px 1fr auto;
+      gap: 20px;
+      align-items: start;
+    }
+
+    .node-rank-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-dark-strong);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent-dark);
+    }
+
+    .node-rank-badge.top3 {
+      background: var(--green-bg);
+      color: var(--green);
+      border-color: rgba(48, 209, 88, 0.3);
+    }
+
+    .node-main-info h4 {
+      font-family: var(--font-display);
+      font-size: 17px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .node-title-org {
+      font-size: 13px;
+      color: var(--accent-dark);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .node-desc {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-dark-secondary);
+      margin-bottom: 8px;
+    }
+
+    .node-ask-box {
+      font-size: 12.5px;
+      background: rgba(0, 0, 0, 0.4);
+      border-left: 3px solid var(--accent-dark);
+      padding: 8px 12px;
+      color: var(--text-dark-primary);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    .node-ask-box strong {
+      color: var(--accent-dark);
+    }
+
+    .node-meta-tags {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+    }
+
+    .strength-pill {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 3px 10px;
+      border-radius: var(--radius-pill);
+    }
+
+    .strength-pill.direct {
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid rgba(48, 209, 88, 0.3);
+    }
+
+    .strength-pill.strong {
+      background: rgba(0, 113, 227, 0.15);
+      color: var(--accent-dark);
+      border: 1px solid rgba(41, 151, 255, 0.3);
+    }
+
+    .strength-pill.moderate {
+      background: var(--amber-bg);
+      color: var(--amber);
+      border: 1px solid rgba(255, 159, 10, 0.3);
+    }
+
+    .strength-pill.ecosystem {
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-dark-secondary);
+      border: 1px solid var(--border-dark);
+    }
+
+    /* Roadmap Timeline */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin: 32px 0;
+    }
+
+    .roadmap-card {
+      background: var(--bg-light-card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .roadmap-phase {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .roadmap-title {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-light-primary);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+
+    .roadmap-body {
+      font-size: 12.5px;
+      line-height: 1.5;
+      color: var(--text-light-secondary);
+      margin-bottom: 10px;
+    }
+
+    .roadmap-outcome {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--green-dark);
+      margin-top: auto;
+      padding-top: 8px;
+      border-top: 1px solid var(--border-light);
+    }
+
+    /* Questions & Traps Grid */
+    .qa-box-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .qa-col {
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .qa-col.good {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-top: 4px solid var(--green);
+    }
+
+    .qa-col.bad {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark);
+      border-top: 4px solid var(--red);
+    }
+
+    .qa-col h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #ffffff;
+    }
+
+    .qa-item {
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-dark);
+    }
+
+    .qa-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .qa-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      margin-bottom: 4px;
+    }
+
+    .qa-col.bad .qa-num { color: var(--red); }
+
+    .qa-text {
+      font-size: 13.5px;
+      line-height: 1.5;
+      color: var(--text-dark-primary);
+      margin-bottom: 4px;
+    }
+
+    .qa-rationale {
+      font-size: 12px;
+      color: var(--text-dark-secondary);
+    }
+
+    /* Decision Box */
+    .decision-banner {
+      background: var(--bg-dark-card);
+      border: 1px solid var(--border-dark-strong);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      margin-top: 24px;
+      border-left: 6px solid var(--green);
+    }
+
+    .decision-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .decision-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .verdict-tag {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 18px;
+      border-radius: var(--radius-pill);
+      background: var(--green-bg);
+      color: var(--green);
+      border: 1px solid rgba(48, 209, 88, 0.4);
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 24px 0;
+    }
+
+    .decision-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-dark);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .decision-item-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .decision-item-val {
+      font-size: 13.5px;
+      color: var(--text-dark-primary);
+      line-height: 1.45;
+    }
+
+    .if-i-were-sai-box {
+      background: rgba(0, 113, 227, 0.08);
+      border: 1px solid rgba(41, 151, 255, 0.25);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin-top: 24px;
+    }
+
+    .if-i-were-sai-header {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--accent-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .if-i-were-sai-text {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--text-dark-primary);
+      font-style: italic;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 28px 0;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      background: var(--bg-light-card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 14px 18px;
+      background: var(--bg-light);
+      color: var(--text-light-secondary);
+      border-bottom: 1px solid var(--border-light-strong);
+    }
+
+    td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-light);
+      color: var(--text-light-primary);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(0, 0, 0, 0.015); }
+
+    /* Footer */
+    footer {
+      padding: 64px 0 96px;
+      background: var(--bg-dark);
+      border-top: 1px solid var(--border-dark);
+      color: var(--text-dark-muted);
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-display);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-dark-primary);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .executive-card-grid { grid-template-columns: 1fr; }
+      .kpi-grid-4 { grid-template-columns: repeat(2, 1fr); }
+      .card-grid-3 { grid-template-columns: 1fr; }
+      .card-grid-2 { grid-template-columns: 1fr; }
+      .qa-box-grid { grid-template-columns: 1fr; }
+      .roadmap-grid { grid-template-columns: 1fr; }
+      .decision-grid { grid-template-columns: 1fr; }
+      .ranked-node-card { grid-template-columns: 1fr; gap: 12px; }
+      .node-meta-tags { align-items: flex-start; flex-direction: row; }
+      h1.hero-title { font-size: 42px; }
+      h2.section-title { font-size: 30px; }
+    }
+
+    @media (max-width: 640px) {
+      .nav { padding: 0 16px; }
+      .nav-links { display: none; }
+      .container { padding: 0 20px; }
+      section { padding: 64px 0; }
+      h1.hero-title { font-size: 34px; }
+      h2.hero-subtitle { font-size: 18px; }
+      .kpi-grid-4 { grid-template-columns: 1fr; }
+      .footer-content { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#overview" class="nav-brand">
+      <span>C3A Labs</span>
+      <span class="divider">/</span>
+      <span class="product">SARVAX Strategy</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#one-page">Sai's 1-Page Answer</a></li>
+      <li><a href="#strategic-position">Real Position</a></li>
+      <li><a href="#capabilities">Top 7 Skills</a></li>
+      <li><a href="#capability-matrix">Matrix</a></li>
+      <li><a href="#hidden-leverage">Hidden Leverage</a></li>
+      <li><a href="#ranked-network">Top 15 People</a></li>
+      <li><a href="#conversation-agenda">Ask vs Do-Not-Ask</a></li>
+      <li><a href="#roadmap">90-Day Roadmap</a></li>
+      <li><a href="#decision-memo">Decision Memo</a></li>
+    </ul>
+    <div class="nav-badge">
+      <span>Pursue: Strategic Advisor</span>
+    </div>
+  </nav>
+
+  <!-- Hero & Section 01: Sai's One-Page Answer -->
+  <section class="section-dark" id="one-page">
+    <div class="container">
+      <div class="eyebrow accent-blue">Sai POV &middot; Executive Decision Document &middot; C3A Labs</div>
+      <h1 class="hero-title">Atul Bansal</h1>
+      <h2 class="hero-subtitle">From "Who is Atul?" to "What does Atul change for C3A?" — A strategic roadmap for Sai Casula sitting across the table tomorrow.</h2>
+
+      <!-- Section 01 Content Grid -->
+      <div class="executive-card-grid">
+        <div class="exec-hero-card highlight">
+          <div class="eyebrow accent-blue">01 &middot; Who Is Atul to C3A?</div>
+          <h3>The Systems Operator &amp; Exit Mentor</h3>
+          <p>
+            Atul Bansal is a <strong>battle-tested, dual-exit systems infrastructure operator and active angel syndicate leader</strong> (DEC &rarr; FORE &rarr; Laurel Networks [$88M cash sale to ECI] &rarr; Timesys [16-year CEO arc &rarr; Lynx PE exit] &rarr; TiE Pittsburgh Angels Managing Director). For C3A Labs, he is <strong>not an institutional VC check</strong>, but the <strong>single highest-leverage Strategic Advisor and Angel Mentor</strong> we can recruit to transform SARVAX from a promising B2B agent tool into an institutional-grade, compliance-certified, build-to-exit enterprise platform.
+          </p>
+        </div>
+
+        <div class="exec-hero-card">
+          <div class="eyebrow accent-green">The Highest-Value Role Target</div>
+          <h3>Strategic Advisor + Lead Angel</h3>
+          <p>
+            <strong>Role Selected: COMBINATION (Strategic Advisor + Lead Angel Investor via TiE Angels).</strong>
+          </p>
+          <p style="font-size: 13.5px; color: var(--text-dark-secondary);">
+            Pitching him purely as an investor ignores 90% of his value; treating him purely as an informal mentor leaves him unaligned. Structuring him as a <strong>Founding Strategic Advisor with a FAST equity grant (0.35%–0.50% NQO) and inviting him to anchor a $25K–$50K angel check via TiE Angels</strong> creates complete strategic and financial alignment.
+          </p>
+        </div>
+      </div>
+
+      <!-- Why Sai Should Care (5 Bullets) & What Atul Can Change (5 Outcomes) -->
+      <div class="card-grid-2">
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark);">
+          <div class="feature-card-num">Executive Core</div>
+          <h3 style="color: #fff;">Why Should Sai Care? (5 Bullets)</h3>
+          <ul>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--accent-dark);">1. Architectural CISO Trust:</strong> 25+ years building systems where failure is catastrophic (carrier routing, avionics, defense RTOS). He can stress-test SARVAX's approval gates so enterprise risk officers immediately approve pilots.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--accent-dark);">2. The Direct CMU Financial AI Bridge:</strong> Formal SEC partner with Dr. Ganesh Mani (CMU Faculty / S3D; sold AI asset management boutique to State Street / SSgA) providing instant wealth domain validation.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--accent-dark);">3. Dual-Track M&amp;A Blueprint:</strong> Personally executed an $88M all-cash corporate sale (ECI) and a PE platform buyout (Lynx/OceanSound advised by CEO ally), unlocking sell-side readiness from Day 1.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--accent-dark);">4. $158M+ Institutional VC Pedigree:</strong> Raised from NEA (Peter Barris, Rob Coneybeer), Trinity, and Adams Capital. He knows how institutional ICs evaluate tech.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--accent-dark);">5. US-India Execution Mastery:</strong> Operated Timesys Bangalore for over a decade, providing C3A with proven playbooks for 24-hour engineering velocity and US sales.</li>
+          </ul>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark);">
+          <div class="feature-card-num">Measurable Impact</div>
+          <h3 style="color: #fff;">What Can Atul Change? (5 Outcomes)</h3>
+          <ul>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--green);">1. Transforms Positioning:</strong> Shifts SARVAX from "probabilistic AI prompt tool" to "deterministic, fail-closed financial workflow infrastructure."</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--green);">2. Fast Angel Syndication:</strong> Unlocks a $25K–$100K seed check from TiE Pittsburgh Angels and syndicates co-investments across TiE Silicon Valley and Mumbai.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--green);">3. Academic &amp; Wealth Validation:</strong> Opens the door to Dr. Ganesh Mani (CMU) to review and validate SARVAX's financial compliance trace logs.</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--green);">4. Day-1 M&amp;A Architecture:</strong> Embeds IP clean-room standards, software escrow, and SaaS Rule-of-40 tracking guided by CEO ally (Girish Godbole).</li>
+            <li style="margin-bottom: 10px; font-size: 13.5px; color: var(--text-dark-primary);"><strong style="color: var(--green);">5. Tier-1 Series A Access:</strong> Provides warm, peer-level partner introductions to NEA, Shasta, and Trinity when SARVAX reaches $50K MRR.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="kpi-grid-4">
+        <div class="kpi-card">
+          <div class="kpi-num accent">$158.5M</div>
+          <div class="kpi-label">Total VC Raised (NEA, Trinity, Adams, Ciena)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num green">$88M Cash</div>
+          <div class="kpi-label">Laurel Networks Sale to ECI Telecom</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num">16 Yrs CEO</div>
+          <div class="kpi-label">Timesys Corp &rarr; Lynx / OceanSound PE Exit</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-num amber">Rule 506(b)</div>
+          <div class="kpi-label">TiE Pittsburgh Angels Co-Managing Director</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 02 & 03: Real Position & Top 7 Capabilities -->
+  <section class="section-light" id="strategic-position">
+    <div class="container">
+      <div class="eyebrow accent-blue-light">Strategic Reality</div>
+      <h2 class="section-title">Atul’s Real Strategic Position &amp; Top 7 Capabilities</h2>
+      <p class="section-lead">Separating formal titles from operational reality to ensure C3A approaches him with the exact right posture.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 220px;">Profile Surface</th>
+              <th style="width: 280px;">Actual Operational Reality</th>
+              <th>Strategic Action for Sai &amp; C3A Labs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>"Managing Director, TiE Pittsburgh Angels"</strong></td>
+              <td>Co-leads an accredited angel syndicate pooling $60K–$450K checks across regional angels (SEC Form D). He is <strong>NOT</strong> an institutional VC GP with a $100M fund.</td>
+              <td><strong style="color: var(--accent);">Do NOT send a standard VC pitch deck.</strong> Approach him as a lead angel mentor who can syndicate checks and bridge to institutional funds.</td>
+            </tr>
+            <tr>
+              <td><strong>"Investor, aicas GmbH"</strong></td>
+              <td>Direct personal equity holder in a $34.5M revenue European hard real-time Java/IoT company.</td>
+              <td>He values hard technical moats, deterministic state machines, and deep-tech platforms over superficial SaaS wrappers.</td>
+            </tr>
+            <tr>
+              <td><strong>"Strategic Advisor, Innosential"</strong></td>
+              <td>Co-founder and past chairman of a CMU-rooted applied AI solutions firm.</td>
+              <td>He understands enterprise AI pipelines, MLOps, and the friction of deploying autonomous agents in regulated workflows.</td>
+            </tr>
+            <tr>
+              <td><strong>"VP Business Development, Lynx"</strong></td>
+              <td>Post-merger operating and transition role following the Dec 2023 Timesys acquisition.</td>
+              <td>Deep familiarity with corporate earn-outs, post-merger integration, and enterprise cybersecurity compliance (SBOM/CVE).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Top 7 Capabilities -->
+      <div class="eyebrow accent-blue-light" id="capabilities" style="margin-top: 48px;">Core Competence Deep-Dive</div>
+      <h2 class="section-title">What Atul Is Exceptionally Good At</h2>
+      <p class="section-lead">Specific capabilities developed through 35 years of high-consequence execution.</p>
+
+      <div class="card-grid-3">
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 01</div>
+          <h3>Carrier-Grade &amp; Fail-Closed Architecture</h3>
+          <p><strong>Evidence:</strong> Built Laurel ST200 multi-service edge routers running ShadeTree OS, deployed across Level 3, Korea Telecom, and Dacom where single-packet dropped connections violated carrier SLAs.</p>
+          <p><strong>Why it matters:</strong> Wealth managers cannot tolerate non-deterministic or hallucinating agents.</p>
+          <div class="tag-list">
+            <span class="tag">Approval Gates</span>
+            <span class="tag">State Machines</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 02</div>
+          <h3>Dual-Track Strategic Exit Engineering</h3>
+          <p><strong>Evidence:</strong> Executed an $88M all-cash corporate sale to ECI (2005) and a private-equity add-on platform sale to Lynx/OceanSound (2023 advised by CEO ally).</p>
+          <p><strong>Why it matters:</strong> Startups often make cap-table mistakes that block strategic acquisitions.</p>
+          <div class="tag-list">
+            <span class="tag">M&amp;A Readiness</span>
+            <span class="tag">Valuation Math</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 03</div>
+          <h3>Cybersecurity, SBOM &amp; CISO Trust</h3>
+          <p><strong>Evidence:</strong> Built Timesys Vigiles from scratch into an automated vulnerability tracking and Software Bill of Materials (SBOM) platform adopted by NXP and 200+ defense accounts.</p>
+          <p><strong>Why it matters:</strong> Regulated enterprises demand SOC 2, ISO 42001, and zero-data-retention proof.</p>
+          <div class="tag-list">
+            <span class="tag">Vigiles Security</span>
+            <span class="tag">CISO Audit</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 04</div>
+          <h3>Tier-1 Institutional VC Syndication</h3>
+          <p><strong>Evidence:</strong> Raised $158M+ across his career from NEA (Peter Barris), Trinity (Paul Vabakos), and Adams Capital (Joel Adams). Managed boards through major tech cycles.</p>
+          <p><strong>Why it matters:</strong> Preps Sai for Series A institutional investment committee (IC) diligence.</p>
+          <div class="tag-list">
+            <span class="tag">Series A Prep</span>
+            <span class="tag">Board Governance</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 05</div>
+          <h3>Ego-Free Executive Scaling</h3>
+          <p><strong>Evidence:</strong> Stepped from CEO to President &amp; COO at Laurel in 2004, recruiting seasoned sales leader Don Pyle (Cisco/Juniper) to drive the commercial expansion leading to the $88M sale.</p>
+          <p><strong>Why it matters:</strong> Guides founders on senior GTM hiring, commission plans, and executive authority.</p>
+          <div class="tag-list">
+            <span class="tag">GTM Hiring</span>
+            <span class="tag">Executive Scaling</span>
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Capability 06</div>
+          <h3>Cross-Border US-India Delivery</h3>
+          <p><strong>Evidence:</strong> Ran Timesys Technologies India LLP in Bangalore for over a decade, delivering embedded Linux kernels and security patches seamlessly into US defense and commercial accounts.</p>
+          <p><strong>Why it matters:</strong> Framework for 24-hour sprint handoffs and cross-border IP protection.</p>
+          <div class="tag-list">
+            <span class="tag">Bangalore Ops</span>
+            <span class="tag">IP Clean-Room</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 05 & 06: Capability Matrix & Hidden Leverage -->
+  <section class="section-dark-elevated" id="capability-matrix">
+    <div class="container">
+      <div class="eyebrow accent-blue">Fit Evaluation</div>
+      <h2 class="section-title">Atul &times; C3A Capability Matrix &amp; Hidden Leverage</h2>
+      <p class="section-lead">A rigorous assessment of where Atul delivers 10x impact versus where C3A must not rely on him.</p>
+
+      <!-- Matrix Table -->
+      <div class="table-container" style="background: var(--bg-dark-card); border-color: var(--border-dark);">
+        <table>
+          <thead>
+            <tr style="background: rgba(255, 255, 255, 0.04);">
+              <th style="color: var(--text-dark-secondary);">C3A Strategic Need</th>
+              <th style="color: var(--text-dark-secondary);">Atul Proven Capability</th>
+              <th style="width: 100px; color: var(--text-dark-secondary);">Fit Score</th>
+              <th style="color: var(--text-dark-secondary);">Realistic Outcome for C3A</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color: #fff;">Fail-Closed AI Agent Control Architecture</strong></td>
+              <td>Carrier-grade routing &amp; RTOS state machines (Laurel ST200, Timesys LinuxLink)</td>
+              <td><span class="tag green">9.5 / 10</span></td>
+              <td>SARVAX architecture validated for institutional compliance; zero-hallucination workflow guarantees.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">Founder Mentorship &amp; CEO Sounding Board</strong></td>
+              <td>25+ years operating through founder-to-exit cycles (Laurel, Timesys)</td>
+              <td><span class="tag green">9.5 / 10</span></td>
+              <td>Bi-weekly strategic sounding board for Sai on scaling, org structure, and capital allocation.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">M&amp;A Readiness &amp; Strategic Exit</strong></td>
+              <td>Dual-track exits: $88M corporate cash sale (ECI) &amp; PE rollup (Lynx/OceanSound)</td>
+              <td><span class="tag green">9.0 / 10</span></td>
+              <td>Clean IP clean-room standards and valuation modeling aligned with strategic acquirers from Day 1.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">Financial AI Domain &amp; Academic Validation</strong></td>
+              <td>Co-Managing Director of TiE Angels with Dr. Ganesh Mani (CMU / SSgA AI pioneer)</td>
+              <td><span class="tag green">9.0 / 10</span></td>
+              <td>Warm bridge to Dr. Ganesh Mani for co-authoring SARVAX's wealth compliance framework.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">Angel Round Capital Syndication</strong></td>
+              <td>Managing Director, TiE Pittsburgh Angels (SEC Form D Rule 506b)</td>
+              <td><span class="tag" style="background: var(--amber-bg); color: var(--amber);">7.5 / 10</span></td>
+              <td>$25K–$100K seed check from TiE Angels syndicate anchoring C3A's seed round.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">Fast Institutional Lead VC Check</strong></td>
+              <td>Not an institutional fund manager (angel syndicate only)</td>
+              <td><span class="tag red">2.0 / 10</span></td>
+              <td><strong style="color: var(--red);">DO NOT RELY.</strong> Pitching him as a VC will result in a quick pass. Treat him as an angel mentor.</td>
+            </tr>
+            <tr>
+              <td><strong style="color: #fff;">B2C Growth Marketing &amp; Consumer AI</strong></td>
+              <td>B2B enterprise infrastructure &amp; embedded systems only</td>
+              <td><span class="tag red">1.0 / 10</span></td>
+              <td><strong style="color: var(--red);">DO NOT RELY.</strong> Keep 100% focus on SARVAX. Do not discuss KARAX or consumer apps.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Section 06: Hidden Leverage -->
+      <div class="eyebrow accent-blue" id="hidden-leverage" style="margin-top: 48px;">Unobvious Value</div>
+      <h2 class="section-title">The Hidden Leverage: 4 Unobvious Strategic Assets</h2>
+      <p class="section-lead">High-value connections and structural assets in Atul’s history that are invisible on a standard resume.</p>
+
+      <div class="card-grid-2">
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-left: 4px solid var(--accent-dark);">
+          <div class="feature-card-num">Hidden Asset 01</div>
+          <h3 style="color: #fff;">Dr. Ganesh Mani &amp; The State Street (SSgA) AI Precedent</h3>
+          <p>Formal SEC Form D partner co-managing TiE Pittsburgh Angels and co-founder heritage at Innosential. Dr. Mani built and sold an early AI investment boutique to State Street Global Advisors (SSgA) and teaches financial AI at Carnegie Mellon.</p>
+          <div class="node-ask-box">
+            <strong>How to Unlock:</strong> In Month 2, ask: <em>"Would you and Dr. Ganesh Mani be open to a joint 30-minute review of our wealth agent execution engine?"</em>
+          </div>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-left: 4px solid var(--accent-dark);">
+          <div class="feature-card-num">Hidden Asset 02</div>
+          <h3 style="color: #fff;">Girish Godbole &amp; The CEO ally M&amp;A Valuation Engine</h3>
+          <p>Exclusive sell-side M&amp;A advisor to Timesys in the Lynx transaction; co-serves on TiE Pittsburgh board. Master of middle-market software exits, ARR multiples, Rule-of-40 metrics, and PE rollups.</p>
+          <div class="node-ask-box">
+            <strong>How to Unlock:</strong> Request an introduction to Girish in Month 3 for a 1-hour session on <em>"Building an AI workflow company for institutional exit optionality."</em>
+          </div>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-left: 4px solid var(--accent-dark);">
+          <div class="feature-card-num">Hidden Asset 03</div>
+          <h3 style="color: #fff;">Peter Barris (NEA) &amp; The Stockholder Rep Fiduciary Tie</h3>
+          <p>Peter Barris (NEA Chairman Emeritus, $28B+ AUM) served as Laurel's Stockholder Representative in the SEC merger agreement with ECI Telecom, establishing a 20-year fiduciary bond.</p>
+          <div class="node-ask-box">
+            <strong>How to Unlock:</strong> Save for Series A lead round (Month 6–9) when SARVAX demonstrates repeatable $50K+ MRR and proven enterprise retention.
+          </div>
+        </div>
+
+        <div class="feature-card" style="background: var(--bg-dark-card); border: 1px solid var(--border-dark); border-left: 4px solid var(--accent-dark);">
+          <div class="feature-card-num">Hidden Asset 04</div>
+          <h3 style="color: #fff;">aicas GmbH &amp; European Hard Real-Time Software</h3>
+          <p>Active personal equity investment in aicas ($34.5M Rev, Karlsruhe, Germany), creators of JamaicaVM hard real-time Java Virtual Machine for automotive and industrial automation.</p>
+          <div class="node-ask-box">
+            <strong>How to Unlock:</strong> Frame SARVAX around deterministic state machines for financial workflows, echoing JamaicaVM’s real-time predictability philosophy.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 08: The 15 People Who Matter Most -->
+  <section class="section-dark" id="ranked-network">
+    <div class="container">
+      <div class="eyebrow accent-blue">Actionable Network Matrix</div>
+      <h2 class="section-title">The 15 People Who Matter Most (Ranked by Outcome &gt; Prestige)</h2>
+      <p class="section-lead">Ranked strictly by concrete value to C3A Labs rather than public fame.</p>
+
+      <!-- Node 1 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge top3">01</div>
+        <div class="node-main-info">
+          <h4>Dr. Ganesh Mani</h4>
+          <div class="node-title-org">Core Faculty, Carnegie Mellon University (S3D) &middot; Co-MD, TiE Pittsburgh Angels</div>
+          <div class="node-desc">Exact domain match for SARVAX. Sold AI asset management boutique to State Street Global Advisors (SSgA). Co-signs SEC Form D with Atul.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Joint 30-minute review of SARVAX financial compliance state-machine. (Month 2 &middot; Priority: IMMEDIATE)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill direct">DIRECT</span>
+          <span class="tag green">Priority: High</span>
+        </div>
+      </div>
+
+      <!-- Node 2 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge top3">02</div>
+        <div class="node-main-info">
+          <h4>Girish Godbole</h4>
+          <div class="node-title-org">Founder &amp; Partner, CEO ally, Inc. &middot; TiE Pittsburgh Board</div>
+          <div class="node-desc">Exclusive sell-side M&amp;A advisor on Timesys sale to Lynx; master of middle-market software valuations, ARR multiples, and PE platform rollups.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> 1-hour strategic session on structuring SARVAX for institutional M&amp;A optionality. (Month 3 &middot; Priority: HIGH)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill direct">DIRECT</span>
+          <span class="tag green">Priority: High</span>
+        </div>
+      </div>
+
+      <!-- Node 3 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge top3">03</div>
+        <div class="node-main-info">
+          <h4>Peter Barris</h4>
+          <div class="node-title-org">Chairman Emeritus, New Enterprise Associates (NEA &middot; $28B+ AUM)</div>
+          <div class="node-desc">Laurel Networks Stockholder Representative in SEC merger agreement; 20-year fiduciary tie. Premier Silicon Valley institutional VC leader.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Warm partner introduction to NEA enterprise AI team for Series A. (Month 6–9 &middot; Priority: SERIES A)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 4 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">04</div>
+        <div class="node-main-info">
+          <h4>Paul Vabakos</h4>
+          <div class="node-title-org">General Partner, Trinity Ventures</div>
+          <div class="node-desc">Laurel Networks Series B lead investor and board member. Led 24 portfolio investments to IPO/M&amp;A generating >$100B in market cap.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Feedback on C3A's venture narrative and enterprise infrastructure syndicate. (Month 4–6)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 5 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">05</div>
+        <div class="node-main-info">
+          <h4>Joel Adams</h4>
+          <div class="node-title-org">Founder &amp; General Partner, Adams Capital Management ($815M AUM)</div>
+          <div class="node-desc">Recruited Atul as Timesys CEO in 2007; 16-year board governance partnership. Venture pioneer in East Coast technology governance.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Advice on board structuring, clean cap tables, and founder-investor alignment. (Month 3–4)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 6 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">06</div>
+        <div class="node-main-info">
+          <h4>Rob Coneybeer</h4>
+          <div class="node-title-org">Founder &amp; Managing Director, Shasta Ventures &middot; Ex-Partner, NEA</div>
+          <div class="node-desc">Laurel Networks Board Member. Early-stage venture leader (Nest, eero, Turo) investing in smart infrastructure.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Early-stage Seed/Series A syndicate participation. (Month 6)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 7 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">07</div>
+        <div class="node-main-info">
+          <h4>Don Pyle</h4>
+          <div class="node-title-org">Former CEO, Laurel Networks &middot; Senior Executive at Cisco &amp; Juniper</div>
+          <div class="node-desc">Handpicked by Atul in 2004 to take over Laurel CEO seat before $88M exit. Master of high-ACV enterprise infrastructure sales.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Review C3A's enterprise sales compensation and pilot-to-production pipeline. (Month 4–5)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 8 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">08</div>
+        <div class="node-main-info">
+          <h4>Stephen Vogelsang</h4>
+          <div class="node-title-org">CTO, Nokia Federal &middot; Laurel Networks Co-Founder</div>
+          <div class="node-desc">Laurel Co-Founder &amp; VP Marketing; FORE Systems routing colleague. Oversees mission-critical federal government infrastructure.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Insights on enterprise SLA structures and procurement evaluation gates. (Month 3–4)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill direct">DIRECT</span>
+          <span class="tag">Priority: Mid-Term</span>
+        </div>
+      </div>
+
+      <!-- Node 9 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">09</div>
+        <div class="node-main-info">
+          <h4>Manav Garg</h4>
+          <div class="node-title-org">Co-Founder &amp; Managing Partner, Together Fund &middot; Founder, Eka Software</div>
+          <div class="node-desc">Built India's premier operator-led SaaS fund ($200M+ AUM); master of cross-border US-India enterprise software scaling.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Together Fund seed evaluation and US market expansion feedback. (Month 3–4)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill moderate">MODERATE</span>
+          <span class="tag">Priority: Seed</span>
+        </div>
+      </div>
+
+      <!-- Node 10 -->
+      <div class="ranked-node-card">
+        <div class="node-rank-badge">10</div>
+        <div class="node-main-info">
+          <h4>Venktesh Shukla</h4>
+          <div class="node-title-org">Founder &amp; Managing Partner, Monta Vista Capital &middot; Founding Chair, TiE Angels</div>
+          <div class="node-desc">Gatekeeper to the global Silicon Valley Indian-American angel network; multi-decade TiE trustee.</div>
+          <div class="node-ask-box"><strong>Concrete Ask:</strong> Cross-chapter syndication of C3A's seed round across TiE Silicon Valley. (Month 3)</div>
+        </div>
+        <div class="node-meta-tags">
+          <span class="strength-pill strong">STRONG</span>
+          <span class="tag">Priority: Seed</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 15 & 16: What Sai Should Ask vs. What Sai Should NOT Ask -->
+  <section class="section-dark-elevated" id="conversation-agenda">
+    <div class="container">
+      <div class="eyebrow accent-blue">Meeting Tactics</div>
+      <h2 class="section-title">The Strategic Conversation Agenda</h2>
+      <p class="section-lead">The exact questions Sai should ask to build mentor chemistry, and the transactional traps to avoid completely.</p>
+
+      <div class="qa-box-grid">
+        <!-- 10 High-Value Questions -->
+        <div class="qa-col good">
+          <h3>What Sai SHOULD Ask Atul (10 Questions)</h3>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 01</div>
+            <div class="qa-text">"At Laurel and Timesys, you built software for environments where failure was not an option. When enterprise buyers look at AI agents today, their #1 fear is non-deterministic behavior. How did you architect and prove 'fail-closed' reliability to your first tier-1 carrier customers?"</div>
+            <div class="qa-rationale">Proves C3A thinks about risk the way an enterprise operator does.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 02</div>
+            <div class="qa-text">"We designed SARVAX with explicit human-in-the-loop approval gates for financial operations. Looking at our control workflow on this one-pager, what is the first failure mode an enterprise CISO or Chief Compliance Officer will challenge us on?"</div>
+            <div class="qa-rationale">Invites him into a peer-to-peer technical architecture critique.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 03</div>
+            <div class="qa-text">"You spent 16 years leading Timesys from embedded tools to an automated cybersecurity suite (Vigiles). How did you successfully transition your pricing from one-off engineering services to high-margin, recurring enterprise software licenses?"</div>
+            <div class="qa-rationale">Extracts his exact SaaS pricing and licensing playbook.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 04</div>
+            <div class="qa-text">"When you brought in Don Pyle as CEO of Laurel in 2004 to execute the scale-up before the ECI sale, what were the critical operational milestones you had to achieve before making that executive transition?"</div>
+            <div class="qa-rationale">Shows founder maturity and openness to executive scaling.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 05</div>
+            <div class="qa-text">"You ran engineering teams across Pittsburgh and Bangalore for over a decade at Timesys. What governance frameworks did you use to prevent IP contamination and maintain 24-hour sprint velocity?"</div>
+            <div class="qa-rationale">Directly aligns with C3A's US-India operational structure.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 06</div>
+            <div class="qa-text">"When you and Girish Godbole (CEO ally) prepared Timesys for its acquisition by Lynx / OceanSound, what technical and IP clean-room audits took the longest to clear?"</div>
+            <div class="qa-rationale">Surfaces M&amp;A due diligence red flags before they arise.</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Question 07</div>
+            <div class="qa-text">"We would love to establish a structured cadence to get your brutal critique as we scale SARVAX. What does an ideal founder advisory relationship look like from your perspective?"</div>
+            <div class="qa-rationale">Invites him to define his own advisory parameters.</div>
+          </div>
+        </div>
+
+        <!-- What Sai Should NOT Ask -->
+        <div class="qa-col bad">
+          <h3>What Sai Should NOT Ask Atul (Traps to Avoid)</h3>
+
+          <div class="qa-item">
+            <div class="qa-num">Prohibited Ask 01</div>
+            <div class="qa-text">"Will you invest $100K in our seed round today?"</div>
+            <div class="qa-rationale"><strong style="color: var(--red);">Trap:</strong> Premature and transactional. He is an operator-mentor first; forcing a capital ask on Meeting 1 degrades the dynamic. (Timing: After Session 2).</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Prohibited Ask 02</div>
+            <div class="qa-text">"Can you introduce us to Peter Barris at NEA or Paul Vabakos at Trinity?"</div>
+            <div class="qa-rationale"><strong style="color: var(--red);">Trap:</strong> Burning top-tier social capital. Introducing unproven, pre-revenue startups damages his reputation. (Timing: Month 6+ at $50K MRR).</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Prohibited Ask 03</div>
+            <div class="qa-text">"Can you introduce us to 5 enterprise wealth management clients?"</div>
+            <div class="qa-rationale"><strong style="color: var(--red);">Trap:</strong> Expecting an advisor to act as an outsourced sales rep creates immediate friction. (Timing: Month 3+ after product validation).</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Prohibited Ask 04</div>
+            <div class="qa-text">"Can you join our advisory board for 1% equity today?"</div>
+            <div class="qa-rationale"><strong style="color: var(--red);">Trap:</strong> Premature contract offer before establishing personal chemistry. (Timing: End of Month 1 using FAST terms: 0.35%–0.50%).</div>
+          </div>
+
+          <div class="qa-item">
+            <div class="qa-num">Prohibited Ask 05</div>
+            <div class="qa-text">"What do you think of our consumer AI product, KARAX?"</div>
+            <div class="qa-rationale"><strong style="color: var(--red);">Trap:</strong> Violates C3A focus and alienates an enterprise infrastructure operator. (Timing: NEVER. Keep 100% focus on SARVAX).</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 17 & 19: Roadmap & The Atul Effect -->
+  <section class="section-light" id="roadmap">
+    <div class="container">
+      <div class="eyebrow accent-blue-light">Execution Plan</div>
+      <h2 class="section-title">The 90-Day Relationship Roadmap &amp; "The Atul Effect"</h2>
+      <p class="section-lead">A step-by-step sequence to turn a 25-minute review into a long-term advisory and syndication partnership.</p>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <div class="roadmap-phase">Meeting 01</div>
+          <div class="roadmap-title">Operator Review</div>
+          <div class="roadmap-body">25-minute architecture pressure test on SARVAX control boundaries and fail-closed state machines.</div>
+          <div class="roadmap-outcome">Goal: 2–3 brutal critiques</div>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-phase">48 Hours</div>
+          <div class="roadmap-title">Execution Memo</div>
+          <div class="roadmap-body">Send 1-page memo: "3 Architecture Adjustments Made Based on Your Review" to prove execution speed.</div>
+          <div class="roadmap-outcome">Goal: Build trust</div>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-phase">Day 30</div>
+          <div class="roadmap-title">Strategy Session</div>
+          <div class="roadmap-body">Review enterprise SaaS pricing, SLA packaging, and US-India engineering structure in Session 2.</div>
+          <div class="roadmap-outcome">Goal: Advisory alignment</div>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-phase">Day 60</div>
+          <div class="roadmap-title">FAST Agreement</div>
+          <div class="roadmap-body">Execute FAST Advisory Agreement (0.35%–0.50% NQO equity) and invite TiE Angels seed check ($25K–$50K).</div>
+          <div class="roadmap-outcome">Goal: Formal board seat</div>
+        </div>
+
+        <div class="roadmap-card">
+          <div class="roadmap-phase">Day 90+</div>
+          <div class="roadmap-title">Network Scale</div>
+          <div class="roadmap-body">Warm introductions to Dr. Ganesh Mani (CMU), Girish Godbole (CEO ally), and Series A VCs (NEA/Trinity).</div>
+          <div class="roadmap-outcome">Goal: Institutional scale</div>
+        </div>
+      </div>
+
+      <!-- The Atul Effect Matrix -->
+      <div class="card-grid-3" style="margin-top: 36px;">
+        <div class="feature-card">
+          <div class="feature-card-num">Atul Effect &middot; 3 Months</div>
+          <h3>Security &amp; Architecture Audit</h3>
+          <p>• SARVAX enterprise security briefing audited and certified by an exit-proven systems CEO.<br>• FAST Advisory Agreement executed with Atul Bansal (0.35%–0.50% equity).<br>• $25K–$50K angel check anchored via TiE Pittsburgh Angels syndicate.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Atul Effect &middot; 6 Months</div>
+          <h3>Academic &amp; GTM Validation</h3>
+          <p>• Direct advisory collaboration with Dr. Ganesh Mani (CMU Core Faculty / S3D).<br>• Enterprise GTM pricing model structured around multi-year recurring licenses and SLA tiers.<br>• 1-hour strategic M&amp;A architecture review completed with Girish Godbole (CEO ally).</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-card-num">Atul Effect &middot; 12 Months</div>
+          <h3>Series A Institutional Lead</h3>
+          <p>• Warm partner-level introductions to Tier-1 Silicon Valley VCs (NEA, Shasta, Trinity, Together Fund) for Series A.<br>• Institutional due diligence package ready with clean IP assignment and SBOM security.<br>• C3A established as a premier cross-border enterprise AI success story.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 20: Final Sai Decision Memo -->
+  <section class="section-dark" id="decision-memo">
+    <div class="container">
+      <div class="eyebrow accent-blue">Strategic Conclusion</div>
+      <h2 class="section-title">Final Decision Memo for Sai Casula</h2>
+      <p class="section-lead">The definitive executive directive on how C3A Labs should proceed with Atul Bansal.</p>
+
+      <div class="decision-banner">
+        <div class="decision-header">
+          <div class="decision-title">Strategic Directive: PURSUE ATUL BANSAL</div>
+          <div class="verdict-tag">Verdict: YES &middot; High Priority</div>
+        </div>
+
+        <div class="decision-grid">
+          <div class="decision-item">
+            <div class="decision-item-label">Primary Role Target</div>
+            <div class="decision-item-val"><strong>Strategic Advisor</strong><br>(FAST Agreement: 0.35% &ndash; 0.50% Equity)</div>
+          </div>
+          <div class="decision-item">
+            <div class="decision-item-label">Secondary Role Target</div>
+            <div class="decision-item-val"><strong>Lead Angel Investor</strong><br>($25K &ndash; $50K via TiE Pittsburgh Angels)</div>
+          </div>
+          <div class="decision-item">
+            <div class="decision-item-label">Single Best Next Move</div>
+            <div class="decision-item-val"><strong>Send 1-Page SARVAX Brief</strong><br>Request 25-min operator review on control boundaries</div>
+          </div>
+        </div>
+
+        <div class="if-i-were-sai-box">
+          <div class="if-i-were-sai-header">If I Were Sai... (Founder Recommendation)</div>
+          <div class="if-i-were-sai-text">
+            "I would treat Atul as our master systems architect and boardroom Sherpa. I would not pitch him for money; I would pitch him on our execution discipline. I would show him SARVAX's fail-closed state machines, ask for his most ruthless critique, deliver fixes within 48 hours, and lock him in as a formal Founding Strategic Advisor. Through Atul, we don't just get a mentor—we get the CMU financial AI bridge (Dr. Ganesh Mani), the M&amp;A playbook (CEO ally), and the golden key to Tier-1 Silicon Valley venture capital."
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <h4>C3A Labs &middot; Strategic Operations</h4>
+        <p>Private executive intelligence and mentorship evaluation blueprint. Prepared for Sai Casula and C3A Labs strategic governance.</p>
+      </div>
+      <div>
+        <p><strong>Standards:</strong> Multi-source validated provenance &middot; Apple design system &middot; SARVAX active focus.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

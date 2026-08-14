@@ -7,6 +7,8 @@
 !/Atul_Bansal_C3A_Network_Intelligence_Report.md
 !/Atul_Bansal_Board_Decision_Brief.md
 !/Atul_Bansal_Board_Decision_Brief.html
+!/Atul_Bansal_Sai_Strategic_Decision_Brief.md
+!/Atul_Bansal_Sai_Strategic_Decision_Brief.html
 !/SARVAX_Founder_Operator_One_Pager_Draft.md
 !/reports/
 !/reports/*.md
@@ -15,6 +17,7 @@
 *.html
 *.htm
 !/Atul_Bansal_Board_Decision_Brief.html
+!/Atul_Bansal_Sai_Strategic_Decision_Brief.html
 
 # Never publish local/system/transient artifacts even if a future allow rule is added.
 .DS_Store
