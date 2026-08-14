@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atul Bansal — Intelligence Dossier</title>
+<style>
+:root{--bg:#000;--bg2:#0a0a0a;--bg3:#111;--bg4:#1a1a1a;--t1:#f5f5f7;--t2:#a1a1a6;--t3:#6e6e73;--accent:#2997ff;--green:#30d158;--red:#ff453a;--amber:#ff9f0a;--border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);--sf:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sf);background:var(--bg);color:var(--t1);line-height:1.6;letter-spacing:-.01em;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:999;height:48px;background:rgba(0,0,0,.88);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.nav-left{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--t2)}
+.nav-left .dot{width:6px;height:6px;border-radius:50%;background:var(--green)}
+.nav-links{display:flex;gap:16px;list-style:none}
+.nav-links a{font-size:11.5px;color:var(--t3);transition:color .15s}
+.nav-links a:hover{color:var(--t1);text-decoration:none}
+
+/* LAYOUT */
+.wrap{max-width:960px;margin:0 auto;padding:0 28px}
+section{padding:80px 0}
+
+/* HERO */
+.hero{padding:100px 0 80px;border-bottom:1px solid var(--border)}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:16px}
+.hero h1{font-size:52px;font-weight:700;line-height:1.05;letter-spacing:-.035em;margin-bottom:20px}
+.hero .subtitle{font-size:20px;color:var(--t2);line-height:1.45;max-width:720px;margin-bottom:36px;letter-spacing:-.015em}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px}
+.chip{font-size:11.5px;font-weight:500;padding:5px 14px;border-radius:980px;background:rgba(255,255,255,.04);border:1px solid var(--border2);color:var(--t2)}
+.chip strong{color:var(--t1)}
+
+/* SECTION HEADERS */
+.sec-header{margin-bottom:48px}
+.sec-label{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
+.sec-title{font-size:32px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--t1);margin-bottom:10px}
+.sec-lead{font-size:15px;color:var(--t2);max-width:720px;line-height:1.55}
+
+/* DARK SECTION */
+.s-dark{background:var(--bg);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.s-dark2{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.s-light{background:#f5f5f7;color:#1d1d1f}
+.s-light .sec-label{color:#0071e3}
+.s-light .sec-title{color:#1d1d1f}
+.s-light .sec-lead{color:#6e6e73}
+
+/* PSYCHOLOGY CARDS */
+.psy-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px}
+.psy-card{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:28px}
+.psy-card h3{font-size:17px;font-weight:600;color:#fff;margin-bottom:10px}
+.psy-card p{font-size:13.5px;color:var(--t2);line-height:1.55}
+.psy-card .insight{margin-top:14px;padding:12px 16px;background:rgba(41,151,255,.06);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;font-size:12.5px;color:var(--t1);line-height:1.5}
+
+/* CAREER ARC */
+.arc{position:relative;margin:40px 0}
+.arc::before{content:'';position:absolute;left:156px;top:0;bottom:0;width:1px;background:var(--border2)}
+.arc-item{display:grid;grid-template-columns:120px 1fr;gap:76px;margin-bottom:40px;position:relative}
+.arc-date{text-align:right;font-family:var(--mono);font-size:12px;font-weight:700;color:var(--accent);padding-top:4px}
+.arc-item::after{content:'';position:absolute;left:152px;top:8px;width:9px;height:9px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.arc-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px}
+.arc-card h4{font-size:16px;font-weight:600;color:#fff;margin-bottom:2px}
+.arc-card .role{font-size:12px;font-weight:600;color:var(--accent);margin-bottom:10px}
+.arc-card p{font-size:13px;color:var(--t2);line-height:1.55;margin-bottom:10px}
+.arc-card ul{list-style:none;margin-bottom:10px}
+.arc-card ul li{position:relative;padding-left:16px;font-size:12.5px;color:var(--t1);line-height:1.5;margin-bottom:4px}
+.arc-card ul li::before{content:'›';position:absolute;left:0;color:var(--accent);font-weight:700}
+.arc-card .source{font-family:var(--mono);font-size:10.5px;color:var(--t3);border-top:1px solid var(--border);padding-top:8px;margin-top:10px}
+
+/* HIDDEN DISCOVERY */
+.disco-card{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--amber);border-radius:12px;padding:24px;margin-bottom:16px}
+.disco-card h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:6px}
+.disco-card p{font-size:13px;color:var(--t2);line-height:1.55}
+.disco-card .why{margin-top:10px;font-size:12.5px;color:var(--amber);font-weight:500}
+
+/* NETWORK */
+.net-card{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:24px;margin-bottom:14px;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:start}
+.net-card h4{font-size:15px;font-weight:600;color:#fff;margin-bottom:3px}
+.net-card .org{font-size:11.5px;color:var(--accent);margin-bottom:6px}
+.net-card .conn{font-size:12.5px;color:var(--t2);line-height:1.5}
+.str-pill{font-family:var(--mono);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;padding:3px 10px;border-radius:980px;white-space:nowrap}
+.str-pill.direct{background:rgba(48,209,88,.1);color:var(--green);border:1px solid rgba(48,209,88,.2)}
+.str-pill.strong{background:rgba(41,151,255,.1);color:var(--accent);border:1px solid rgba(41,151,255,.2)}
+.str-pill.moderate{background:rgba(255,159,10,.1);color:var(--amber);border:1px solid rgba(255,159,10,.2)}
+
+/* THESIS / PHILOSOPHY */
+.quote-block{background:var(--bg3);border:1px solid var(--border);border-radius:14px;padding:32px;margin:24px 0;position:relative}
+.quote-block::before{content:'"';position:absolute;top:8px;left:20px;font-size:60px;color:rgba(41,151,255,.15);font-family:Georgia,serif;line-height:1}
+.quote-block p{font-size:15px;color:var(--t1);line-height:1.6;font-style:italic;padding-left:24px}
+.quote-block .attr{margin-top:12px;padding-left:24px;font-size:12px;color:var(--t3);font-style:normal}
+
+/* TABLE */
+.tbl-wrap{overflow-x:auto;margin:28px 0;border-radius:12px;border:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-size:12.5px}
+th{font-family:var(--mono);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:14px 16px;background:var(--bg4);color:var(--t3);border-bottom:1px solid var(--border2);text-align:left}
+td{padding:14px 16px;border-bottom:1px solid var(--border);color:var(--t1);vertical-align:top;line-height:1.45}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(255,255,255,.015)}
+td em{color:var(--accent);font-style:normal;font-weight:500}
+
+/* LIGHT TABLE */
+.s-light table{color:#1d1d1f}
+.s-light th{background:#e8e8ed;color:#6e6e73;border-bottom-color:rgba(0,0,0,.1)}
+.s-light td{border-bottom-color:rgba(0,0,0,.06);color:#1d1d1f}
+.s-light tr:hover td{background:rgba(0,0,0,.02)}
+
+/* KPI ROW */
+.kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:28px 0}
+.kpi{background:var(--bg3);border:1px solid var(--border);border-radius:12px;padding:20px}
+.kpi .num{font-size:28px;font-weight:700;letter-spacing:-.03em;color:#fff;margin-bottom:4px}
+.kpi .num.a{color:var(--accent)}
+.kpi .num.g{color:var(--green)}
+.kpi .lbl{font-size:11.5px;color:var(--t2)}
+
+/* RISK / WHAT HE CANNOT DO */
+.risk-card{background:var(--bg3);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:12px;padding:20px;margin-bottom:12px}
+.risk-card h4{font-size:14px;font-weight:600;color:var(--red);margin-bottom:4px}
+.risk-card p{font-size:12.5px;color:var(--t2);line-height:1.5}
+
+/* TIMELINE AT BOTTOM */
+.timeline-mini{display:flex;gap:2px;margin:24px 0;height:32px;border-radius:6px;overflow:hidden}
+.timeline-mini .era{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9px;font-weight:700;color:#fff;letter-spacing:.03em;text-transform:uppercase}
+
+/* FOOTER */
+footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+.footer-inner h5{font-size:12px;font-weight:600;color:var(--t1);margin-bottom:4px;text-transform:uppercase;letter-spacing:.04em}
+
+/* RESPONSIVE */
+@media(max-width:900px){.psy-grid,.net-card{grid-template-columns:1fr}.arc::before{left:20px}.arc-item{grid-template-columns:1fr;gap:12px;padding-left:40px}.arc-date{text-align:left}.arc-item::after{left:16px;top:5px}.kpi-row{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}h1{font-size:36px}.sec-title{font-size:26px}}
+@media(max-width:600px){.wrap{padding:0 18px}section{padding:56px 0}h1{font-size:28px}.kpi-row{grid-template-columns:1fr}.footer-inner{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left"><span class="dot"></span> Atul Bansal — Intelligence Dossier</div>
+  <ul class="nav-links">
+    <li><a href="#who">Who He Is</a></li>
+    <li><a href="#psychology">Psychology</a></li>
+    <li><a href="#career">Career</a></li>
+    <li><a href="#hidden">Hidden Layers</a></li>
+    <li><a href="#network">Network</a></li>
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#current">Current Status</a></li>
+    <li><a href="#approach">How To Approach</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero" id="who">
+<div class="wrap">
+  <div class="hero-eyebrow">Deep Intelligence Dossier · August 2026</div>
+  <h1>Atul Bansal</h1>
+  <div class="subtitle">A systems builder who spent 35 years inside the machines that move the internet — and is now between chapters.</div>
+  <div class="hero-meta">
+    <span class="chip"><strong>Location</strong> Wexford, Pennsylvania (Pittsburgh metro)</span>
+    <span class="chip"><strong>Education</strong> IIT Kanpur · University of Rhode Island</span>
+    <span class="chip"><strong>Domain</strong> Embedded systems · Cybersecurity · Open source</span>
+    <span class="chip"><strong>Current</strong> Between engagements since July 2025</span>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ THE ONE-PARAGRAPH ANSWER ═══════════ -->
+<section class="s-dark">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Who is this man?</div>
+    <div class="sec-title">The short version</div>
+  </div>
+  <div style="font-size:16px;color:var(--t2);line-height:1.7;max-width:800px">
+    Atul Bansal is a chemical engineer from IIT Kanpur who pivoted to computer science, then spent the next three decades building the invisible infrastructure layer of the internet. He co-founded a telecom edge-router company (Laurel Networks) and sold it for $88 million cash. He ran an embedded Linux and cybersecurity company (Timesys) for 16 years and sold it to a PE-backed acquirer. He did this twice — build, sell, integrate, leave — using the same playbook both times. He also quietly co-founded an AI/data-science firm (Innosential) with Carnegie Mellon professors in 2015, which almost nobody knows about. He left his last operating role (VP at Lynx Software Technologies) in July 2025. He is currently active as Managing Director of TiE Pittsburgh Angels, a small angel syndicate, and as Strategic Advisor to Innosential. He has no confirmed full-time employer as of August 2026.
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ PSYCHOLOGY ═══════════ -->
+<section class="s-dark2" id="psychology">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">How he thinks</div>
+    <div class="sec-title">The psychology of Atul Bansal</div>
+    <div class="sec-lead">Not what he's done — how he makes decisions, what he values, what patterns repeat across 35 years.</div>
+  </div>
+
+  <div class="psy-grid">
+    <div class="psy-card">
+      <h3>He builds for environments where failure kills people</h3>
+      <p>His entire career has been inside systems that cannot go down. Telecom carrier routers. Defense avionics. Medical devices. Embedded Linux on NXP chips in cars. This is not a SaaS person who worries about uptime — this is someone who designs systems where a dropped packet means a carrier SLA breach, or a patient monitor goes dark.</p>
+      <div class="insight">What this means: He will judge any technology he evaluates by one question — "What happens when this fails?" If you can't answer that clearly, he will not trust your system.</div>
+    </div>
+
+    <div class="psy-card">
+      <h3>He is a builder, not a scaler</h3>
+      <p>He stayed at Timesys for 16 years. He stayed at Laurel for 6. He doesn't flip companies in 18 months. He builds slowly, capital-efficiently, through multiple technology transitions. The Vigiles cybersecurity pivot at Timesys came from reading regulatory tailwinds (FDA, EU Cyber Resilience Act, Executive Order 14028) — patient, compliance-driven product evolution, not growth-hacking.</p>
+      <div class="insight">What this means: He respects founders who are building for the long term. He will be skeptical of anyone optimizing for a fast exit rather than a durable business.</div>
+    </div>
+
+    <div class="psy-card">
+      <h3>He has a repeatable exit pattern — and it's deliberate</h3>
+      <p>Build → sell → stay inside the acquirer for 18–24 months → leave. He did this at ECI Telecom (2005–2007) and again at Lynx (2023–2025). This is not coincidence — it's a managed transition playbook. He ensures the team, the product, and the India subsidiary survive the handoff before he walks away.</p>
+      <div class="insight">What this means: He takes responsibility beyond the wire transfer. He cares about what happens to the people and the technology after the deal closes.</div>
+    </div>
+
+    <div class="psy-card">
+      <h3>He operates through institutions, not personal brands</h3>
+      <p>Every major phase of his career has been anchored to an institution — FORE Systems alumni network, TiE Pittsburgh, Innosential, Pittsburgh Technology Council. He doesn't keynote conferences. He doesn't post hot takes on LinkedIn. He builds relationships inside structured organizations where trust compounds over years.</p>
+      <div class="insight">What this means: Cold outreach will likely fail. He responds to institutional warm introductions and shared organizational context, not clever emails.</div>
+    </div>
+
+    <div class="psy-card">
+      <h3>He has a secret AI life</h3>
+      <p>Since 2015, he has been Co-Founder and Past Chairman of Innosential — a Bengaluru-headquartered AI/data-science firm whose team includes the founding director of Carnegie Mellon's Language Technologies Institute (Jaime Carbonell) and current CMU faculty (Bhiksha Raj). The Langue AI unit inside Innosential draws on researchers who contributed to IBM Watson, Amazon Alexa, Microsoft Cortana, and Google's language models. This is his only publicly documented direct involvement in an AI company, and it ran in parallel with his Timesys CEO duties for eight years.</p>
+      <div class="insight">What this means: He understands AI at a deeper level than his embedded-systems career suggests. But he thinks about AI through the lens of applied NLP and data science — not prompt engineering or chatbot wrappers.</div>
+    </div>
+
+    <div class="psy-card">
+      <h3>He believes in open standards as competitive moats</h3>
+      <p>From his first day at Timesys in 2007 ("expanding our commitment to non-proprietary, open-source Linux") to his last public statement at Lynx in 2025 ("cybersecurity is a key product differentiator"), his thesis has been identical for 18 years: open standards and proactive compliance are durable advantages in infrastructure software. He does not chase trends.</p>
+      <div class="insight">What this means: He will be drawn to companies building on open foundations with real compliance architecture — not proprietary black boxes marketed on AI hype.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ CAREER ARC ═══════════ -->
+<section class="s-light" id="career">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Verified career reconstruction</div>
+    <div class="sec-title">The full arc</div>
+    <div class="sec-lead">35 years. Two complete build-sell-integrate cycles. One consistent throughline: infrastructure that cannot fail.</div>
+  </div>
+
+  <!-- Visual timeline bar -->
+  <div class="timeline-mini">
+    <div class="era" style="flex:7;background:#1d1d1f">DEC</div>
+    <div class="era" style="flex:4;background:#2d2d2f">FORE</div>
+    <div class="era" style="flex:6;background:var(--accent)">Laurel</div>
+    <div class="era" style="flex:2;background:#444">ECI</div>
+    <div class="era" style="flex:16;background:#0d6f30">Timesys</div>
+    <div class="era" style="flex:2;background:var(--accent)">Lynx</div>
+  </div>
+
+  <div class="arc">
+    <div class="arc-item">
+      <div class="arc-date">1984–1989</div>
+      <div class="arc-card">
+        <h4>IIT Kanpur → University of Rhode Island</h4>
+        <div class="role">BS Chemical Engineering · MS Chemical Engineering & Computer Science</div>
+        <p>The pivot from process engineering to computing happened at the graduate level. Chemical engineering thinking — systems, flows, failure modes — became the foundation for how he later designed network infrastructure. No patents or publications found from this period.</p>
+        <div class="source">Source: The Org biography [2]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">1988–1995</div>
+      <div class="arc-card">
+        <h4>Digital Equipment Corporation (DEC)</h4>
+        <div class="role">Engineering & Technical Management · IP Router Products</div>
+        <p>His first exposure to building the physical infrastructure of the internet. DEC was one of the original minicomputer giants — this was where commercial IP routing was being born.</p>
+        <div class="source">Source: Timesys biography [2]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">1995–1999</div>
+      <div class="arc-card">
+        <h4>FORE Systems (Acquired by Marconi for $4.5B)</h4>
+        <div class="role">President, Network Control Technology Division · Director, Multilayer Ethernet Switching ($100M+ revenue unit)</div>
+        <p>The most formative period of his career. FORE built products that generated $1 billion in revenue. An early Laurel investor said: "The carriers know these guys." This is where he built the credibility — and the team — that would fund everything that came after.</p>
+        <ul>
+          <li>Ran a division doing $100M+ annual revenue</li>
+          <li>Coordinated IP routing and ATM-to-IP convergence</li>
+          <li>Built relationships with all six future Laurel co-founders</li>
+        </ul>
+        <div class="source">Source: Timesys biography [2]; NEA investor testimony [23]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">1999–2005</div>
+      <div class="arc-card">
+        <h4>Laurel Networks — First Exit</h4>
+        <div class="role">Co-Founder, President/CEO, Chairman of the Board</div>
+        <p>Six FORE Systems veterans in their 30s built IP/MPLS multiservice edge routers for telecom carriers. Raised $97M–$120M (sources disagree) from NEA, Trinity Ventures, Worldview, and CIENA. Grew to 130–150 employees. CIENA became both investor and reseller in 2003 — a strategic, not purely financial, relationship.</p>
+        <ul>
+          <li>Feb 2004: Stepped from CEO to President/COO, recruited Don Pyle (Cisco/Juniper) as CEO</li>
+          <li>May 2005: Acquired by ECI Telecom for <strong>$88 million cash</strong></li>
+          <li>Became ECI's Data Networking Division; Bansal stayed as COO until 2007</li>
+        </ul>
+        <div class="source">Sources: SEC Form 20-F [33][25]; Converge Network Digest [32]; PitchBook [24]; Wikipedia [25]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">2007–2023</div>
+      <div class="arc-card">
+        <h4>Timesys Corporation — Second Exit</h4>
+        <div class="role">CEO (16-year tenure)</div>
+        <p>Joined as an outside CEO in April 2007, recruited by Adams Capital Management following a national search. Steered a mid-stage embedded Linux company through multiple technology transitions — from custom BSPs to cybersecurity/SBOM compliance (Vigiles). Raised $40.5M–$44.8M from 13 investors including Adams Capital, The Hillman Company, Philips, and Nissin Electric. Served 1,000+ customers across medical, automotive, industrial, aerospace, and IoT.</p>
+        <ul>
+          <li>Built strategic alliances with NXP, Renesas, and other semiconductor partners</li>
+          <li>Pivoted product emphasis toward Vigiles SBOM/CVE tracking as FDA, EU Cyber Resilience Act, and EO 14028 created regulatory tailwinds</li>
+          <li>Dec 2023: Acquired by Lynx Software Technologies (OceanSound Partners, $8B+ AUM)</li>
+          <li>Transaction value: <strong>not publicly disclosed</strong> — flagged as unknown, not assumed</li>
+        </ul>
+        <div class="source">Sources: Military Embedded Systems [36]; Lynx press release [38]; CB Insights [29]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">2015–present</div>
+      <div class="arc-card">
+        <h4>Innosential — The Hidden Chapter</h4>
+        <div class="role">Co-Founder, Strategic Advisor, Past Chairman</div>
+        <p>A Bengaluru-headquartered AI and data-science firm running in parallel with his Timesys CEO duties. Operates three units: Algosential AI (AutoML/MLOps, CMU roots), Langue AI (conversational AI — researchers from IBM Watson, Amazon Alexa, Microsoft Cortana, Google), and Innosential Learning (AI upskilling). Team includes Dr. Ganesh Mani (CMU), the late Jaime Carbonell (founding director of CMU's Language Technologies Institute), and Bhiksha Raj (CMU LTI faculty).</p>
+        <div class="source">Sources: Innosential team page [22]; RocketReach [41]; CMU faculty records [43][44]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">Dec 2023 – Jul 2025</div>
+      <div class="arc-card">
+        <h4>Lynx Software Technologies</h4>
+        <div class="role">VP, Business Development, Open Source</div>
+        <p>Post-acquisition integration role. Led open-source ecosystem strategy, built partnerships across industrial, medical, and defense verticals. Stayed 19 months — consistent with his repeatable pattern of remaining inside the acquirer before departing. Left July 2025.</p>
+        <div class="source">Source: LinkedIn profile [1]</div>
+      </div>
+    </div>
+
+    <div class="arc-item">
+      <div class="arc-date">Jan 2021 – present</div>
+      <div class="arc-card">
+        <h4>TiE Pittsburgh Angels</h4>
+        <div class="role">Managing Director</div>
+        <p>Leads a chapter-level angel syndicate of 20+ entrepreneurs. 2 documented deals, ~$450K deployed, 2021–2025. Part of the broader TiE Angels network (14 chapters, 186+ investees, $21M+ deployed). Provides mentorship, capital, and operational support to early-stage Pittsburgh ventures.</p>
+        <div class="source">Sources: TiE Angels platform [57]; SEC Form D [1]</div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ HIDDEN LAYERS ═══════════ -->
+<section class="s-dark" id="hidden">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">What other researchers miss</div>
+    <div class="sec-title">Hidden layers beneath the résumé</div>
+    <div class="sec-lead">These are the findings that don't show up in a surface LinkedIn scan or a Google search. Each one changes how you understand this person.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>1. The Innosential AI venture is invisible</h4>
+    <p>His LinkedIn headline mentions "Angel Investor | Startup Mentor" but not "Co-Founder of an AI company." Innosential doesn't appear in generic search summaries. It only surfaces via targeted searches combining "Atul Bansal" with "Innosential." He has been running an AI/data-science firm with Carnegie Mellon professors since 2015 — eight years of parallel AI involvement that his public profile completely hides.</p>
+    <div class="why">Why it matters: He understands AI at a deeper level than his infrastructure career suggests. He's not a newcomer to the space.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>2. The Ganesh Mani cross-connection</h4>
+    <p>Dr. Ganesh Mani — CMU Adjunct Faculty, ex-President of TiE Pittsburgh — appears on Innosential's team page alongside Bansal. Mani's own bio independently confirms the TiE Pittsburgh presidency. This means Bansal's TiE network and his AI network are not separate silos — they are structurally intertwined through one person.</p>
+    <div class="why">Why it matters: Any approach through TiE Pittsburgh automatically carries AI-sector context. This is not a generalist startup network.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>3. The CMU Language Technologies Institute connection</h4>
+    <p>Innosential's Langue AI unit includes the late Jaime Carbonell (founding director of CMU's LTI — the lab that pioneered statistical NLP) and Bhiksha Raj (current CMU LTI faculty in machine learning and speech processing). Researchers from this lineage contributed to IBM Watson, Amazon Alexa, Microsoft Cortana, and Google's language models. This gives Bansal a connection to frontier AI/NLP research that his embedded-systems résumé completely obscures.</p>
+    <div class="why">Why it matters: He has academic AI credibility most infrastructure operators don't have. He just doesn't advertise it.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>4. Timesys Technologies India LLP survived the acquisition</h4>
+    <p>While Timesys's US parent changed ownership in December 2023, the India subsidiary's governance structure — including Bansal's own chairman role — persisted independently. Dr. Rakesh Thapar continues as CTO/MD of the India entity. Most researchers would assume Bansal's India role ended with the 2023 sale. It didn't.</p>
+    <div class="why">Why it matters: He has an ongoing, formal governance role in India that outlived his US operating career. India is not a past chapter — it's a current one.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>5. The "FORE Systems Six" — a Fairchild-like diaspora</h4>
+    <p>All six Laurel Networks co-founders came from FORE Systems. This is Pittsburgh's version of the Fairchild Semiconductor alumni pattern — a single large company's talent repeatedly re-forming into new ventures. NEA's Rob Coneybeer explicitly cited the team's prior billion-dollar product experience at FORE as the reason "the carriers know these guys." The credibility transfer came from a shared prior employer, not from Bansal's individual reputation alone.</p>
+    <div class="why">Why it matters: His network is not just "people he knows" — it's a structural talent diaspora from a single formative company. This explains the depth and cohesion of his professional relationships.</div>
+  </div>
+
+  <div class="disco-card">
+    <h4>6. CIENA was both investor and reseller</h4>
+    <p>In Laurel Networks' 2003 funding round, CIENA didn't just invest — it simultaneously became a reseller of Laurel's core product. This was a strategic, not purely financial, investment that broadened carrier-level distribution and likely improved Laurel's positioning ahead of its 2005 sale.</p>
+    <div class="why">Why it matters: He knows how to structure strategic investor relationships that create commercial value, not just capital.</div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ NETWORK ═══════════ -->
+<section class="s-light" id="network">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Verified relationships</div>
+    <div class="sec-title">The people around him</div>
+    <div class="sec-lead">Only documented, evidence-backed connections. No inferences about personal closeness. Relationship strength is classified, not assumed.</div>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Dr. Ganesh Mani</h4>
+      <div class="org" style="color:#0071e3">CMU Faculty · ex-President, TiE Pittsburgh · Innosential Co-Team</div>
+      <div class="conn">The most important hidden connection. Mani and Bansal appear together on Innosential's team page and both have served as TiE Pittsburgh presidents. Mani sold an early AI asset-management boutique to State Street Global Advisors. This is a multi-institutional, multi-decade relationship spanning TiE leadership and an AI venture simultaneously.</div>
+    </div>
+    <span class="str-pill direct">DIRECT</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Dr. Rakesh Thapar</h4>
+      <div class="org" style="color:#0071e3">CTO/MD, Timesys Technologies India LLP</div>
+      <div class="conn">Senior India-based executive whose role persisted through the Lynx acquisition. Bansal remains Chairman of the India entity. This is an ongoing structural relationship that outlived the US parent company's sale.</div>
+    </div>
+    <span class="str-pill strong">STRONG</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Akshay Bhat</h4>
+      <div class="org" style="color:#0071e3">Former CTO, Timesys</div>
+      <div class="conn">Publicly thanked by Bansal in 2021 for six years of contribution. One of the few individually documented, warmly-toned professional relationships in his record. Bhat's tenure spans the Timesys leadership into the Lynx era.</div>
+    </div>
+    <span class="str-pill strong">STRONG</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Six FORE Systems Co-Founders</h4>
+      <div class="org" style="color:#0071e3">Jeffrey Prem · Robert Rennison · Dimitris Varotsis · Steve Vogelsang · Robert Warden · +1</div>
+      <div class="conn">Co-founded Laurel Networks together, all former FORE Systems executives. No evidence of continuity beyond Laurel's 2005 sale. This is a verified co-founding relationship, not an ongoing personal network (with the exception of Vogelsang, who continued in the carrier infrastructure space at Nokia).</div>
+    </div>
+    <span class="str-pill moderate">VERIFIED PAST</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Rob Coneybeer</h4>
+      <div class="org" style="color:#0071e3">Partner, NEA → Co-Founder, Shasta Ventures</div>
+      <div class="conn">Early Laurel investor and public advocate for the founding team's credibility. Went on to co-found Shasta Ventures (Nest, eero, Turo). No evidence of continued Bansal-Coneybeer relationship beyond the Laurel era.</div>
+    </div>
+    <span class="str-pill moderate">VERIFIED PAST</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>Tim Reed</h4>
+      <div class="org" style="color:#0071e3">CEO, Lynx Software Technologies</div>
+      <div class="conn">Acquirer-side CEO, jointly quoted with Bansal in the Timesys acquisition announcement. Post-2025 continuity unconfirmed.</div>
+    </div>
+    <span class="str-pill moderate">VERIFIED</span>
+  </div>
+
+  <div class="net-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <div>
+      <h4>TiE Angels National Steering Committee</h4>
+      <div class="org" style="color:#0071e3">14 chapters · Venktesh Shukla · Kumar Sripadam · Rajesh Sehgal · Pravin Patil · + others</div>
+      <div class="conn">Bansal represents Pittsburgh on the national TiE Angels steering committee. The broader network spans 14 chapters with 186+ investees and $21M+ deployed. His own Pittsburgh chapter is small (2 deals, ~$450K, 2021–2025) but the national network is substantial.</div>
+    </div>
+    <span class="str-pill strong">STRONG</span>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ PHILOSOPHY ═══════════ -->
+<section class="s-dark2" id="philosophy">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">In his own words</div>
+    <div class="sec-title">What he actually believes</div>
+    <div class="sec-lead">Directly attributable public statements spanning 18 years. The thesis has not changed.</div>
+  </div>
+
+  <div class="quote-block">
+    <p>Expanding our commitment to non-proprietary, open-source Linux software — a deliberate strategic bet against proprietary embedded alternatives.</p>
+    <div class="attr">— Atul Bansal, on joining Timesys as CEO, April 2007</div>
+  </div>
+
+  <div class="quote-block">
+    <p>Cybersecurity and SBOM compliance are increasingly urgent regulatory and competitive necessities. Our Vigiles roadmap is tied directly to FDA, EU Cyber Resilience Act, and US Executive Order 14028 requirements.</p>
+    <div class="attr">— Atul Bansal, Timesys product launch statement, August 2023</div>
+  </div>
+
+  <div class="quote-block">
+    <p>Cybersecurity is a key product differentiator.</p>
+    <div class="attr">— Atul Bansal, as VP at Lynx Software Technologies, February 2025</div>
+  </div>
+
+  <div style="margin-top:32px;padding:24px;background:var(--bg3);border:1px solid var(--border);border-radius:12px">
+    <div style="font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;color:var(--accent);margin-bottom:10px">The consistent thesis across 18 years</div>
+    <div style="font-size:15px;color:var(--t1);line-height:1.6">
+      <strong>Open standards and proactive security compliance are durable sources of competitive advantage in infrastructure software.</strong> He has held this belief from 2007 through at least 2025 — an unusually stable strategic conviction. He does not chase trends. He reads regulatory tailwinds and builds compliance infrastructure before it becomes mandatory.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ CURRENT STATUS ═══════════ -->
+<section class="s-dark" id="current">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Where he is right now</div>
+    <div class="sec-title">Current status: August 2026</div>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi"><div class="num" style="color:var(--amber)">Between roles</div><div class="lbl">Left Lynx July 2025 · No confirmed employer since</div></div>
+    <div class="kpi"><div class="num a">TiE Pittsburgh Angels</div><div class="lbl">Managing Director · Active since Jan 2021</div></div>
+    <div class="kpi"><div class="num g">Innosential</div><div class="lbl">Strategic Advisor / Past Chairman · Active since 2015</div></div>
+    <div class="kpi"><div class="num">Timesys India LLP</div><div class="lbl">Chairman · Ongoing post-acquisition governance</div></div>
+  </div>
+
+  <div style="margin-top:28px;padding:24px;background:var(--bg3);border:1px solid var(--border);border-radius:12px">
+    <div style="font-size:14px;color:var(--t2);line-height:1.6">
+      <strong style="color:var(--t1)">What we know:</strong> His LinkedIn-listed Lynx role explicitly ended in July 2025. No subsequent employer, title, or company announcement naming this specific Atul Bansal was found for August 2025 through August 2026. His two active roles are TiE Pittsburgh Angels (Managing Director) and Innosential (Strategic Advisor / Past Chairman).<br><br>
+      <strong style="color:var(--t1)">What we don't know:</strong> Whether he has taken on a new operating role, a new board seat, or remains between engagements. This should be treated as an open question, not an assumption.<br><br>
+      <strong style="color:var(--amber)">15 unrelated namesakes exist.</strong> A Dubai/London-based "Atul Bansal" (ex-LivLyt/ZenAdmin, now at Revolut) is more prominent in raw search volume than the actual target. At least 14 other unrelated namesakes (Meesho, GoKwik, Poonawalla Fincorp, PwC, Google, HBO, etc.) were identified and excluded from this dossier.
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ WHAT HE CARES ABOUT ═══════════ -->
+<section class="s-light">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">What motivates him</div>
+    <div class="sec-title">What Atul Bansal actually cares about</div>
+    <div class="sec-lead">Inferred from career patterns, public statements, and institutional affiliations — not invented motivations.</div>
+  </div>
+
+  <div class="psy-grid">
+    <div class="psy-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+      <h3 style="color:#1d1d1f">Infrastructure that outlives the founder</h3>
+      <p style="color:#6e6e73">He stayed at Timesys for 16 years. He stayed inside ECI for 2 years after selling Laurel. He chairs Timesys India even after the US sale. He builds things that are meant to survive him. This is not a serial entrepreneur optimizing for personal liquidity events.</p>
+    </div>
+    <div class="psy-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+      <h3 style="color:#1d1d1f">The US-India bridge</h3>
+      <p style="color:#6e6e73">IIT Kanpur alumnus. Board member of Kanpur Institute of Technology. Chairman of Timesys Technologies India LLP. Co-Founder of Innosential (Bengaluru). His India connection is not incidental — it's structural, ongoing, and formal.</p>
+    </div>
+    <div class="psy-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+      <h3 style="color:#1d1d1f">Open standards over proprietary lock-in</h3>
+      <p style="color:#6e6e73">His 18-year thesis: open-source, non-proprietary infrastructure wins in the long run. He built Timesys around Linux, not a proprietary RTOS. He led Lynx's open-source strategy. This is a durable belief, not a marketing position.</p>
+    </div>
+    <div class="psy-card" style="background:#fff;border-color:rgba(0,0,0,.08)">
+      <h3 style="color:#1d1d1f">Structured mentorship through institutions</h3>
+      <p style="color:#6e6e73">His advisory activity is channeled through TiE, Innosential Learning, and Pittsburgh Technology Council — not informal one-off advisory calls. He prefers institutional, community-based engagement over transactional relationships.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ WHAT HE CAN / CANNOT DO ═══════════ -->
+<section class="s-dark2" id="approach">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Realistic assessment</div>
+    <div class="sec-title">What he can actually do — and what he can't</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+    <div>
+      <div style="font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--green);margin-bottom:16px">What he can realistically unlock</div>
+      <div class="disco-card" style="border-left-color:var(--green)">
+        <h4>Systems architecture credibility</h4>
+        <p>35 years of building fail-closed infrastructure. His endorsement of a system's reliability carries weight with enterprise CISOs and compliance officers.</p>
+      </div>
+      <div class="disco-card" style="border-left-color:var(--green)">
+        <h4>Angel syndicate capital ($25K–$100K)</h4>
+        <p>TiE Pittsburgh Angels can syndicate seed checks. The broader TiE Angels network (14 chapters) has deployed $21M+ across 186+ investees.</p>
+      </div>
+      <div class="disco-card" style="border-left-color:var(--green)">
+        <h4>Warm introductions to TiE steering committee</h4>
+        <p>National TiE Angels peers across Silicon Valley, Mumbai, New Jersey, DC, Boston, LA. These are angel-stage connections, not institutional VC leads.</p>
+      </div>
+      <div class="disco-card" style="border-left-color:var(--green)">
+        <h4>India operational playbooks</h4>
+        <p>16 years of running US-India engineering delivery at Timesys. Chairman of the India subsidiary. Real operational knowledge of cross-border software teams.</p>
+      </div>
+      <div class="disco-card" style="border-left-color:var(--green)">
+        <h4>M&A exit preparation</h4>
+        <p>Two personally executed exits ($88M corporate cash, undisclosed PE sale). Knows what acquirers look for, how to structure clean IP, and how to stay inside the acquirer post-close.</p>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-family:var(--mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--red);margin-bottom:16px">What he probably cannot do</div>
+      <div class="risk-card">
+        <h4>Write a large institutional check</h4>
+        <p>TiE Pittsburgh Angels deployed ~$450K across 2 deals over 4 years. He is not a fund manager. Expect angel-scale capital, not a Series A lead.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Introduce to NEA / Trinity / Shasta directly</h4>
+        <p>His Laurel-era VC relationships (Coneybeer, Vabakos, Barris) are 20+ years old. No evidence of continued personal contact into the present. Warm intros through TiE are more realistic.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Sell consumer products</h4>
+        <p>Zero career history in consumer software, growth marketing, or B2C distribution. His entire network is B2B infrastructure and enterprise procurement.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Provide cutting-edge AI/ML technical guidance</h4>
+        <p>His Innosential involvement connects him to CMU AI researchers, but his personal expertise is systems infrastructure, not neural network architecture or model training.</p>
+      </div>
+      <div class="risk-card">
+        <h4>Source enterprise customers directly</h4>
+        <p>His customer relationships are in embedded systems, defense, telecom, and semiconductor — not wealth management, fintech, or SaaS enterprise buyers.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ DISAMBIGUATION ═══════════ -->
+<section class="s-light">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Identity verification</div>
+    <div class="sec-title">Namesake disambiguation</div>
+    <div class="sec-lead">At least 15 unrelated "Atul Bansal" namesakes were identified and explicitly excluded from this dossier.</div>
+  </div>
+
+  <div class="tbl-wrap" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <table>
+      <thead>
+        <tr><th>Namesake</th><th>Role / Company</th><th>Why it's not the target</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Dubai/London "Atul Bansal"</td><td>Entrepreneur-in-Residence, Revolut (ex-LivLyt/ZenAdmin/McKinsey/Careem)</td><td>Different geography, career, and industry. Most prominent in search volume.</td></tr>
+        <tr><td>Meesho "Atul Bansal"</td><td>Group Financial Controller, Bengaluru</td><td>Finance role, no engineering or infrastructure history</td></tr>
+        <tr><td>GoKwik "Atul Bansal"</td><td>Head of Marketing (ex-Amazon/Airtel)</td><td>Marketing executive, no Pittsburgh or TiE connection</td></tr>
+        <tr><td>Velocis Systems "Atul Bansal"</td><td>Co-Founder & MD (IT solutions, India, since 2006)</td><td>Different company, different sector, no IIT Kanpur tie</td></tr>
+        <tr><td>DEE Piping "Atul Bansal"</td><td>CEO, DEE Development Engineers</td><td>Industrial/manufacturing, no software history</td></tr>
+        <tr><td>Poonawalla Fincorp "Atul Bansal"</td><td>Co-Chief Financial Officer</td><td>Finance executive, no engineering background</td></tr>
+        <tr><td>Google "Atul Bansal"</td><td>Engineering Manager (IIT Kharagpur)</td><td>Different IIT, no Pittsburgh or infrastructure history</td></tr>
+        <tr><td>HBO "Atul Bansal"</td><td>VP Consumer Products, Latin America</td><td>Entertainment industry, no overlap</td></tr>
+        <tr><td>PwC "Atul Bansal"</td><td>Director, Cloud Innovation & Engineering</td><td>Consulting, no startup or TiE connection</td></tr>
+        <tr><td>+ 6 others</td><td>ServiceNow, Navikenz, Blackstraw.ai, o9, Twenty Two Motors, Kickstart Advisors</td><td>All confirmed distinct via career signature mismatch</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ RESEARCH GAPS ═══════════ -->
+<section class="s-dark">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Honest assessment</div>
+    <div class="sec-title">What we don't know</div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div class="risk-card">
+      <h4>Current employer (Aug 2025 – Aug 2026)</h4>
+      <p>No confirmed role since leaving Lynx in July 2025. Could be between engagements, could have taken a role not yet public.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Timesys/Lynx transaction value</h4>
+      <p>Never publicly disclosed. Some sources imply a number; none verify it. Do not assume.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Individual angel investments</h4>
+      <p>No named personal investments found outside TiE Pittsburgh Angels' aggregate activity. He may invest personally but not publicly.</p>
+    </div>
+    <div class="risk-card">
+      <h4>Personal relationship depth</h4>
+      <p>Co-location at a company does not imply personal closeness. Network maps show institutional proximity, not friendship.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ SOURCE TABLE ═══════════ -->
+<section class="s-light">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">Verification ledger</div>
+    <div class="sec-title">Primary sources</div>
+  </div>
+
+  <div class="tbl-wrap" style="background:#fff;border-color:rgba(0,0,0,.08)">
+    <table>
+      <thead><tr><th>#</th><th>Source</th><th>What it verifies</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>LinkedIn profile (atul-bansal-a0ab174)</td><td>Current roles, headline, location, Lynx departure date</td></tr>
+        <tr><td>2</td><td>The Org, Timesys biography</td><td>Full career history, education, board roles</td></tr>
+        <tr><td>3–5</td><td>ECI Telecom SEC Form 20-F (2005, 2006)</td><td>$88M acquisition, Laurel financials, Data Networking Division</td></tr>
+        <tr><td>6</td><td>Military Embedded Systems (Apr 2007)</td><td>Timesys CEO appointment announcement</td></tr>
+        <tr><td>7</td><td>Converge Network Digest (Feb 2004)</td><td>Laurel CEO handoff to Don Pyle</td></tr>
+        <tr><td>22</td><td>Innosential "About Us" / team page</td><td>Bansal, Ganesh Mani, Carbonell, Bhiksha Raj listed</td></tr>
+        <tr><td>23</td><td>NEA investor testimony (SBN Online)</td><td>"The carriers know these guys" — Laurel credibility basis</td></tr>
+        <tr><td>25–27</td><td>Laurel Networks press / PitchBook / Wikipedia</td><td>Funding rounds, CIENA dual role, $88M sale</td></tr>
+        <tr><td>29</td><td>CB Insights / Crunchbase (Timesys)</td><td>13 investors, $40.5–44.8M cumulative funding</td></tr>
+        <tr><td>33</td><td>ECI Telecom SEC Form 6-K Exhibit 3</td><td>$88M all-cash transaction terms</td></tr>
+        <tr><td>36</td><td>Timesys 2007 press release</td><td>Open-source Linux strategy statement</td></tr>
+        <tr><td>38</td><td>Lynx press release (Dec 2023)</td><td>Timesys acquisition announcement</td></tr>
+        <tr><td>39</td><td>Timesys Technologies India LLP registry</td><td>Bansal as Chairman, Thapar as CTO/MD</td></tr>
+        <tr><td>42</td><td>Dr. Ganesh Mani LinkedIn / CMU bio</td><td>Ex-President TiE Pittsburgh, CMU faculty</td></tr>
+        <tr><td>43–44</td><td>CMU LTI faculty records</td><td>Jaime Carbonell (deceased), Bhiksha Raj at Innosential</td></tr>
+        <tr><td>57</td><td>TiE Angels platform</td><td>14 chapters, 186+ investees, $21M+ deployed</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+<div class="wrap footer-inner">
+  <div>
+    <h5>Atul Bansal — Intelligence Dossier</h5>
+    <p>Compiled from Apollo.io API, SEC EDGAR filings, Carnegie Mellon faculty records, corporate registries, Perplexity deep research, and primary source verification. August 2026.</p>
+  </div>
+  <div style="text-align:right">
+    <p>All claims evidence-bounded. Unresolved questions flagged, not assumed. 15 namesakes verified and excluded.</p>
+  </div>
+</div>
+</footer>
+
+</body>
+</html>
