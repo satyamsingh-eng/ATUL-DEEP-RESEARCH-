@@ -834,23 +834,84 @@
       font-style: italic;
     }
 
-    /* Tables */
+    /* High-Contrast Tables */
     .table-container {
       overflow-x: auto;
       margin: 24px 0;
       border-radius: var(--radius-md);
-      border: 1px solid var(--border-light);
-      background: var(--bg-light-card);
     }
 
-    table {
+    /* Dark section tables */
+    .section-dark .table-container,
+    .section-dark-elevated .table-container {
+      border: 1px solid var(--border-dark);
+      background: var(--bg-dark-card);
+    }
+
+    .section-dark table,
+    .section-dark-elevated table {
       width: 100%;
       border-collapse: collapse;
       font-size: 13px;
       text-align: left;
+      color: var(--text-dark-primary);
     }
 
-    th {
+    .section-dark th,
+    .section-dark-elevated th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 14px 18px;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-dark-secondary);
+      border-bottom: 1px solid var(--border-dark-strong);
+    }
+
+    .section-dark td,
+    .section-dark-elevated td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border-dark);
+      color: var(--text-dark-primary);
+      vertical-align: top;
+      line-height: 1.45;
+    }
+
+    .section-dark td strong,
+    .section-dark-elevated td strong {
+      color: #ffffff;
+    }
+
+    .section-dark tr:last-child td,
+    .section-dark-elevated tr:last-child td {
+      border-bottom: none;
+    }
+
+    .section-dark tr:hover td,
+    .section-dark-elevated tr:hover td {
+      background: rgba(255, 255, 255, 0.025);
+    }
+
+    /* Light section tables */
+    .section-light .table-container,
+    .section-white .table-container {
+      border: 1px solid var(--border-light);
+      background: var(--bg-light-card);
+    }
+
+    .section-light table,
+    .section-white table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+      color: var(--text-light-primary);
+    }
+
+    .section-light th,
+    .section-white th {
       font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 700;
@@ -862,7 +923,8 @@
       border-bottom: 1px solid var(--border-light-strong);
     }
 
-    td {
+    .section-light td,
+    .section-white td {
       padding: 14px 18px;
       border-bottom: 1px solid var(--border-light);
       color: var(--text-light-primary);
@@ -870,8 +932,15 @@
       line-height: 1.45;
     }
 
-    tr:last-child td { border-bottom: none; }
-    tr:hover td { background: rgba(0, 0, 0, 0.015); }
+    .section-light tr:last-child td,
+    .section-white tr:last-child td {
+      border-bottom: none;
+    }
+
+    .section-light tr:hover td,
+    .section-white tr:hover td {
+      background: rgba(0, 0, 0, 0.015);
+    }
 
     /* Footer */
     footer {
@@ -900,7 +969,7 @@
       letter-spacing: 0.05em;
     }
 
-    /* Responsive */
+    /* Responsive Breakpoints */
     @media (max-width: 1024px) {
       .nav-links { display: none; }
       .nav-badge { display: none; }
@@ -1158,55 +1227,55 @@
       <h2 class="section-title">Atul &times; C3A Capability Matrix &amp; Current Needs</h2>
       <p class="section-lead">A rigorous assessment of where Atul delivers 10x impact versus where C3A must not rely on him.</p>
 
-      <div class="table-container" style="background: var(--bg-dark-card); border-color: var(--border-dark);">
+      <div class="table-container">
         <table>
           <thead>
-            <tr style="background: rgba(255, 255, 255, 0.04);">
-              <th style="color: var(--text-dark-secondary);">C3A Strategic Need</th>
-              <th style="color: var(--text-dark-secondary);">Atul Proven Capability</th>
-              <th style="width: 100px; color: var(--text-dark-secondary);">Fit Score</th>
-              <th style="color: var(--text-dark-secondary);">Realistic Outcome for C3A</th>
+            <tr>
+              <th style="width: 220px;">C3A Strategic Need</th>
+              <th style="width: 300px;">Atul Proven Capability</th>
+              <th style="width: 110px;">Fit Score</th>
+              <th>Realistic Outcome for C3A</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong style="color: #fff;">Fail-Closed AI Agent Control Architecture</strong></td>
+              <td><strong>Fail-Closed AI Agent Control Architecture</strong></td>
               <td>Carrier-grade routing &amp; RTOS state machines (Laurel ST200, Timesys LinuxLink)</td>
               <td><span class="tag green">9.5 / 10</span></td>
               <td>SARVAX architecture validated for institutional compliance; zero-hallucination workflow guarantees.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">Founder Mentorship &amp; CEO Sounding Board</strong></td>
+              <td><strong>Founder Mentorship &amp; CEO Sounding Board</strong></td>
               <td>25+ years operating through founder-to-exit cycles (Laurel, Timesys)</td>
               <td><span class="tag green">9.5 / 10</span></td>
               <td>Bi-weekly strategic sounding board for Sai on scaling, org structure, and capital allocation.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">M&amp;A Readiness &amp; Strategic Exit</strong></td>
+              <td><strong>M&amp;A Readiness &amp; Strategic Exit</strong></td>
               <td>Dual-track exits: $88M corporate cash sale (ECI) &amp; PE rollup (Lynx/OceanSound)</td>
               <td><span class="tag green">9.0 / 10</span></td>
               <td>Clean IP clean-room standards and valuation modeling aligned with strategic acquirers from Day 1.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">Financial AI Domain &amp; Academic Validation</strong></td>
+              <td><strong>Financial AI Domain &amp; Academic Validation</strong></td>
               <td>Co-Managing Director of TiE Angels with Dr. Ganesh Mani (CMU / SSgA AI pioneer)</td>
               <td><span class="tag green">9.0 / 10</span></td>
               <td>Warm bridge to Dr. Ganesh Mani for co-authoring SARVAX's wealth compliance framework.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">Angel Round Capital Syndication</strong></td>
+              <td><strong>Angel Round Capital Syndication</strong></td>
               <td>Managing Director, TiE Pittsburgh Angels (SEC Form D Rule 506b)</td>
               <td><span class="tag" style="background: var(--amber-bg); color: var(--amber);">7.5 / 10</span></td>
               <td>$25K–$100K seed check from TiE Angels syndicate anchoring C3A's seed round.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">Fast Institutional Lead VC Check</strong></td>
+              <td><strong>Fast Institutional Lead VC Check</strong></td>
               <td>Not an institutional fund manager (angel syndicate only)</td>
               <td><span class="tag red">2.0 / 10</span></td>
               <td><strong style="color: var(--red);">DO NOT RELY.</strong> Pitching him as a VC will result in a quick pass. Treat him as an angel mentor.</td>
             </tr>
             <tr>
-              <td><strong style="color: #fff;">B2C Growth Marketing &amp; Consumer AI</strong></td>
+              <td><strong>B2C Growth Marketing &amp; Consumer AI</strong></td>
               <td>B2B enterprise infrastructure &amp; embedded systems only</td>
               <td><span class="tag red">1.0 / 10</span></td>
               <td><strong style="color: var(--red);">DO NOT RELY.</strong> Keep 100% focus on SARVAX. Do not discuss KARAX or consumer apps.</td>
@@ -1275,7 +1344,7 @@
             <div class="timeline-title">ECI Telecom</div>
             <div class="timeline-role">Chief Operating Officer, ECI Data Networking Division</div>
             <div class="timeline-desc">ECI acquired 100% of Laurel Networks for $88 Million in all-cash (June 2005). Bansal led the operational integration of Laurel’s carrier-edge routing platforms into ECI's global optical, broadband, and transport networking portfolio.</div>
-            <div class="timeline-meta">Sources: SEC Form 6-K Exhibit 3 [4], Form 20-F [3][5]</div>
+            <div class="timeline-meta">Sources: SEC Form 6-K Exhibit 3 [4], Form 20-F [3]</div>
           </div>
         </div>
 
@@ -1290,7 +1359,7 @@
               <li>Formed strategic embedded semiconductor alliances with NXP Semiconductors, Renesas, and Xilinx/AMD.</li>
               <li>Developed automated vulnerability management (SBOM/SCA) for mission-critical edge devices.</li>
             </ul>
-            <div class="timeline-meta">Source: Military Embedded Systems Announcement [6]</div>
+            <div class="timeline-meta">Source: Military Embedded Systems Announcement [5]</div>
           </div>
         </div>
 
@@ -1300,7 +1369,7 @@
             <div class="timeline-title">Lynx Software Technologies (OceanSound Partners)</div>
             <div class="timeline-role">Vice President, Open-Source Business Development</div>
             <div class="timeline-desc">Lynx acquired Timesys in December 2023. Bansal leads open-source security integration, Vigiles vulnerability lifecycle suites, and mission-critical edge platform software across defense, aerospace, and industrial sectors.</div>
-            <div class="timeline-meta">Sources: Lynx Acquisition Release [7], Vigiles Demand Release [8]</div>
+            <div class="timeline-meta">Sources: Lynx Acquisition Release [6]</div>
           </div>
         </div>
       </div>
@@ -1707,78 +1776,6 @@
             "I would treat Atul as our master systems architect and boardroom Sherpa. I would not pitch him for money; I would pitch him on our execution discipline. I would show him SARVAX's fail-closed state machines, ask for his most ruthless critique, deliver fixes within 48 hours, and lock him in as a formal Founding Strategic Advisor. Through Atul, we don't just get a mentor—we get the CMU financial AI bridge (Dr. Ganesh Mani), the M&amp;A playbook (CEO ally), and the golden key to Tier-1 Silicon Valley venture capital."
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Audited Primary Sources Table -->
-  <section class="section-white" id="sources">
-    <div class="container">
-      <div class="eyebrow accent-blue-light">Verification Ledger</div>
-      <h2 class="section-title">Audited Primary Sources</h2>
-      <p class="section-lead">All assertions in this profile are grounded in verified regulatory filings, company releases, and contemporaneous industry records.</p>
-
-      <div class="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th style="width: 60px;">ID</th>
-              <th style="width: 220px;">Source Entity &amp; Type</th>
-              <th>Description &amp; Documented Claim</th>
-              <th style="width: 140px;">Verification Route</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[1]</td>
-              <td><strong>Timesys Corporation</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">Company Biography</span></td>
-              <td>Historical management biography documenting DEC (1988&ndash;1995), FORE Systems (from 1995), Laurel Networks co-founding, and IIT/URI education.</td>
-              <td><a href="https://www.timesys.com/management-team" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">timesys.com [1]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[2]</td>
-              <td><strong>Converge Network Digest</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">Executive Appointment (Feb 2004)</span></td>
-              <td>Contemporaneous reporting on Don Pyle appointment as CEO and Atul Bansal transition to President &amp; COO prior to sale.</td>
-              <td><a href="https://convergedigest.com/laurel-appoints-former-ciscojuniper" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">convergedigest [2]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[3]</td>
-              <td><strong>ECI Telecom / US SEC</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">SEC Form 20-F (2005)</span></td>
-              <td>Annual report confirming 100% common share acquisition, $18M TTM revenue, 150 employees, and $118M total capital disclosure.</td>
-              <td><a href="https://www.sec.gov/Archives/edgar/data/701544/000114420406012298/v038283_20f.htm" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">SEC Edgar [3]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[4]</td>
-              <td><strong>ECI Telecom / US SEC</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">SEC Form 6-K Exhibit 3</span></td>
-              <td>Regulatory disclosure of $88M all-cash acquisition of Laurel Networks (June 2005) and Data Networking division formation.</td>
-              <td><a href="https://www.sec.gov/Archives/edgar/data/701544/000114420405016282/v018674_ex3.txt" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">SEC Edgar [4]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[5]</td>
-              <td><strong>Military Embedded Systems</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">Industry Announcement (Apr 2007)</span></td>
-              <td>Official appointment of Atul Bansal as CEO of TimeSys Corporation following national board search.</td>
-              <td><a href="https://vita.militaryembedded.com/842-timesys-appoints-atul-bansal-ceo" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">militaryembedded [5]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[6]</td>
-              <td><strong>Lynx Software Technologies</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">Press Release (Dec 2023)</span></td>
-              <td>Official announcement of Lynx acquiring Timesys to combine edge operating systems with embedded Linux tools and SBOM suites.</td>
-              <td><a href="https://www.lynx.com/press-releases/timesys-acquisition" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">lynx.com [6]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[7]</td>
-              <td><strong>US SEC EDGAR</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">SEC Form D (2021)</span></td>
-              <td>Form D regulatory filing for TiE Pittsburgh Angels LLC co-signed by Atul Bansal and Dr. Ganesh Mani as Co-Managing Directors.</td>
-              <td><a href="https://www.sec.gov/Archives/edgar/data/1843925/000184392521000001/xslFormDX01/primary_doc.xml" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">SEC Edgar [7]</a></td>
-            </tr>
-            <tr>
-              <td style="font-family: var(--font-mono); font-weight: 700; color: var(--accent);">[8]</td>
-              <td><strong>TiE Pittsburgh</strong><br><span style="font-size: 11px; color: var(--text-light-muted);">Official Chapter Registry</span></td>
-              <td>Charter roster listing Atul Bansal alongside board leadership and regional technology executives.</td>
-              <td><a href="https://pittsburgh.tie.org/team" target="_blank" rel="noopener" style="color: var(--accent); text-decoration: none; font-weight: 500;">pittsburgh.tie.org [8]</a></td>
-            </tr>
-          </tbody>
-        </table>
       </div>
     </div>
   </section>
