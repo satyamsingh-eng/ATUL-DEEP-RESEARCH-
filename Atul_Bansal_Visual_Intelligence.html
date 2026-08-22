@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atul Bansal — Visual Intelligence & Syndication Architecture</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#000;--bg2:#0a0a0a;--bg3:#111;--bg4:#1a1a1a;--t1:#f5f5f7;--t2:#a1a1a6;--t3:#6e6e73;--accent:#2997ff;--green:#30d158;--red:#ff453a;--amber:#ff9f0a;--border:rgba(255,255,255,.06);--border2:rgba(255,255,255,.12);--sf:-apple-system,BlinkMacSystemFont,"SF Pro Display","Helvetica Neue",Arial,sans-serif;--mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+body{font-family:var(--sf);background:var(--bg);color:var(--t1);line-height:1.6;letter-spacing:-.01em;overflow-x:hidden}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.nav{position:sticky;top:0;z-index:999;height:48px;background:rgba(0,0,0,.88);backdrop-filter:saturate(180%) blur(20px);border-bottom:.5px solid var(--border);display:flex;align-items:center;justify-content:space-between;padding:0 28px}
+.nav-left{display:flex;align-items:center;gap:12px;font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--t2)}
+.nav-left .dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.nav-links{display:flex;gap:16px;list-style:none}
+.nav-links a{font-size:11.5px;color:var(--t3);transition:color .15s}
+.nav-links a:hover{color:var(--t1);text-decoration:none}
+
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+section{padding:80px 0}
+
+.hero{padding:100px 0 80px;border-bottom:1px solid var(--border)}
+.hero-eyebrow{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:16px}
+.hero h1{font-family:'Instrument Serif', serif; font-size:64px;font-weight:400;line-height:1.05;letter-spacing:-.02em;margin-bottom:20px}
+.hero .subtitle{font-size:20px;color:var(--t2);line-height:1.45;max-width:720px;margin-bottom:36px;letter-spacing:-.015em}
+
+.sec-header{margin-bottom:48px; text-align: center;}
+.sec-label{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.12em;color:var(--accent);margin-bottom:10px}
+.sec-title{font-size:32px;font-weight:700;line-height:1.1;letter-spacing:-.025em;color:var(--t1);margin-bottom:10px}
+.sec-lead{font-size:15px;color:var(--t2);max-width:720px;line-height:1.55; margin: 0 auto;}
+
+.s-dark{background:var(--bg);border-bottom:1px solid var(--border)}
+.s-dark2{background:var(--bg2);border-bottom:1px solid var(--border)}
+
+.diagram-container {
+    background: #000;
+    border: 1px solid var(--border2);
+    border-radius: 12px;
+    padding: 32px 0;
+    margin: 40px 0;
+    overflow-x: auto;
+    display: flex;
+    justify-content: center;
+}
+
+svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+text {
+    font-family: 'Geist', sans-serif;
+}
+.mono {
+    font-family: 'Geist Mono', monospace;
+}
+.callout {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+}
+
+footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);font-size:11px}
+.footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-left"><span class="dot"></span> C3A Labs · Visual Intelligence</div>
+  <ul class="nav-links">
+    <li><a href="Atul_Bansal_Master_Executive_Brief.html">← Back to Master Brief</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+<div class="wrap">
+  <div class="hero-eyebrow">Visual Architecture & Syndication Maps</div>
+  <h1>Operational Blueprints</h1>
+  <div class="subtitle">Visual models of Atul Bansal's repeatable M&A exit loops, the TiE Angels syndication engine, and the structural ecosystem leverage surrounding him.</div>
+</div>
+</section>
+
+<!-- DIAGRAM 1: THE TIE ANGELS CLOUD HACK -->
+<section class="s-dark">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">The Cloud Credit Hack</div>
+    <div class="sec-title">1. The TiE Institutional Syndication Engine</div>
+    <div class="sec-lead">How pitching a local chapter translates a single check into $350K+ in non-dilutive cloud runway.</div>
+  </div>
+
+  <div class="diagram-container">
+    <svg width="840" height="480" viewBox="0 0 840 480" role="img" aria-labelledby="d1-title d1-desc">
+        <title id="d1-title">TiE Angels Syndication and Cloud Credit Architecture</title>
+        <desc id="d1-desc">Architecture diagram showing how a local startup pitch to TiE Pittsburgh flows through an SPV to unlock global syndication and institutional cloud credits from AWS and GCP.</desc>
+        
+        <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
+            </marker>
+            <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#2997ff"/>
+            </marker>
+        </defs>
+
+        <!-- ZONES -->
+        <!-- Startup Zone -->
+        <rect x="20" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+        <rect x="76" y="84" width="48" height="12" rx="2" fill="#000"/>
+        <text x="100" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">STARTUP</text>
+
+        <!-- Local Diligence Zone -->
+        <rect x="220" y="80" width="200" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+        <rect x="282" y="84" width="76" height="12" rx="2" fill="#000"/>
+        <text x="320" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">LOCAL DILIGENCE</text>
+
+        <!-- Global Syndication Zone -->
+        <rect x="460" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+        <rect x="502" y="84" width="76" height="12" rx="2" fill="#000"/>
+        <text x="540" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">TIE PLATFORM</text>
+
+        <!-- Institutional Gate Zone -->
+        <rect x="660" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+        <rect x="702" y="84" width="76" height="12" rx="2" fill="#000"/>
+        <text x="740" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">CLOUD RUNWAY</text>
+
+        <!-- ARROWS -->
+        <path d="M 140,220 H 252" fill="none" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <rect x="176" y="206" width="40" height="12" rx="2" fill="#000"/>
+        <text x="196" y="215" fill="#2997ff" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">PITCH</text>
+
+        <path d="M 380,180 H 420 Q 428,180 428,188 V 212 Q 428,220 436,220 H 472" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <rect x="408" y="166" width="40" height="12" rx="2" fill="#000"/>
+        <text x="428" y="175" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ELEVATE</text>
+
+        <path d="M 380,260 H 420 Q 428,260 428,252 V 228 Q 428,220 436,220 H 472" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <rect x="408" y="246" width="40" height="12" rx="2" fill="#000"/>
+        <text x="428" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ANCHOR</text>
+
+        <path d="M 600,220 H 672" fill="none" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <rect x="616" y="206" width="40" height="12" rx="2" fill="#000"/>
+        <text x="636" y="215" fill="#2997ff" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ORG_ID</text>
+
+        <path d="M 540,180 V 136 Q 540,128 548,128 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+        <rect x="580" y="114" width="40" height="12" rx="2" fill="#000"/>
+        <text x="600" y="123" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">FUNDING</text>
+
+        <!-- NODES -->
+        <!-- N1 -->
+        <rect x="40" y="200" width="100" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="90" y="224" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Tech Startup</text>
+
+        <!-- N2 -->
+        <rect x="260" y="160" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#2997ff" stroke-width="1"/>
+        <text x="320" y="184" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">TiE Pittsburgh</text>
+
+        <!-- N3 -->
+        <rect x="260" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="320" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">TiE Angel SPV</text>
+        <text x="320" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">One cap table line</text>
+
+        <!-- N4 -->
+        <rect x="480" y="200" width="120" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+        <text x="540" y="224" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Startup Steroid</text>
+        <text x="540" y="256" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">Global deal syndication</text>
+
+        <!-- N5 -->
+        <rect x="680" y="108" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="740" y="132" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">GCP Scale Tier</text>
+        <text x="740" y="164" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$350K AI Credits</text>
+
+        <!-- N6 -->
+        <rect x="680" y="200" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="740" y="224" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">AWS Activate</text>
+        <text x="740" y="256" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$100K Portfolio</text>
+
+        <!-- Annotations -->
+        <text x="320" y="130" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Atul & Ganesh filter</text>
+        <text x="540" y="320" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">3,000+ Charter Members</text>
+        
+        <!-- Legend -->
+        <line x1="30" y1="420" x2="810" y2="420" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+        <text x="30" y="440" fill="#a1a1a6" font-size="8" class="mono" letter-spacing="0.14em">LEGEND</text>
+        <rect x="100" y="433" width="12" height="8" rx="2" fill="none" stroke="#2997ff" stroke-width="1"/>
+        <text x="120" y="440" fill="#f5f5f7" font-size="10">Focal Node</text>
+        <rect x="220" y="433" width="12" height="8" rx="2" fill="none" stroke="#6e6e73" stroke-width="1"/>
+        <text x="240" y="440" fill="#f5f5f7" font-size="10">Component</text>
+        <line x1="340" y1="437" x2="356" y2="437" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+        <text x="364" y="440" fill="#f5f5f7" font-size="10">Primary Path</text>
+    </svg>
+  </div>
+</div>
+</section>
+
+<!-- DIAGRAM 2: THE CAREER RETENTION PLAYBOOK -->
+<section class="s-dark2">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">The M&A Loop</div>
+    <div class="sec-title">2. The 18-Month Exit Cycle</div>
+    <div class="sec-lead">The repeatable state-machine demonstrating how Atul Bansal builds, sells, and reliably integrates infrastructure companies.</div>
+  </div>
+
+  <div class="diagram-container">
+    <svg width="840" height="340" viewBox="0 0 840 340" role="img" aria-labelledby="d2-title d2-desc">
+        <title id="d2-title">Atul Bansal M&A Exit Cycle Timeline</title>
+        <desc id="d2-desc">State machine showing two identical cycles: Build company, Sell for cash/PE, stay 18 months to integrate, then leave. Applied to Laurel Networks and Timesys.</desc>
+
+        <defs>
+            <marker id="arrow2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
+            </marker>
+        </defs>
+
+        <!-- ARROWS (Top Loop: Laurel) -->
+        <path d="M 120,100 H 222" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+        <rect x="156" y="86" width="30" height="12" rx="2" fill="#0a0a0a"/>
+        <text x="171" y="95" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">SELL</text>
+
+        <path d="M 350,100 H 452" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+        <rect x="386" y="86" width="30" height="12" rx="2" fill="#0a0a0a"/>
+        <text x="401" y="95" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">LEAVE</text>
+
+        <path d="M 580,100 H 620 Q 628,100 628,108 V 172 Q 628,180 636,180 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+        <!-- ARROWS (Bottom Loop: Timesys) -->
+        <path d="M 120,260 H 222" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+        <rect x="156" y="246" width="30" height="12" rx="2" fill="#0a0a0a"/>
+        <text x="171" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">SELL</text>
+
+        <path d="M 350,260 H 452" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+        <rect x="386" y="246" width="30" height="12" rx="2" fill="#0a0a0a"/>
+        <text x="401" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">LEAVE</text>
+
+        <path d="M 580,260 H 620 Q 628,260 628,252 V 188 Q 628,180 636,180 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+        <!-- NODES Cycle 1 -->
+        <rect x="40" y="80" width="80" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="80" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Laurel</text>
+        <text x="80" y="136" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">1999-2005</text>
+
+        <rect x="230" y="80" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="290" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">ECI Telecom</text>
+        <text x="290" y="136" fill="#30d158" font-size="9" class="mono" text-anchor="middle">18 Months (COO)</text>
+
+        <rect x="460" y="80" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="520" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Integration</text>
+        <text x="520" y="136" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Completed 2007</text>
+
+        <!-- NODES Cycle 2 -->
+        <rect x="40" y="240" width="80" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="80" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys</text>
+        <text x="80" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">2007-2023</text>
+
+        <rect x="230" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="290" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Lynx Software</text>
+        <text x="290" y="296" fill="#30d158" font-size="9" class="mono" text-anchor="middle">19 Months (VP)</text>
+
+        <rect x="460" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="520" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Integration</text>
+        <text x="520" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Completed Jul 2025</text>
+
+        <!-- END NODE -->
+        <rect x="680" y="160" width="120" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+        <text x="740" y="184" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Capital Deploy</text>
+        <text x="740" y="216" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">TiE Angels Lead</text>
+
+        <!-- Annotations -->
+        <text x="290" y="50" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">$88M Cash Exit (2005)</text>
+        <text x="290" y="210" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">&lt; $100M PE Exit (2023)</text>
+    </svg>
+  </div>
+</div>
+</section>
+
+<!-- DIAGRAM 3: THE ECOSYSTEM LEVERAGE MAP -->
+<section class="s-dark">
+<div class="wrap">
+  <div class="sec-header">
+    <div class="sec-label">The Power Matrix</div>
+    <div class="sec-title">3. Institutional Connectivity</div>
+    <div class="sec-lead">Atul sits at the nexus of four major structural pillars in the Pittsburgh technology ecosystem.</div>
+  </div>
+
+  <div class="diagram-container">
+    <svg width="840" height="520" viewBox="0 0 840 520" role="img" aria-labelledby="d3-title d3-desc">
+        <title id="d3-title">Atul Bansal Ecosystem Leverage Map</title>
+        <desc id="d3-desc">Hub and spoke architecture diagram showing Atul Bansal in the center connecting to CMU S3D, CEO ally, TiE Pittsburgh, and Timesys India.</desc>
+
+        <defs>
+            <marker id="arrow3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
+            </marker>
+        </defs>
+
+        <!-- ARROWS -->
+        <!-- Center to CMU (Top-Left) -->
+        <path d="M 370,240 H 260 V 160" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
+        <!-- Center to CEO ally (Top-Right) -->
+        <path d="M 470,240 H 580 V 160" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
+        <!-- Center to TiE/412 (Bottom-Left) -->
+        <path d="M 370,280 H 260 V 360" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
+        <!-- Center to Timesys India (Bottom-Right) -->
+        <path d="M 470,280 H 580 V 360" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
+
+        <!-- ZONES & NODES -->
+        <!-- Center Node -->
+        <rect x="370" y="240" width="100" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+        <text x="420" y="264" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Atul Bansal</text>
+
+        <!-- Top Left: CMU -->
+        <rect x="200" y="120" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="260" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CMU S3D</text>
+        <text x="260" y="176" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Ganesh Mani</text>
+        <text x="260" y="100" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Financial AI Validation</text>
+
+        <!-- Top Right: CEO ally -->
+        <rect x="520" y="120" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="580" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CEO ally, Inc.</text>
+        <text x="580" y="176" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Girish Godbole</text>
+        <text x="580" y="100" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">M&A Exit Architecture</text>
+
+        <!-- Bottom Left: Capital -->
+        <rect x="200" y="360" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="260" y="384" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">412 Venture Fund</text>
+        <text x="260" y="416" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Ilana Diamond</text>
+        <text x="260" y="440" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Series A Capital</text>
+
+        <!-- Bottom Right: India -->
+        <rect x="520" y="360" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
+        <text x="580" y="384" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys India LLP</text>
+        <text x="580" y="416" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Rakesh Thapar</text>
+        <text x="580" y="440" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">140+ Eng Hub</text>
+
+    </svg>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="wrap footer-inner">
+  <div>
+    <h5>C3A Labs — Operations</h5>
+    <p>Architecture diagrams extracted from Deep Research Intelligence Sweeps. August 2026.</p>
+  </div>
+  <div style="text-align:right">
+    <a href="Atul_Bansal_Master_Executive_Brief.html" style="color:var(--accent)">← Back to Master Brief</a>
+  </div>
+</div>
+</footer>
+
+</body>
+</html>
