@@ -8,6 +8,7 @@
 !/Atul_Bansal_Master_Executive_Brief.md
 !/Atul_Bansal_Master_Executive_Brief.html
 !/index.html
+!/TiE_Angels_Intelligence_Brief.html
 !/SARVAX_Founder_Operator_One_Pager_Draft.md
 !/reports/
 !/reports/*.md
@@ -17,6 +18,7 @@
 *.htm
 !/Atul_Bansal_Master_Executive_Brief.html
 !/index.html
+!/TiE_Angels_Intelligence_Brief.html
 
 # Never publish local/system/transient artifacts even if a future allow rule is added.
 .DS_Store
