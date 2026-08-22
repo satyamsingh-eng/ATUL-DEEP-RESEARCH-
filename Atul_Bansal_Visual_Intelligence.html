@@ -40,11 +40,12 @@ section{padding:80px 0}
     background: #000;
     border: 1px solid var(--border2);
     border-radius: 12px;
-    padding: 32px 0;
+    padding: 32px;
     margin: 40px 0;
     overflow-x: auto;
     display: flex;
     justify-content: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
 
 svg {
@@ -53,16 +54,9 @@ svg {
     display: block;
 }
 
-text {
-    font-family: 'Geist', sans-serif;
-}
-.mono {
-    font-family: 'Geist Mono', monospace;
-}
-.callout {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-}
+text { font-family: 'Geist', sans-serif; }
+.mono { font-family: 'Geist Mono', monospace; }
+.callout { font-family: 'Instrument Serif', serif; font-style: italic; }
 
 footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);font-size:11px}
 .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
@@ -70,16 +64,14 @@ footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);fo
 </head>
 <body>
 
-
 <nav class="nav">
-  <div class="nav-left"><span class="dot"></span> C3A Labs Executive Intelligence</div>
+  <div class="nav-left"><span class="dot"></span> C3A Labs · Visual Intelligence</div>
   <ul class="nav-links">
     <li><a href="index.html">Master Brief</a></li>
-    <li><a href="Atul_Bansal_Visual_Intelligence.html">Visual Maps</a></li>
+    <li><a href="Atul_Bansal_Visual_Intelligence.html" style="color:#f5f5f7;font-weight:bold;">Visual Maps</a></li>
     <li><a href="TiE_Angels_Intelligence_Brief.html">TiE Angels Deep Dive</a></li>
   </ul>
 </nav>
-
 
 <section class="hero">
 <div class="wrap">
@@ -95,107 +87,112 @@ footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);fo
   <div class="sec-header">
     <div class="sec-label">The Cloud Credit Hack</div>
     <div class="sec-title">1. The TiE Institutional Syndication Engine</div>
-    <div class="sec-lead">How pitching a local chapter translates a single check into $350K+ in non-dilutive cloud runway.</div>
+    <div class="sec-lead">How pitching a local chapter translates a single check into $350K+ in non-dilutive cloud runway via SPVs.</div>
   </div>
-
   <div class="diagram-container">
-    <svg width="840" height="480" viewBox="0 0 840 480" role="img" aria-labelledby="d1-title d1-desc">
-        <title id="d1-title">TiE Angels Syndication and Cloud Credit Architecture</title>
-        <desc id="d1-desc">Architecture diagram showing how a local startup pitch to TiE Pittsburgh flows through an SPV to unlock global syndication and institutional cloud credits from AWS and GCP.</desc>
-        
-        <defs>
-            <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
-            </marker>
-            <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                <polygon points="0 0, 8 3, 0 6" fill="#2997ff"/>
-            </marker>
-        </defs>
+    <svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d1-title d1-desc">
+      <title id="d1-title">TiE Angels Syndication Engine</title>
+      <desc id="d1-desc">Architecture diagram showing how a local startup pitch to TiE Pittsburgh flows through an SPV to unlock global syndication and institutional cloud credits.</desc>
+      <defs>
+        <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.9" fill="rgba(245,245,245,0.08)"/>
+        </pattern>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bfc0c0"/></marker>
+        <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#2997ff"/></marker>
+        <marker id="arrow-link" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#30d158"/></marker>
+      </defs>
 
-        <!-- ZONES -->
-        <!-- Startup Zone -->
-        <rect x="20" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
-        <rect x="76" y="84" width="48" height="12" rx="2" fill="#000"/>
-        <text x="100" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">STARTUP</text>
+      <rect width="100%" height="100%" fill="#000000"/>
+      <rect width="100%" height="100%" fill="url(#dots)" opacity="0.6"/>
 
-        <!-- Local Diligence Zone -->
-        <rect x="220" y="80" width="200" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
-        <rect x="282" y="84" width="76" height="12" rx="2" fill="#000"/>
-        <text x="320" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">LOCAL DILIGENCE</text>
+      <!-- ZONES -->
+      <rect x="40" y="80" width="200" height="300" rx="8" fill="rgba(245,245,245,0.03)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+      <rect x="94" y="84" width="92" height="12" rx="2" fill="#000"/>
+      <text x="140" y="93" fill="rgba(245,245,245,0.5)" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">LOCAL DILIGENCE</text>
 
-        <!-- Global Syndication Zone -->
-        <rect x="460" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
-        <rect x="502" y="84" width="76" height="12" rx="2" fill="#000"/>
-        <text x="540" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">TIE PLATFORM</text>
+      <rect x="280" y="80" width="200" height="300" rx="8" fill="rgba(41,151,255,0.03)" stroke="rgba(41,151,255,0.15)" stroke-width="0.8"/>
+      <rect x="340" y="84" width="80" height="12" rx="2" fill="#000"/>
+      <text x="380" y="93" fill="rgba(41,151,255,0.5)" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">TIE PLATFORM</text>
 
-        <!-- Institutional Gate Zone -->
-        <rect x="660" y="80" width="160" height="280" rx="8" fill="rgba(245,245,245,0.02)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
-        <rect x="702" y="84" width="76" height="12" rx="2" fill="#000"/>
-        <text x="740" y="93" fill="rgba(245,245,245,0.5)" font-size="7" class="mono" text-anchor="middle" letter-spacing="0.1em">CLOUD RUNWAY</text>
+      <rect x="520" y="80" width="200" height="300" rx="8" fill="rgba(48,209,88,0.03)" stroke="rgba(48,209,88,0.15)" stroke-width="0.8"/>
+      <rect x="576" y="84" width="88" height="12" rx="2" fill="#000"/>
+      <text x="620" y="93" fill="rgba(48,209,88,0.5)" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">CLOUD RUNWAY</text>
 
-        <!-- ARROWS -->
-        <path d="M 140,220 H 252" fill="none" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
-        <rect x="176" y="206" width="40" height="12" rx="2" fill="#000"/>
-        <text x="196" y="215" fill="#2997ff" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">PITCH</text>
+      <rect x="760" y="80" width="200" height="300" rx="8" fill="rgba(245,245,245,0.03)" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+      <rect x="806" y="84" width="108" height="12" rx="2" fill="#000"/>
+      <text x="860" y="93" fill="rgba(245,245,245,0.5)" font-size="7" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.1em">GLOBAL SYNDICATE</text>
 
-        <path d="M 380,180 H 420 Q 428,180 428,188 V 212 Q 428,220 436,220 H 472" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow)"/>
-        <rect x="408" y="166" width="40" height="12" rx="2" fill="#000"/>
-        <text x="428" y="175" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ELEVATE</text>
+      <!-- ARROWS -->
+      <!-- Pitch to SPV -->
+      <path d="M 200,240 H 260 Q 268,240 268,232 V 168 Q 268,160 276,160 H 312" fill="none" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+      <rect x="238" y="146" width="40" height="12" rx="2" fill="#000"/>
+      <text x="258" y="155" fill="#2997ff" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">ANCHOR</text>
 
-        <path d="M 380,260 H 420 Q 428,260 428,252 V 228 Q 428,220 436,220 H 472" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow)"/>
-        <rect x="408" y="246" width="40" height="12" rx="2" fill="#000"/>
-        <text x="428" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ANCHOR</text>
+      <!-- SPV to Cloud -->
+      <path d="M 440,160 H 544" fill="none" stroke="#30d158" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+      <rect x="472" y="146" width="44" height="12" rx="2" fill="#000"/>
+      <text x="494" y="155" fill="#30d158" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">ORG_ID</text>
 
-        <path d="M 600,220 H 672" fill="none" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
-        <rect x="616" y="206" width="40" height="12" rx="2" fill="#000"/>
-        <text x="636" y="215" fill="#2997ff" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ORG_ID</text>
+      <!-- Cloud fork down -->
+      <path d="M 680,160 H 700 Q 708,160 708,168 V 212 Q 708,220 700,220 H 680" fill="none" stroke="#bfc0c0" stroke-width="1" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+      <path d="M 680,160 H 700 Q 708,160 708,152 V 108 Q 708,100 700,100 H 680" fill="none" stroke="#bfc0c0" stroke-width="1" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
 
-        <path d="M 540,180 V 136 Q 540,128 548,128 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
-        <rect x="580" y="114" width="40" height="12" rx="2" fill="#000"/>
-        <text x="600" y="123" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">FUNDING</text>
+      <!-- SPV to Global -->
+      <path d="M 440,160 H 480 Q 488,160 488,168 V 232 Q 488,240 496,240 H 792" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="622" y="226" width="56" height="12" rx="2" fill="#000"/>
+      <text x="650" y="235" fill="#bfc0c0" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">BROADCAST</text>
 
-        <!-- NODES -->
-        <!-- N1 -->
-        <rect x="40" y="200" width="100" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="90" y="224" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Tech Startup</text>
+      <!-- NODES -->
+      <!-- Startup -->
+      <rect x="60" y="220" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="130" y="244" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Tech Startup</text>
 
-        <!-- N2 -->
-        <rect x="260" y="160" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#2997ff" stroke-width="1"/>
-        <text x="320" y="184" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">TiE Pittsburgh</text>
+      <!-- TiE Pittsburgh -->
+      <rect x="60" y="140" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#2997ff" stroke-width="1"/>
+      <text x="130" y="164" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">TiE Pittsburgh</text>
+      
+      <path d="M 130,220 V 188" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="110" y="198" width="40" height="12" rx="2" fill="#000"/>
+      <text x="130" y="207" fill="#bfc0c0" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">PITCH</text>
 
-        <!-- N3 -->
-        <rect x="260" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="320" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">TiE Angel SPV</text>
-        <text x="320" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">One cap table line</text>
+      <!-- SPV -->
+      <rect x="320" y="140" width="120" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="380" y="164" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Startup Steroid</text>
+      <text x="380" y="192" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">1 Cap Table Line</text>
 
-        <!-- N4 -->
-        <rect x="480" y="200" width="120" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
-        <text x="540" y="224" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Startup Steroid</text>
-        <text x="540" y="256" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">Global deal syndication</text>
+      <!-- GCP -->
+      <rect x="560" y="140" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#30d158" stroke-width="1"/>
+      <text x="620" y="164" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">GCP Scale Tier</text>
+      <text x="620" y="196" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$350K AI Credits</text>
 
-        <!-- N5 -->
-        <rect x="680" y="108" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="740" y="132" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">GCP Scale Tier</text>
-        <text x="740" y="164" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$350K AI Credits</text>
+      <!-- AWS -->
+      <rect x="560" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#30d158" stroke-width="1"/>
+      <text x="620" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">AWS Activate</text>
+      <text x="620" y="296" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$100K Portfolio</text>
 
-        <!-- N6 -->
-        <rect x="680" y="200" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="740" y="224" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">AWS Activate</text>
-        <text x="740" y="256" fill="#30d158" font-size="9" class="mono" text-anchor="middle">$100K Portfolio</text>
+      <!-- Global -->
+      <rect x="800" y="220" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="860" y="244" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">3,000+ Angels</text>
+      <text x="860" y="276" fill="#bfc0c0" font-size="9" class="mono" text-anchor="middle">Global syndication</text>
 
-        <!-- Annotations -->
-        <text x="320" y="130" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Atul & Ganesh filter</text>
-        <text x="540" y="320" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">3,000+ Charter Members</text>
-        
-        <!-- Legend -->
-        <line x1="30" y1="420" x2="810" y2="420" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
-        <text x="30" y="440" fill="#a1a1a6" font-size="8" class="mono" letter-spacing="0.14em">LEGEND</text>
-        <rect x="100" y="433" width="12" height="8" rx="2" fill="none" stroke="#2997ff" stroke-width="1"/>
-        <text x="120" y="440" fill="#f5f5f7" font-size="10">Focal Node</text>
-        <rect x="220" y="433" width="12" height="8" rx="2" fill="none" stroke="#6e6e73" stroke-width="1"/>
-        <text x="240" y="440" fill="#f5f5f7" font-size="10">Component</text>
-        <line x1="340" y1="437" x2="356" y2="437" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
-        <text x="364" y="440" fill="#f5f5f7" font-size="10">Primary Path</text>
+      <!-- Callouts -->
+      <text x="130" y="120" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Atul & Ganesh filter</text>
+
+      <!-- Legend strip -->
+      <line x1="40" y1="420" x2="960" y2="420" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+      <text x="40" y="440" fill="#a1a1a6" font-size="8" class="mono" letter-spacing="0.14em">LEGEND</text>
+
+      <rect x="120" y="433" width="14" height="10" rx="2" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="144" y="442" fill="#f5f5f7" font-size="10">Focal Node</text>
+
+      <rect x="240" y="433" width="14" height="10" rx="2" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="264" y="442" fill="#f5f5f7" font-size="10">Component</text>
+
+      <line x1="360" y1="438" x2="388" y2="438" stroke="#2997ff" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+      <text x="400" y="442" fill="#f5f5f7" font-size="10">Anchor Deal</text>
+
+      <line x1="500" y1="438" x2="528" y2="438" stroke="#30d158" stroke-width="1.2" marker-end="url(#arrow-link)"/>
+      <text x="540" y="442" fill="#f5f5f7" font-size="10">Institutional Org ID</text>
     </svg>
   </div>
 </div>
@@ -209,74 +206,85 @@ footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);fo
     <div class="sec-title">2. The 18-Month Exit Cycle</div>
     <div class="sec-lead">The repeatable state-machine demonstrating how Atul Bansal builds, sells, and reliably integrates infrastructure companies.</div>
   </div>
-
   <div class="diagram-container">
-    <svg width="840" height="340" viewBox="0 0 840 340" role="img" aria-labelledby="d2-title d2-desc">
-        <title id="d2-title">Atul Bansal M&A Exit Cycle Timeline</title>
-        <desc id="d2-desc">State machine showing two identical cycles: Build company, Sell for cash/PE, stay 18 months to integrate, then leave. Applied to Laurel Networks and Timesys.</desc>
+    <svg viewBox="0 0 1000 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d2-title d2-desc">
+      <title id="d2-title">The 18-Month M&A Retention Playbook</title>
+      <desc id="d2-desc">State machine diagram demonstrating Atul Bansal's repeatable build, sell, and integrate cycle across Laurel Networks and Timesys.</desc>
+      <defs>
+        <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.9" fill="rgba(245,245,245,0.08)"/>
+        </pattern>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bfc0c0"/></marker>
+      </defs>
 
-        <defs>
-            <marker id="arrow2" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
-            </marker>
-        </defs>
+      <rect width="100%" height="100%" fill="#000000"/>
+      <rect width="100%" height="100%" fill="url(#dots)" opacity="0.6"/>
 
-        <!-- ARROWS (Top Loop: Laurel) -->
-        <path d="M 120,100 H 222" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
-        <rect x="156" y="86" width="30" height="12" rx="2" fill="#0a0a0a"/>
-        <text x="171" y="95" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">SELL</text>
+      <!-- ARROWS Cycle 1 -->
+      <path d="M 220,140 H 352" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="256" y="126" width="60" height="12" rx="2" fill="#000"/>
+      <text x="286" y="135" fill="#a1a1a6" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">SELL ($88M)</text>
 
-        <path d="M 350,100 H 452" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
-        <rect x="386" y="86" width="30" height="12" rx="2" fill="#0a0a0a"/>
-        <text x="401" y="95" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">LEAVE</text>
+      <path d="M 520,140 H 652" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="556" y="126" width="60" height="12" rx="2" fill="#000"/>
+      <text x="586" y="135" fill="#a1a1a6" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">INTEGRATE</text>
 
-        <path d="M 580,100 H 620 Q 628,100 628,108 V 172 Q 628,180 636,180 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+      <path d="M 820,140 H 840 Q 848,140 848,148 V 212 Q 848,220 856,220 H 872" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
 
-        <!-- ARROWS (Bottom Loop: Timesys) -->
-        <path d="M 120,260 H 222" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
-        <rect x="156" y="246" width="30" height="12" rx="2" fill="#0a0a0a"/>
-        <text x="171" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">SELL</text>
+      <!-- ARROWS Cycle 2 -->
+      <path d="M 220,300 H 352" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="256" y="286" width="60" height="12" rx="2" fill="#000"/>
+      <text x="286" y="295" fill="#a1a1a6" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">SELL (&lt;$100M)</text>
 
-        <path d="M 350,260 H 452" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
-        <rect x="386" y="246" width="30" height="12" rx="2" fill="#0a0a0a"/>
-        <text x="401" y="255" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">LEAVE</text>
+      <path d="M 520,300 H 652" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="556" y="286" width="60" height="12" rx="2" fill="#000"/>
+      <text x="586" y="295" fill="#a1a1a6" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing="0.06em">INTEGRATE</text>
 
-        <path d="M 580,260 H 620 Q 628,260 628,252 V 188 Q 628,180 636,180 H 672" fill="none" stroke="#6e6e73" stroke-width="1.2" marker-end="url(#arrow2)"/>
+      <path d="M 820,300 H 840 Q 848,300 848,292 V 228 Q 848,220 856,220 H 872" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
 
-        <!-- NODES Cycle 1 -->
-        <rect x="40" y="80" width="80" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="80" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Laurel</text>
-        <text x="80" y="136" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">1999-2005</text>
+      <!-- NODES Cycle 1 -->
+      <rect x="80" y="120" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="150" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Laurel Networks</text>
+      <text x="150" y="172" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">1999–2005</text>
 
-        <rect x="230" y="80" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="290" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">ECI Telecom</text>
-        <text x="290" y="136" fill="#30d158" font-size="9" class="mono" text-anchor="middle">18 Months (COO)</text>
+      <rect x="360" y="120" width="160" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="440" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">ECI Telecom (Acquirer)</text>
+      <text x="440" y="172" fill="#30d158" font-size="9" class="mono" text-anchor="middle">18 Months Retention</text>
 
-        <rect x="460" y="80" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="520" y="104" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Integration</text>
-        <text x="520" y="136" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Completed 2007</text>
+      <rect x="660" y="120" width="160" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="740" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Depart / Next Chapter</text>
+      <text x="740" y="172" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">2007</text>
 
-        <!-- NODES Cycle 2 -->
-        <rect x="40" y="240" width="80" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="80" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys</text>
-        <text x="80" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">2007-2023</text>
+      <!-- NODES Cycle 2 -->
+      <rect x="80" y="280" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="150" y="304" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys</text>
+      <text x="150" y="332" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">2007–2023</text>
 
-        <rect x="230" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="290" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Lynx Software</text>
-        <text x="290" y="296" fill="#30d158" font-size="9" class="mono" text-anchor="middle">19 Months (VP)</text>
+      <rect x="360" y="280" width="160" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="440" y="304" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Lynx Software (Acquirer)</text>
+      <text x="440" y="332" fill="#30d158" font-size="9" class="mono" text-anchor="middle">19 Months Retention</text>
 
-        <rect x="460" y="240" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="520" y="264" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Integration</text>
-        <text x="520" y="296" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Completed Jul 2025</text>
+      <rect x="660" y="280" width="160" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="740" y="304" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Depart / Next Chapter</text>
+      <text x="740" y="332" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">July 2025</text>
 
-        <!-- END NODE -->
-        <rect x="680" y="160" width="120" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
-        <text x="740" y="184" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Capital Deploy</text>
-        <text x="740" y="216" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">TiE Angels Lead</text>
+      <!-- END NODE -->
+      <rect x="880" y="200" width="100" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="930" y="224" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Venture</text>
+      <text x="930" y="252" fill="#2997ff" font-size="9" class="mono" text-anchor="middle">Capital Deployment</text>
 
-        <!-- Annotations -->
-        <text x="290" y="50" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">$88M Cash Exit (2005)</text>
-        <text x="290" y="210" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">&lt; $100M PE Exit (2023)</text>
+      <!-- Callouts -->
+      <text x="440" y="80" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">"We are not leaving immediately."</text>
+
+      <!-- Legend -->
+      <line x1="40" y1="420" x2="960" y2="420" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+      <text x="40" y="440" fill="#a1a1a6" font-size="8" class="mono" letter-spacing="0.14em">LEGEND</text>
+
+      <rect x="120" y="433" width="14" height="10" rx="2" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="144" y="442" fill="#f5f5f7" font-size="10">Operating Company</text>
+
+      <rect x="280" y="433" width="14" height="10" rx="2" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="304" y="442" fill="#f5f5f7" font-size="10">Current Phase</text>
     </svg>
   </div>
 </div>
@@ -290,56 +298,83 @@ footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);fo
     <div class="sec-title">3. Institutional Connectivity</div>
     <div class="sec-lead">Atul sits at the nexus of four major structural pillars in the Pittsburgh technology ecosystem.</div>
   </div>
-
   <div class="diagram-container">
-    <svg width="840" height="520" viewBox="0 0 840 520" role="img" aria-labelledby="d3-title d3-desc">
-        <title id="d3-title">Atul Bansal Ecosystem Leverage Map</title>
-        <desc id="d3-desc">Hub and spoke architecture diagram showing Atul Bansal in the center connecting to CMU S3D, CEO ally, TiE Pittsburgh, and Timesys India.</desc>
+    <svg viewBox="0 0 1000 640" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="d3-t d3-d">
+      <title id="d3-t">Atul Bansal Power Matrix</title>
+      <desc id="d3-d">Ecosystem leverage map placing Atul Bansal at the center connecting CMU S3D, CEO ally, TiE Pittsburgh, and Timesys India.</desc>
+      <defs>
+        <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+          <circle cx="1" cy="1" r="0.9" fill="rgba(245,245,245,0.08)"/>
+        </pattern>
+        <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#bfc0c0"/></marker>
+        <marker id="arrow-green" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0, 8 3, 0 6" fill="#30d158"/></marker>
+      </defs>
 
-        <defs>
-            <marker id="arrow3" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
-                <polygon points="0 0, 8 3, 0 6" fill="#6e6e73"/>
-            </marker>
-        </defs>
+      <rect width="100%" height="100%" fill="#000000"/>
+      <rect width="100%" height="100%" fill="url(#dots)" opacity="0.6"/>
 
-        <!-- ARROWS -->
-        <!-- Center to CMU (Top-Left) -->
-        <path d="M 370,240 H 260 V 160" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
-        <!-- Center to CEO ally (Top-Right) -->
-        <path d="M 470,240 H 580 V 160" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
-        <!-- Center to TiE/412 (Bottom-Left) -->
-        <path d="M 370,280 H 260 V 360" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
-        <!-- Center to Timesys India (Bottom-Right) -->
-        <path d="M 470,280 H 580 V 360" fill="none" stroke="#6e6e73" stroke-width="1.2" stroke-dasharray="4,4" marker-end="url(#arrow3)"/>
+      <!-- ARROWS -->
+      <!-- Center to CMU (Top-Left) -->
+      <path d="M 450,300 H 260 Q 252,300 252,292 V 168 Q 252,160 244,160 H 240" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="330" y="286" width="60" height="12" rx="2" fill="#000"/>
+      <text x="360" y="295" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">CO-FOUNDER</text>
 
-        <!-- ZONES & NODES -->
-        <!-- Center Node -->
-        <rect x="370" y="240" width="100" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
-        <text x="420" y="264" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Atul Bansal</text>
+      <!-- Center to CEO ally (Top-Right) -->
+      <path d="M 550,300 H 740 Q 748,300 748,292 V 168 Q 748,160 756,160 H 760" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="610" y="286" width="40" height="12" rx="2" fill="#000"/>
+      <text x="630" y="295" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">ADVISOR</text>
 
-        <!-- Top Left: CMU -->
-        <rect x="200" y="120" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="260" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CMU S3D</text>
-        <text x="260" y="176" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Ganesh Mani</text>
-        <text x="260" y="100" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Financial AI Validation</text>
+      <!-- Center to TiE/412 (Bottom-Left) -->
+      <path d="M 450,340 H 260 Q 252,340 252,348 V 472 Q 252,480 244,480 H 240" fill="none" stroke="#30d158" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+      <rect x="330" y="326" width="60" height="12" rx="2" fill="#000"/>
+      <text x="360" y="335" fill="#30d158" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">LEAD ANGEL</text>
 
-        <!-- Top Right: CEO ally -->
-        <rect x="520" y="120" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="580" y="144" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CEO ally, Inc.</text>
-        <text x="580" y="176" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Girish Godbole</text>
-        <text x="580" y="100" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">M&A Exit Architecture</text>
+      <!-- Center to Timesys India (Bottom-Right) -->
+      <path d="M 550,340 H 740 Q 748,340 748,348 V 472 Q 748,480 756,480 H 760" fill="none" stroke="#bfc0c0" stroke-width="1.2" marker-end="url(#arrow)"/>
+      <rect x="610" y="326" width="48" height="12" rx="2" fill="#000"/>
+      <text x="634" y="335" fill="#a1a1a6" font-size="8" class="mono" text-anchor="middle" letter-spacing="0.06em">CHAIRMAN</text>
 
-        <!-- Bottom Left: Capital -->
-        <rect x="200" y="360" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="260" y="384" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">412 Venture Fund</text>
-        <text x="260" y="416" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Ilana Diamond</text>
-        <text x="260" y="440" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Series A Capital</text>
+      <!-- ZONES & NODES -->
+      <!-- Center Node -->
+      <rect x="450" y="300" width="100" height="40" rx="6" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="500" y="324" fill="#fff" font-size="12" font-weight="600" text-anchor="middle">Atul Bansal</text>
 
-        <!-- Bottom Right: India -->
-        <rect x="520" y="360" width="120" height="40" rx="6" fill="#1d1d1f" stroke="#6e6e73" stroke-width="1"/>
-        <text x="580" y="384" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys India LLP</text>
-        <text x="580" y="416" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Rakesh Thapar</text>
-        <text x="580" y="440" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">140+ Eng Hub</text>
+      <!-- Top Left: CMU -->
+      <rect x="100" y="140" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="170" y="164" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CMU S3D</text>
+      <text x="170" y="196" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Ganesh Mani</text>
+      <text x="170" y="120" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Financial AI Validation</text>
+
+      <!-- Top Right: CEO ally -->
+      <rect x="760" y="140" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="830" y="164" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">CEO ally, Inc.</text>
+      <text x="830" y="196" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Girish Godbole</text>
+      <text x="830" y="120" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">M&A Exit Architecture</text>
+
+      <!-- Bottom Left: Capital -->
+      <rect x="100" y="460" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#30d158" stroke-width="1"/>
+      <text x="170" y="484" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">412 Venture Fund</text>
+      <text x="170" y="516" fill="#30d158" font-size="9" class="mono" text-anchor="middle">Ilana Diamond / TiE</text>
+      <text x="170" y="540" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">Series A Capital Pipeline</text>
+
+      <!-- Bottom Right: India -->
+      <rect x="760" y="460" width="140" height="40" rx="6" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="830" y="484" fill="#f5f5f7" font-size="12" font-weight="600" text-anchor="middle">Timesys India LLP</text>
+      <text x="830" y="516" fill="#a1a1a6" font-size="9" class="mono" text-anchor="middle">Dr. Rakesh Thapar</text>
+      <text x="830" y="540" fill="#a1a1a6" font-size="14" class="callout" text-anchor="middle">140+ Eng Hub</text>
+
+      <!-- Legend strip -->
+      <line x1="40" y1="580" x2="960" y2="580" stroke="rgba(245,245,245,0.15)" stroke-width="0.8"/>
+      <text x="40" y="600" fill="#a1a1a6" font-size="8" class="mono" letter-spacing="0.14em">LEGEND</text>
+
+      <rect x="120" y="593" width="14" height="10" rx="2" fill="rgba(41,151,255,0.15)" stroke="#2997ff" stroke-width="1"/>
+      <text x="144" y="602" fill="#f5f5f7" font-size="10">Focal Asset</text>
+
+      <rect x="240" y="593" width="14" height="10" rx="2" fill="#1d1d1f" stroke="#bfc0c0" stroke-width="1"/>
+      <text x="264" y="602" fill="#f5f5f7" font-size="10">Structural Node</text>
+
+      <line x1="380" y1="598" x2="408" y2="598" stroke="#30d158" stroke-width="1.2" marker-end="url(#arrow-green)"/>
+      <text x="420" y="602" fill="#f5f5f7" font-size="10">Primary Capital Vector</text>
 
     </svg>
   </div>
@@ -357,6 +392,5 @@ footer{padding:48px 0 64px;border-top:1px solid var(--border);color:var(--t3);fo
   </div>
 </div>
 </footer>
-
 </body>
 </html>
